@@ -77,31 +77,18 @@ export function RootLayout({ children }: RootLayoutProps) {
                   >
                     <Home className="h-5 w-5" />
                   </Button>
-                </div>
-                {/* Mobile menu */}
-                <div className="md:hidden">
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="icon">
-                        <Menu className="h-5 w-5" />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="w-56">
-                      <DropdownMenuItem onClick={() => setLocation("/about")}>
-                        {t.common.about}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/faq")}>
-                        {t.common.faq}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/contact")}>
-                        {t.common.contact}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/")}>
-                        <Home className="mr-2 h-4 w-4" />
-                        Accueil
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
+                  <Button 
+                    variant="ghost"
+                    onClick={() => setLocation("/login")}
+                  >
+                    {t.common.login}
+                  </Button>
+                  <Button 
+                    variant="default"
+                    onClick={() => setLocation("/register")}
+                  >
+                    {t.common.register}
+                  </Button>
                 </div>
               </>
             )}
@@ -135,20 +122,39 @@ export function RootLayout({ children }: RootLayoutProps) {
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
-              <>
-                <Button 
-                  variant="ghost"
-                  onClick={() => setLocation("/login")}
-                >
-                  {t.common.login}
-                </Button>
-                <Button 
-                  variant="default"
-                  onClick={() => setLocation("/register")}
-                >
-                  {t.common.register}
-                </Button>
-              </>
+              /* Mobile menu */
+              <div className="md:hidden">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="icon">
+                      <Menu className="h-5 w-5" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end" className="w-56">
+                    <DropdownMenuItem onClick={() => setLocation("/about")}>
+                      {t.common.about}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setLocation("/faq")}>
+                      {t.common.faq}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setLocation("/contact")}>
+                      {t.common.contact}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setLocation("/")}>
+                      <Home className="mr-2 h-4 w-4" />
+                      Accueil
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setLocation("/login")}>
+                      <LogOut className="mr-2 h-4 w-4" rotate={180} />
+                      {t.common.login}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setLocation("/register")}>
+                      <User className="mr-2 h-4 w-4" />
+                      {t.common.register}
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
             )}
           </div>
         </div>
