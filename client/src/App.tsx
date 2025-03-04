@@ -1,8 +1,8 @@
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
-import { Switch, Route } from "wouter";
-import { AuthProvider } from "./hooks/use-auth";
+import { Switch, Route, Redirect } from "wouter";
+import { AuthProvider, useAuth } from "./hooks/use-auth";
 import { LanguageProvider } from "./contexts/language-context";
 import { ProtectedRoute } from "./lib/protected-route";
 
@@ -41,11 +41,30 @@ import DonorDashboardPage from "@/pages/donors/dashboard-page";
 import ReportsPage from "@/pages/donors/reports-page";
 import SuccessStoriesPage from "@/pages/donors/success-page";
 
+function HomeRoute() {
+  const { user } = useAuth();
+  if (user) {
+    switch (user.role) {
+      case "entrepreneur":
+        return <Redirect to="/dashboard" />;
+      case "apip":
+        return <Redirect to="/admin" />;
+      case "support_org":
+        return <Redirect to="/mentors" />;
+      case "donor":
+        return <Redirect to="/donors" />;
+      default:
+        return <Redirect to="/dashboard" />;
+    }
+  }
+  return <LandingPage />;
+}
+
 function Router() {
   return (
     <Switch>
       {/* Public Routes */}
-      <Route path="/" component={LandingPage} />
+      <Route path="/" component={HomeRoute} />
       <Route path="/about" component={AboutPage} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/faq" component={FaqPage} />
