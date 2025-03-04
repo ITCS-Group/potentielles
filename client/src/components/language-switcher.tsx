@@ -10,6 +10,11 @@ import { translations, Language, DEFAULT_LANGUAGE } from "@/i18n/translations";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 
+const languageFlags = {
+  fr: "🇫🇷",
+  en: "🇬🇧"
+};
+
 export function LanguageSwitcher() {
   const { data: currentLanguage } = useQuery<Language>({
     queryKey: ["/api/user/language"],
@@ -38,7 +43,9 @@ export function LanguageSwitcher() {
           <DropdownMenuItem
             key={lang}
             onClick={() => setLanguageMutation.mutate(lang as Language)}
+            className="flex items-center gap-2"
           >
+            <span>{languageFlags[lang as Language]}</span>
             {lang === "en" ? "English" : "Français"}
             {currentLanguage === lang && " ✓"}
           </DropdownMenuItem>

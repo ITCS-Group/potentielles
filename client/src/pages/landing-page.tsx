@@ -12,7 +12,7 @@ export default function LandingPage() {
       <div 
         className="w-full h-96 bg-cover bg-center relative"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1604871000636-074fa5117945')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 flex items-center">
