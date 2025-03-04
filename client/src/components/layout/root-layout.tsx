@@ -12,7 +12,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { UserRole } from "@shared/schema";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -31,7 +30,7 @@ export function RootLayout({ children }: RootLayoutProps) {
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
               {user && (
@@ -177,7 +176,7 @@ export function RootLayout({ children }: RootLayoutProps) {
         />
       )}
 
-      <main>{children}</main>
+      <main className="container mx-auto">{children}</main>
     </div>
   );
 }

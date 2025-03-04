@@ -26,7 +26,7 @@ export default function ResourcesPage() {
 
   return (
     <RootLayout>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8">{t.resources.title}</h1>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {resources.map((resource, index) => (
