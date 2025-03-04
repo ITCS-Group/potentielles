@@ -8,6 +8,7 @@ import { insertUserSchema, User as SelectUser, InsertUser } from "@shared/schema
 import { getQueryFn, apiRequest, queryClient } from "../lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { DEFAULT_LANGUAGE } from "@/i18n/translations";
+import { useLocation } from "wouter";
 
 type AuthContextType = {
   user: SelectUser | null;
@@ -23,6 +24,8 @@ type LoginData = Pick<InsertUser, "username" | "password">;
 export const AuthContext = createContext<AuthContextType | null>(null);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const { toast } = useToast();
+  const [, setLocation] = useLocation();
+
   const {
     data: user,
     error,
@@ -73,14 +76,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       await apiRequest("POST", "/api/logout");
     },
     onSuccess: () => {
-      // Clear user data from cache
-      queryClient.setQueryData(["/api/user"], null);
-      // Reset language to default
+      // Reset language to default first
       localStorage.setItem('selectedLanguage', DEFAULT_LANGUAGE);
-      // Clear all queries from the cache to prevent stale data
-      queryClient.clear();
-      // Redirect to home page after successful logout
-      window.location.href = "/";
+
+      // Clear specific user-related queries first
+      queryClient.removeQueries({ queryKey: ["/api/user"] });
+
+      // Set user to null to trigger UI updates
+      queryClient.setQueryData(["/api/user"], null);
+
+      // Navigate to home page
+      setLocation("/");
+
+      // Clear remaining queries after navigation
+      setTimeout(() => {
+        queryClient.clear();
+      }, 0);
     },
     onError: (error: Error) => {
       toast({
