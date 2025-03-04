@@ -33,7 +33,7 @@ export function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col"> {/*Restored flexbox*/}
-      <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50 w-full">
+      <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-30 w-full">
         <div className="px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
@@ -55,62 +55,7 @@ export function RootLayout({ children }: RootLayoutProps) {
             </div>
 
             <div className="flex items-center gap-2">
-              {!user && (
-                <>
-                  {/* Desktop menu */}
-                  <div className="hidden md:flex items-center">
-                    <nav className="flex items-center space-x-1">
-                      <Button 
-                        variant="ghost" 
-                        onClick={() => setLocation("/")}
-                        className="px-3 transition-colors"
-                      >
-                        {t.common.home}
-                      </Button>
-                      <Button 
-                        variant="ghost"
-                        onClick={() => setLocation("/about")}
-                        className="px-3 transition-colors"
-                      >
-                        {t.common.about}
-                      </Button>
-                      <Button 
-                        variant="ghost"
-                        onClick={() => setLocation("/faq")}
-                        className="px-3 transition-colors"
-                      >
-                        {t.common.faq}
-                      </Button>
-                      <Button 
-                        variant="ghost"
-                        onClick={() => setLocation("/contact")}
-                        className="px-3 transition-colors"
-                      >
-                        {t.common.contact}
-                      </Button>
-                      <div className="flex items-center ml-2 space-x-1">
-                        <LanguageSwitcher />
-                        <Button 
-                          variant="ghost"
-                          onClick={() => setLocation("/login")}
-                          className="px-3 transition-colors"
-                        >
-                          {t.common.login}
-                        </Button>
-                        <Button 
-                          variant="default"
-                          onClick={() => setLocation("/register")}
-                          className="px-3"
-                        >
-                          {t.common.register}
-                        </Button>
-                      </div>
-                    </nav>
-                  </div>
-                </>
-              )}
-
-              {user ? (
+              {user && (
                 <>
                   <LanguageSwitcher />
                   <DropdownMenu>
@@ -135,44 +80,6 @@ export function RootLayout({ children }: RootLayoutProps) {
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </>
-              ) : (
-                /* Mobile menu */
-                <div className="md:hidden flex items-center gap-2">
-                  <LanguageSwitcher />
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="icon">
-                        <Menu className="h-5 w-5" />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                      <DropdownMenuItem onClick={() => setLocation("/")}>
-                        <Home className="mr-2 h-4 w-4" />
-                        {t.common.home}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/about")}>
-                        <Info className="mr-2 h-4 w-4" />
-                        {t.common.about}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/faq")}>
-                        <HelpCircle className="mr-2 h-4 w-4" />
-                        {t.common.faq}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/contact")}>
-                        <PhoneCall className="mr-2 h-4 w-4" />
-                        {t.common.contact}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/login")}>
-                        <LogOut className="mr-2 h-4 w-4" rotate={180} />
-                        {t.common.login}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/register")}>
-                        <User className="mr-2 h-4 w-4" />
-                        {t.common.register}
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
               )}
             </div>
           </div>
@@ -186,7 +93,6 @@ export function RootLayout({ children }: RootLayoutProps) {
         </div>
       )}
       {!user && <main className="pt-16">{children}</main>}
-
     </div>
   );
 }

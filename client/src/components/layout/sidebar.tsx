@@ -90,7 +90,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       {/* Overlay */}
       <div
         className={cn(
-          "fixed inset-0 bg-black/50 z-30 md:hidden transition-opacity duration-200",
+          "fixed inset-0 bg-black/50 z-40 md:hidden transition-opacity duration-200",
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
         onClick={onClose}
@@ -100,7 +100,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed top-0 left-0 z-40 h-full w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out md:translate-x-0 mt-14",
+          "fixed top-0 left-0 z-50 h-full w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out md:translate-x-0 mt-14",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
