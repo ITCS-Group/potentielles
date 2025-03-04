@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
-import { translations } from "@/i18n/translations";
+import { translations, DEFAULT_LANGUAGE } from "@/i18n/translations";
 import { RootLayout } from "@/components/layout/root-layout";
 
 export default function LandingPage() {
   const [, setLocation] = useLocation();
-  const t = translations.fr; // Default to French for landing page
+  const t = translations[DEFAULT_LANGUAGE];
 
   return (
     <RootLayout>
       <div 
         className="w-full h-96 bg-cover bg-center relative"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1542744094-24638eff58bb')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 flex items-center">
@@ -22,12 +22,12 @@ export default function LandingPage() {
                 {t.common.welcome}
               </h1>
               <p className="text-xl text-white/90 mb-8">
-                Join our platform dedicated to supporting and empowering female
-                entrepreneurs in Guinea. Track your progress, connect with support
-                organizations, and grow your business.
+                Rejoignez notre plateforme dédiée au soutien et à l'autonomisation des femmes 
+                entrepreneures en Guinée. Suivez vos progrès, connectez-vous avec des 
+                organisations de soutien et développez votre entreprise.
               </p>
-              <Button size="lg" onClick={() => setLocation("/auth")}>
-                {t.common.login}
+              <Button size="lg" onClick={() => setLocation("/auth?tab=register")}>
+                {t.common.register}
               </Button>
             </div>
           </div>
@@ -38,21 +38,21 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow p-6">
-              <h3 className="text-lg font-semibold mb-4">Project Management</h3>
+              <h3 className="text-lg font-semibold mb-4">{t.features.projectManagement}</h3>
               <p className="text-gray-600">
-                Track and manage your business projects with ease
+                {t.features.projectManagementDesc}
               </p>
             </div>
             <div className="bg-white rounded-lg shadow p-6">
-              <h3 className="text-lg font-semibold mb-4">Support Network</h3>
+              <h3 className="text-lg font-semibold mb-4">{t.features.support}</h3>
               <p className="text-gray-600">
-                Connect with mentors and support organizations
+                {t.features.supportDesc}
               </p>
             </div>
             <div className="bg-white rounded-lg shadow p-6">
-              <h3 className="text-lg font-semibold mb-4">Progress Tracking</h3>
+              <h3 className="text-lg font-semibold mb-4">{t.features.progress}</h3>
               <p className="text-gray-600">
-                Monitor your business growth and achievements
+                {t.features.progressDesc}
               </p>
             </div>
           </div>

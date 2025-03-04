@@ -25,30 +25,14 @@ export const translations = {
       support_org: "Support Organization",
       donor: "Donor",
     },
-    dashboard: {
-      overview: "Overview",
-      projects: "Projects",
-      surveys: "Surveys",
-      activities: "Activities",
-      metrics: "Metrics",
-    },
-    projects: {
-      create: "Create Project",
-      edit: "Edit Project",
-      name: "Project Name",
-      description: "Description",
-      status: "Status",
-      startDate: "Start Date",
-      targetDate: "Target Date",
-    },
-    surveys: {
-      create: "Create Survey",
-      edit: "Edit Survey",
-      title: "Survey Title",
-      description: "Description",
-      questions: "Questions",
-      responses: "Responses",
-    },
+    features: {
+      projectManagement: "Project Management",
+      projectManagementDesc: "Track and manage your business projects with ease",
+      support: "Support Network",
+      supportDesc: "Connect with mentors and support organizations",
+      progress: "Progress Tracking",
+      progressDesc: "Monitor your business growth and achievements",
+    }
   },
   fr: {
     common: {
@@ -76,35 +60,18 @@ export const translations = {
       support_org: "Organisation de soutien",
       donor: "Donateur",
     },
-    dashboard: {
-      overview: "Vue d'ensemble",
-      projects: "Projets",
-      surveys: "Enquêtes",
-      activities: "Activités",
-      metrics: "Métriques",
-    },
-    projects: {
-      create: "Créer un projet",
-      edit: "Modifier le projet",
-      name: "Nom du projet",
-      description: "Description",
-      status: "Statut",
-      startDate: "Date de début",
-      targetDate: "Date cible",
-    },
-    surveys: {
-      create: "Créer une enquête",
-      edit: "Modifier l'enquête",
-      title: "Titre de l'enquête",
-      description: "Description",
-      questions: "Questions",
-      responses: "Réponses",
-    },
+    features: {
+      projectManagement: "Gestion de Projets",
+      projectManagementDesc: "Suivez et gérez vos projets d'entreprise facilement",
+      support: "Réseau de Soutien",
+      supportDesc: "Connectez-vous avec des mentors et des organisations de soutien",
+      progress: "Suivi des Progrès",
+      progressDesc: "Surveillez la croissance et les réalisations de votre entreprise",
+    }
   },
 };
 
 export type Language = keyof typeof translations;
 export type TranslationKey = keyof typeof translations.en;
 
-// Add default language constant
 export const DEFAULT_LANGUAGE: Language = "fr";
