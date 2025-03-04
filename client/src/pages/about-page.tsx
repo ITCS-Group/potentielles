@@ -13,9 +13,12 @@ export default function AboutPage() {
             <h1 className="text-4xl font-bold mb-8">{t.about.title}</h1>
             <div className="prose prose-lg">
               <div className="text-lg text-gray-600 space-y-6">
-                <p>{t.about.description}</p>
-                <p>{t.about.mission}</p>
-                <p>{t.about.objectives}</p>
+                {/* Context and Project Description */}
+                <p className="text-justify">{t.about.context}</p>
+                <p className="text-justify">{t.about.funding}</p>
+                <p className="text-justify">{t.about.description}</p>
+                <p className="text-justify">{t.about.mission}</p>
+                <p className="text-justify">{t.about.objectives}</p>
               </div>
 
               <div className="mt-12">

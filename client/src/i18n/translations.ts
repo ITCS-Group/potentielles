@@ -37,7 +37,9 @@ export const translations = {
       description: "Potenti'Elles is a digital platform dedicated to empowering female entrepreneurs in Guinea through comprehensive digital support and resources. Our mission is to create an inclusive environment where women can thrive in business.",
       mission: "Through this innovative platform, we aim to create an ecosystem that facilitates access to information, training, and support for women entrepreneurs in Guinea, particularly focusing on digital transformation and business development.",
       objectives: "Our key objectives include providing digital literacy training, facilitating access to financing, offering business development support, and creating networking opportunities within the Guinean entrepreneurial ecosystem.",
-      partners: "Our Partners"
+      partners: "Our Partners",
+      funding: "The Republic of Guinea has received funding of EUR 15 million from the French Development Agency (\"AFD\") and the European Union (\"EU\"), and intends to use part of this amount to make payments under the Potenti'Elles project: support for female entrepreneurship in Lower Coast and Forest Guinea. The delegated project management is provided by the Private Investment Promotion Agency (APIP).",
+      context: "The \"Potenti'elles\" project aims to economically empower women in Guinea, in a context where they face various socio-economic challenges."
     },
     contact: {
       title: "Contact Us",
@@ -221,7 +223,9 @@ export const translations = {
       description: "Potenti'Elles est une plateforme numérique dédiée à l'autonomisation des femmes entrepreneures en Guinée à travers un soutien numérique complet et des ressources. Notre mission est de créer un environnement inclusif où les femmes peuvent s'épanouir dans les affaires.",
       mission: "À travers cette plateforme innovante, nous visons à créer un écosystème qui facilite l'accès à l'information, à la formation et au soutien pour les femmes entrepreneures en Guinée, en mettant particulièrement l'accent sur la transformation numérique et le développement des entreprises.",
       objectives: "Nos objectifs principaux incluent la formation à la littératie numérique, la facilitation de l'accès au financement, l'offre de soutien au développement des entreprises et la création d'opportunités de réseautage au sein de l'écosystème entrepreneurial guinéen.",
-      partners: "Nos Partenaires"
+      partners: "Nos Partenaires",
+      funding: "La République de Guinée a reçu un financement de l'Agence Française de Développement (l'\"AFD\") et de l'Union Européenne (« UE ») d'un montant de 15 millions EUR, et a l'intention d'utiliser une partie du montant de celui-ci pour effectuer les paiements au titre du projet Potenti'Elles : projet d'appui à l'entrepreneuriat féminin en Basse Côte et Guinée Forestière. La maîtrise d'ouvrage déléguée du projet est assurée par l'Agence de Promotion des Investissements Privés (APIP).",
+      context: "Le projet \"Potenti'elles\" vise à autonomiser économiquement les femmes en Guinée, dans un contexte où ces dernières font face à divers défis socio-économiques."
     },
     contact: {
       title: "Contactez-nous",
