@@ -33,6 +33,18 @@ export const en = {
       logout: "Logout"
     }
   },
+  roles: {
+    entrepreneur: "Entrepreneur",
+    apip: "APIP Admin",
+    support_org: "Support Organization",
+    donor: "Donor",
+    description: {
+      entrepreneur: "Access resources and support for your business",
+      apip: "Manage platform and review projects",
+      support_org: "Provide mentoring and support",
+      donor: "Track impact and view reports"
+    }
+  },
   auth: {
     loginTitle: "Login to your account",
     registerTitle: "Create your account",
