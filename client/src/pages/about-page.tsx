@@ -36,49 +36,55 @@ export default function AboutPage() {
                 <h2 className="text-2xl font-semibold mt-8 mb-4">{t.about.ecosystem}</h2>
                 <p className="text-justify">{t.about.conclusion}</p>
 
-
                 {/* Partners Logos */}
                 <div className="mt-12">
-                  <h2 className="text-2xl font-semibold mb-6">{t.about.partners}</h2>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center bg-white p-8 rounded-lg shadow-sm">
                     {/* Logo UE */}
                     <div className="flex flex-col items-center gap-2">
-                      <img 
-                        src="/logos/eu-logo.svg" 
-                        alt="Union Européenne" 
-                        className="h-20 w-auto"
-                      />
-                      <span className="text-sm text-gray-600">Union Européenne</span>
+                      <div className="h-24 w-32 flex items-center justify-center">
+                        <img 
+                          src="/logos/eu-logo.svg" 
+                          alt="Union Européenne" 
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <span className="text-sm text-gray-600 text-center">Union Européenne</span>
                     </div>
 
                     {/* Logo AFD */}
                     <div className="flex flex-col items-center gap-2">
-                      <img 
-                        src="/logos/afd-logo.svg" 
-                        alt="Agence Française de Développement" 
-                        className="h-20 w-auto"
-                      />
-                      <span className="text-sm text-gray-600">AFD</span>
+                      <div className="h-24 w-32 flex items-center justify-center">
+                        <img 
+                          src="/logos/afd-logo.svg" 
+                          alt="Agence Française de Développement" 
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <span className="text-sm text-gray-600 text-center">AFD</span>
                     </div>
 
                     {/* Logo APIP */}
                     <div className="flex flex-col items-center gap-2">
-                      <img 
-                        src="/logos/apip-logo.svg" 
-                        alt="APIP Guinée" 
-                        className="h-20 w-auto"
-                      />
-                      <span className="text-sm text-gray-600">APIP</span>
+                      <div className="h-24 w-32 flex items-center justify-center">
+                        <img 
+                          src="/logos/apip-logo.svg" 
+                          alt="APIP Guinée" 
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <span className="text-sm text-gray-600 text-center">APIP</span>
                     </div>
 
                     {/* Logo Ministère du Commerce */}
                     <div className="flex flex-col items-center gap-2">
-                      <img 
-                        src="/logos/commerce-guinea-logo.svg" 
-                        alt="Ministère du Commerce de Guinée" 
-                        className="h-20 w-auto"
-                      />
-                      <span className="text-sm text-gray-600">Ministère du Commerce</span>
+                      <div className="h-24 w-32 flex items-center justify-center">
+                        <img 
+                          src="/logos/commerce-guinea-logo.svg" 
+                          alt="Ministère du Commerce de Guinée" 
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <span className="text-sm text-gray-600 text-center">Ministère du Commerce</span>
                     </div>
                   </div>
                 </div>
