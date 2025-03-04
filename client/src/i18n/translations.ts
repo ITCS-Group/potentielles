@@ -21,7 +21,13 @@ export const translations = {
       newProject: "New Project",
       profile: "Profile",
       about: "About",
-      menu: "Menu"
+      menu: "Menu",
+      userMenu: {
+        profile: "Profile",
+        settings: "Settings",
+        users: "Users",
+        logout: "Logout"
+      }
     },
     auth: {
       loginTitle: "Login to your account",
@@ -193,7 +199,13 @@ export const translations = {
       newProject: "Nouveau Projet",
       profile: "Profil",
       about: "À propos",
-      menu: "Menu"
+      menu: "Menu",
+      userMenu: {
+        profile: "Profil",
+        settings: "Paramètres",
+        users: "Utilisateurs",
+        logout: "Déconnexion"
+      }
     },
     auth: {
       loginTitle: "Connectez-vous à votre compte",
