@@ -5,7 +5,6 @@ import { Switch, Route } from "wouter";
 import { AuthProvider } from "./hooks/use-auth";
 import { LanguageProvider } from "./contexts/language-context";
 import { ProtectedRoute } from "./lib/protected-route";
-import { RootLayout } from "@/components/layout/root-layout";
 
 // Public Pages
 import LandingPage from "@/pages/landing-page";
@@ -44,9 +43,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
         <AuthProvider>
-          <RootLayout>
-            <Router />
-          </RootLayout>
+          <Router />
           <Toaster />
         </AuthProvider>
       </LanguageProvider>
