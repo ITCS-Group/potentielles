@@ -27,16 +27,16 @@ export default function FaqPage() {
                   {t.faq.questions.account}
                 </AccordionTrigger>
                 <AccordionContent>
-                  {t.faq.answers.account}
+                  {t.faq.questions.accountAnswer}
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-2">
                 <AccordionTrigger>
-                  {t.faq.questions.eligibility}
+                  {t.faq.questions.roles}
                 </AccordionTrigger>
                 <AccordionContent>
-                  {t.faq.answers.eligibility}
+                  {t.faq.questions.rolesAnswer}
                 </AccordionContent>
               </AccordionItem>
 
@@ -46,7 +46,7 @@ export default function FaqPage() {
                   {t.faq.questions.support}
                 </AccordionTrigger>
                 <AccordionContent>
-                  {t.faq.answers.support}
+                  {t.faq.questions.supportAnswer}
                 </AccordionContent>
               </AccordionItem>
 
@@ -55,7 +55,7 @@ export default function FaqPage() {
                   {t.faq.questions.mentoring}
                 </AccordionTrigger>
                 <AccordionContent>
-                  {t.faq.answers.mentoring}
+                  {t.faq.questions.mentoringAnswer}
                 </AccordionContent>
               </AccordionItem>
 
@@ -65,7 +65,7 @@ export default function FaqPage() {
                   {t.faq.questions.resources}
                 </AccordionTrigger>
                 <AccordionContent>
-                  {t.faq.answers.resources}
+                  {t.faq.questions.resourcesAnswer}
                 </AccordionContent>
               </AccordionItem>
 
@@ -74,7 +74,7 @@ export default function FaqPage() {
                   {t.faq.questions.training}
                 </AccordionTrigger>
                 <AccordionContent>
-                  {t.faq.answers.training}
+                  {t.faq.questions.trainingAnswer}
                 </AccordionContent>
               </AccordionItem>
 
@@ -84,7 +84,7 @@ export default function FaqPage() {
                   {t.faq.questions.technical}
                 </AccordionTrigger>
                 <AccordionContent>
-                  {t.faq.answers.technical}
+                  {t.faq.questions.technicalAnswer}
                 </AccordionContent>
               </AccordionItem>
 
@@ -94,7 +94,7 @@ export default function FaqPage() {
                   {t.faq.questions.privacy}
                 </AccordionTrigger>
                 <AccordionContent>
-                  {t.faq.answers.privacy}
+                  {t.faq.questions.privacyAnswer}
                 </AccordionContent>
               </AccordionItem>
 
@@ -104,7 +104,7 @@ export default function FaqPage() {
                   {t.faq.questions.partners}
                 </AccordionTrigger>
                 <AccordionContent>
-                  {t.faq.answers.partners}
+                  {t.faq.questions.partnersAnswer}
                 </AccordionContent>
               </AccordionItem>
 
@@ -114,7 +114,7 @@ export default function FaqPage() {
                   {t.faq.questions.funding}
                 </AccordionTrigger>
                 <AccordionContent>
-                  {t.faq.answers.funding}
+                  {t.faq.questions.fundingAnswer}
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
