@@ -37,54 +37,54 @@ export default function AboutPage() {
                 <p className="text-justify">{t.about.conclusion}</p>
 
                 {/* Partners Logos */}
-                <div className="mt-12">
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center bg-white p-8 rounded-lg shadow-sm">
+                <div className="mt-12 bg-white rounded-lg p-8 shadow-sm">
+                  <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-12">
                     {/* Logo UE */}
-                    <div className="flex flex-col items-center gap-2">
-                      <div className="h-24 w-32 flex items-center justify-center">
+                    <div className="flex flex-col items-center">
+                      <div className="h-20 w-32 flex items-center justify-center">
                         <img 
                           src="/logos/eu-logo.svg" 
                           alt="Union Européenne" 
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <span className="text-sm text-gray-600 text-center">Union Européenne</span>
+                      <span className="text-sm text-gray-600 text-center mt-2">Union Européenne</span>
                     </div>
 
                     {/* Logo AFD */}
-                    <div className="flex flex-col items-center gap-2">
-                      <div className="h-24 w-32 flex items-center justify-center">
+                    <div className="flex flex-col items-center">
+                      <div className="h-20 w-32 flex items-center justify-center">
                         <img 
                           src="/logos/afd-logo.svg" 
                           alt="Agence Française de Développement" 
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <span className="text-sm text-gray-600 text-center">AFD</span>
+                      <span className="text-sm text-gray-600 text-center mt-2">AFD</span>
                     </div>
 
                     {/* Logo APIP */}
-                    <div className="flex flex-col items-center gap-2">
-                      <div className="h-24 w-32 flex items-center justify-center">
+                    <div className="flex flex-col items-center">
+                      <div className="h-20 w-32 flex items-center justify-center">
                         <img 
                           src="/logos/apip-logo.svg" 
                           alt="APIP Guinée" 
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <span className="text-sm text-gray-600 text-center">APIP</span>
+                      <span className="text-sm text-gray-600 text-center mt-2">APIP</span>
                     </div>
 
                     {/* Logo Ministère du Commerce */}
-                    <div className="flex flex-col items-center gap-2">
-                      <div className="h-24 w-32 flex items-center justify-center">
+                    <div className="flex flex-col items-center">
+                      <div className="h-20 w-32 flex items-center justify-center">
                         <img 
                           src="/logos/commerce-guinea-logo.svg" 
                           alt="Ministère du Commerce de Guinée" 
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <span className="text-sm text-gray-600 text-center">Ministère du Commerce</span>
+                      <span className="text-sm text-gray-600 text-center mt-2">Ministère du Commerce</span>
                     </div>
                   </div>
                 </div>
