@@ -194,7 +194,7 @@ export const en = {
       address: "Corniche Sud, Madina Dispensaire, Commune de Matam, Conakry, République de Guinée",
       phone: "+224 624 94 94 30 / +224 624 94 94 31 / +224 624 94 94 32 / +224 624 94 94 33",
       email: "delegation-guinee-conakry@ec.europa.eu",
-      website: "https://www.eeas.europa.eu/guinea",
+      website: "https://www.eeas.europa.eu/guinee",
       officeHours: "Monday to Thursday: 8:00 - 17:00, Friday: 8:00 - 13:00"
     },
     afd: {
@@ -205,6 +205,18 @@ export const en = {
       website: "https://www.afd.fr/fr/page-region-pays/guinee",
       officeHours: "Monday to Friday: 8:00 - 16:30"
     }
+  },
+  projects: {
+    name: "Project Name",
+    description: "Project Description",
+    new: "New Project",
+    create: "Create Project",
+    details: "Project Details",
+    list: "Projects List",
+    status: "Status",
+    submit: "Submit Project",
+    success: "Project created successfully",
+    error: "Error creating project"
   }
 };
 

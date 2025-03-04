@@ -205,6 +205,18 @@ export const fr = {
       website: "https://www.afd.fr/fr/page-region-pays/guinee",
       officeHours: "Lundi à Vendredi: 8h00 - 16h30"
     }
+  },
+  projects: {
+    name: "Nom du projet",
+    description: "Description du projet",
+    new: "Nouveau projet",
+    create: "Créer un projet",
+    details: "Détails du projet",
+    list: "Liste des projets",
+    status: "Statut",
+    submit: "Soumettre le projet",
+    success: "Projet créé avec succès",
+    error: "Erreur lors de la création du projet"
   }
 };
 
