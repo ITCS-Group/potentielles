@@ -93,32 +93,37 @@ export default function AboutPage() {
 
                     {/* Ministères - Conteneur centré */}
                     <div className="lg:col-span-3 flex justify-center gap-8">
-                      {/* Logo Ministère du Commerce */}
-                      <div className="flex flex-col items-center">
-                        <div className="h-24 w-36 flex items-center justify-center">
-                          <img
-                            src="/logos/min-com.jpeg"
-                            alt="Ministère du Commerce de Guinée"
-                            className="w-full h-full object-contain"
-                          />
+                      <div className="flex flex-col md:flex-row gap-8">
+                        {/* Logo Ministère du Commerce */}
+                        <div className="flex flex-col items-center">
+                          <div className="h-24 w-36 flex items-center justify-center">
+                            <img
+                              src="/logos/min-com.jpeg"
+                              alt="Ministère du Commerce de Guinée"
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                          <span className="text-sm text-gray-600 text-center mt-2">
+                            Ministère du Commerce, <br />
+                            de l'Industrie et des PME de Guinée
+                          </span>
                         </div>
-                        <span className="text-sm text-gray-600 text-center mt-2">
-                          Ministère du Commerce
-                        </span>
-                      </div>
 
-                      {/* Logo Ministère de la Féminisation */}
-                      <div className="flex flex-col items-center">
-                        <div className="h-24 w-36 flex items-center justify-center">
-                          <img
-                            src="/logos/min-fem.jpeg"
-                            alt="Ministère de la Féminisation"
-                            className="w-full h-full object-contain"
-                          />
+                        {/* Logo Ministère de la Féminisation */}
+                        <div className="flex flex-col items-center">
+                          <div className="h-24 w-36 flex items-center justify-center">
+                            <img
+                              src="/logos/min-fem.jpeg"
+                              alt="Ministère de la Féminisation"
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                          <span className="text-sm text-gray-600 text-center mt-2">
+                            Ministère de la Promotion féminine,
+                            <br />
+                            de l'Enfance et des Personnes vulnérables
+                          </span>
                         </div>
-                        <span className="text-sm text-gray-600 text-center mt-2">
-                          Ministère de la Féminisation
-                        </span>
                       </div>
                     </div>
                   </div>
