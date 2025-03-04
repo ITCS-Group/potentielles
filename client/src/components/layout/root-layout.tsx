@@ -2,7 +2,7 @@ import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
-import { LogOut, Home, Menu, User, Settings, Info, HelpCircle, PhoneCall } from "lucide-react";
+import { LogOut, Home, Menu, User, Settings, Info, HelpCircle, PhoneCall, X } from "lucide-react";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/contexts/language-context";
 import { Sidebar } from "./sidebar";
@@ -32,8 +32,8 @@ export function RootLayout({ children }: RootLayoutProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow">
+    <div className="min-h-screen bg-gray-50 relative">
+      <header className="bg-white shadow relative z-20">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
@@ -42,9 +42,13 @@ export function RootLayout({ children }: RootLayoutProps) {
                   variant="ghost" 
                   size="icon"
                   onClick={toggleSidebar}
-                  className="lg:hidden"
+                  className="block md:hidden"
                 >
-                  <Menu className="h-5 w-5" />
+                  {isSidebarOpen ? (
+                    <X className="h-5 w-5" />
+                  ) : (
+                    <Menu className="h-5 w-5" />
+                  )}
                 </Button>
               )}
               <div className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 text-transparent bg-clip-text">
@@ -183,7 +187,7 @@ export function RootLayout({ children }: RootLayoutProps) {
         />
       )}
 
-      <main className="container mx-auto">{children}</main>
+      <main className="container mx-auto relative z-10">{children}</main>
     </div>
   );
 }
