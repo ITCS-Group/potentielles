@@ -53,14 +53,14 @@ export default function AboutPage() {
 
                     {/* Logo AFD */}
                     <div className="flex flex-col items-center">
-                      <div className="h-20 w-32 flex items-center justify-center">
+                      <div className="h-20 w-40 flex items-center justify-center">
                         <img 
                           src="/logos/afd-logo.svg" 
                           alt="Agence Française de Développement" 
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <span className="text-sm text-gray-600 text-center mt-2">AFD</span>
+                      <span className="text-sm text-gray-600 text-center mt-2">Agence Française de Développement</span>
                     </div>
 
                     {/* Logo APIP */}
