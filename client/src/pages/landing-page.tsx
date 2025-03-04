@@ -56,18 +56,6 @@ export default function LandingPage() {
                   APIP - Agence de Promotion des Investissements Privés
                 </span>
               </div>
-              {/* Carte avec marqueur */}
-              <div className="w-full max-w-3xl h-64 rounded-lg overflow-hidden border border-gray-200">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1917.496423233331!2d-13.7196889!3d9.5348599!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf1cd9de6a42c3a7%3A0x6c7f1b0f1b0f1b0f!2sAgence%20Guin%C3%A9enne%20Pour%20La%20Promotion%20De...!5e0!3m2!1sfr!2sfr!4v1709590144561!5m2!1sfr!2sfr&zoom=17"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
               <p className="text-xl text-gray-600 max-w-3xl">
                 {t.landing.impactDesc}
               </p>
