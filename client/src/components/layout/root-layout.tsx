@@ -32,25 +32,23 @@ export function RootLayout({ children }: RootLayoutProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col"> {/* Added flexbox for better layout */}
-      <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50 w-full"> {/* Added w-full for full width */}
+    <div className="min-h-screen bg-gray-50 flex flex-col"> {/*Restored flexbox*/}
+      <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50 w-full">
         <div className="px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
-              {user && (
-                <Button 
-                  variant="ghost" 
-                  size="icon"
-                  onClick={toggleSidebar}
-                  className="block md:hidden"
-                >
-                  {isSidebarOpen ? (
-                    <X className="h-5 w-5" />
-                  ) : (
-                    <Menu className="h-5 w-5" />
-                  )}
-                </Button>
-              )}
+              <Button 
+                variant="ghost" 
+                size="icon"
+                onClick={toggleSidebar}
+                className="block md:hidden"
+              >
+                {isSidebarOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
+                )}
+              </Button>
               <div className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 text-transparent bg-clip-text">
                 Potenti'Elles
               </div>
@@ -182,12 +180,12 @@ export function RootLayout({ children }: RootLayoutProps) {
       </header>
 
       {user && (
-        <div className="flex" style={{height: 'calc(100vh - 64px)'}}> {/* Added container for sidebar and main content */}
-          <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} className="z-40" /> {/* Added z-index */}
-          <main className="flex-grow pt-16">{children}</main> {/* Added flex-grow to main */}
+        <div className="flex" style={{height: 'calc(100vh - 64px)'}}>
+          <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} className="z-40" />
+          <main className="flex-grow pt-16">{children}</main>
         </div>
       )}
-      {!user && <main className="pt-16">{children}</main>} {/* Added to handle case where user is not logged in*/}
+      {!user && <main className="pt-16">{children}</main>}
 
     </div>
   );

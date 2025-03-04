@@ -39,117 +39,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [, setLocation] = useLocation();
   const { t } = useLanguage();
 
-  const baseMenuItems = [
-    {
-      label: t.common.welcome,
-      icon: <Home className="h-5 w-5" />,
-      path: "/",
-      hideWhenLoggedIn: true,
-    },
-  ];
-
-  const roleBasedMenus: RoleBasedMenus = {
-    [UserRole.Entrepreneur]: [
-      {
-        label: t.dashboard.overview,
-        icon: <Home className="h-5 w-5" />,
-        path: "/dashboard",
-      },
-      {
-        label: t.dashboard.projects,
-        icon: <FileText className="h-5 w-5" />,
-        path: "/projects",
-      },
-      {
-        label: t.common.newProject,
-        icon: <FileText className="h-5 w-5" />,
-        path: "/projects/new",
-      },
-      {
-        label: t.dashboard.surveys,
-        icon: <ClipboardList className="h-5 w-5" />,
-        path: "/surveys",
-      },
-      {
-        label: t.dashboard.resources,
-        icon: <BookOpen className="h-5 w-5" />,
-        path: "/resources",
-      },
-      {
-        label: t.common.profile,
-        icon: <User className="h-5 w-5" />,
-        path: "/profile",
-      },
-    ],
-    [UserRole.APIP]: [
-      {
-        label: t.dashboard.overview,
-        icon: <Home className="h-5 w-5" />,
-        path: "/admin",
-      },
-      {
-        label: t.admin.users,
-        icon: <Users className="h-5 w-5" />,
-        path: "/admin/users",
-      },
-      {
-        label: t.admin.projects,
-        icon: <FileText className="h-5 w-5" />,
-        path: "/admin/projects",
-      },
-      {
-        label: t.admin.surveys,
-        icon: <ClipboardList className="h-5 w-5" />,
-        path: "/admin/surveys",
-      },
-      {
-        label: t.admin.analytics,
-        icon: <BarChart3 className="h-5 w-5" />,
-        path: "/admin/reports",
-      },
-      {
-        label: t.admin.settings,
-        icon: <Settings className="h-5 w-5" />,
-        path: "/admin/settings",
-      },
-    ],
-    [UserRole.SupportOrg]: [
-      {
-        label: t.dashboard.overview,
-        icon: <Home className="h-5 w-5" />,
-        path: "/mentors",
-      },
-      {
-        label: t.mentors.mentees,
-        icon: <Users className="h-5 w-5" />,
-        path: "/mentors/mentees",
-      },
-      {
-        label: t.mentors.chat,
-        icon: <MessageSquare className="h-5 w-5" />,
-        path: "/mentors/chat",
-      },
-    ],
-    [UserRole.Donor]: [
-      {
-        label: t.dashboard.overview,
-        icon: <Home className="h-5 w-5" />,
-        path: "/donors",
-      },
-      {
-        label: t.donors.reports,
-        icon: <BarChart3 className="h-5 w-5" />,
-        path: "/donors/reports",
-      },
-      {
-        label: t.donors.success,
-        icon: <FileText className="h-5 w-5" />,
-        path: "/donors/success",
-      },
-    ],
-  };
-
-  const [location] = useLocation();
   useEffect(() => {
     if (window.innerWidth < 768) {
       onClose();
@@ -158,7 +47,38 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   if (!user) return null;
 
-  const menuItems = [...baseMenuItems, ...(roleBasedMenus[user.role as UserRole] || [])];
+  const menuItems = [
+    {
+      label: t.dashboard.overview,
+      icon: <Home className="h-5 w-5" />,
+      path: "/dashboard",
+    },
+    {
+      label: t.dashboard.projects,
+      icon: <FileText className="h-5 w-5" />,
+      path: "/projects",
+    },
+    {
+      label: t.common.newProject,
+      icon: <FileText className="h-5 w-5" />,
+      path: "/projects/new",
+    },
+    {
+      label: t.dashboard.surveys,
+      icon: <ClipboardList className="h-5 w-5" />,
+      path: "/surveys",
+    },
+    {
+      label: t.dashboard.resources,
+      icon: <BookOpen className="h-5 w-5" />,
+      path: "/resources",
+    },
+    {
+      label: t.common.profile,
+      icon: <User className="h-5 w-5" />,
+      path: "/profile",
+    },
+  ];
 
   const handleNavigation = (path: string) => {
     setLocation(path);
@@ -192,19 +112,17 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         </div>
 
         <nav className="p-4 space-y-2">
-          {menuItems
-            .filter(item => !item.hideWhenLoggedIn || !user)
-            .map((item, index) => (
-              <Button
-                key={index}
-                variant="ghost"
-                className="w-full justify-start gap-3"
-                onClick={() => handleNavigation(item.path)}
-              >
-                {item.icon}
-                {item.label}
-              </Button>
-            ))}
+          {menuItems.map((item, index) => (
+            <Button
+              key={index}
+              variant="ghost"
+              className="w-full justify-start gap-3"
+              onClick={() => handleNavigation(item.path)}
+            >
+              {item.icon}
+              {item.label}
+            </Button>
+          ))}
         </nav>
       </aside>
     </>
