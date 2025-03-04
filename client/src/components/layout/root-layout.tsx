@@ -2,8 +2,8 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
 import { LogOut, Home } from "lucide-react";
-import { translations, DEFAULT_LANGUAGE } from "@/i18n/translations";
 import { useLocation } from "wouter";
+import { useLanguage } from "@/contexts/language-context";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ interface RootLayoutProps {
 export function RootLayout({ children }: RootLayoutProps) {
   const { user, logoutMutation } = useAuth();
   const [, setLocation] = useLocation();
-  const t = translations[user?.language || DEFAULT_LANGUAGE];
+  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-gray-50">

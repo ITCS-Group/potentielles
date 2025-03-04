@@ -3,6 +3,7 @@ import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import { Switch, Route } from "wouter";
 import { AuthProvider } from "./hooks/use-auth";
+import { LanguageProvider } from "./contexts/language-context";
 import { ProtectedRoute } from "./lib/protected-route";
 import { RootLayout } from "@/components/layout/root-layout";
 
@@ -41,10 +42,12 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <AuthProvider>
-        <Router />
-        <Toaster />
-      </AuthProvider>
+      <LanguageProvider>
+        <AuthProvider>
+          <Router />
+          <Toaster />
+        </AuthProvider>
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }
