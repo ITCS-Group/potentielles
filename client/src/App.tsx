@@ -15,8 +15,13 @@ import LoginPage from "@/pages/login-page";
 import RegisterPage from "@/pages/register-page";
 import NotFound from "@/pages/not-found";
 
-// Private Pages
+// Private Pages - Entrepreneur
 import DashboardPage from "@/pages/dashboard-page";
+import ProjectsPage from "@/pages/projects/projects-page";
+import NewProjectPage from "@/pages/projects/new-project-page";
+import SurveysPage from "@/pages/surveys/surveys-page";
+import ResourcesPage from "@/pages/resources-page";
+import ProfilePage from "@/pages/profile-page";
 
 function Router() {
   return (
@@ -29,8 +34,13 @@ function Router() {
       <Route path="/login" component={LoginPage} />
       <Route path="/register" component={RegisterPage} />
 
-      {/* Protected Routes - Only the main dashboard for now */}
+      {/* Protected Routes - Entrepreneur */}
       <ProtectedRoute path="/dashboard" component={DashboardPage} />
+      <ProtectedRoute path="/projects" component={ProjectsPage} />
+      <ProtectedRoute path="/projects/new" component={NewProjectPage} />
+      <ProtectedRoute path="/surveys" component={SurveysPage} />
+      <ProtectedRoute path="/resources" component={ResourcesPage} />
+      <ProtectedRoute path="/profile" component={ProfilePage} />
 
       {/* 404 Route */}
       <Route component={NotFound} />
