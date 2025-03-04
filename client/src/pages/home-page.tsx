@@ -1,20 +1,18 @@
 import { useAuth } from "@/hooks/use-auth";
 import { UserRole } from "@shared/schema";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/contexts/language-context";
-import { LanguageSwitcher } from "@/components/language-switcher";
+import { RootLayout } from "@/components/layout/root-layout";
 import {
   BarChart3,
   ClipboardList,
   FileText,
-  LogOut,
   Users,
 } from "lucide-react";
 
 export default function HomePage() {
-  const { user, logoutMutation } = useAuth();
+  const { user } = useAuth();
   const [, setLocation] = useLocation();
   const { t } = useLanguage();
 
@@ -79,27 +77,8 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-900">
-            {t.common.welcome}
-          </h1>
-          <div className="flex items-center gap-4">
-            <LanguageSwitcher />
-            <Button
-              variant="ghost"
-              onClick={() => logoutMutation.mutate()}
-              disabled={logoutMutation.isPending}
-            >
-              <LogOut className="h-4 w-4 mr-2" />
-              {t.common.logout}
-            </Button>
-          </div>
-        </div>
-      </header>
-
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <RootLayout>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {user &&
             roleBasedCards[user.role].map((card, index) => (
@@ -122,7 +101,7 @@ export default function HomePage() {
               </Card>
             ))}
         </div>
-      </main>
-    </div>
+      </div>
+    </RootLayout>
   );
 }

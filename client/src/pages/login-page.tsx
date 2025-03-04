@@ -30,7 +30,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (user) {
-      setLocation("/home");
+      setLocation("/dashboard");
     }
   }, [user, setLocation]);
 
