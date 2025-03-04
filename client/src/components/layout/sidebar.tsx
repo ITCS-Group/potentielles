@@ -42,6 +42,15 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [, setLocation] = useLocation();
   const { t } = useLanguage();
 
+  const baseMenuItems = [
+    {
+      label: t.common.welcome,
+      icon: <Home className="h-5 w-5" />,
+      path: "/",
+      hideWhenLoggedIn: true,
+    },
+  ];
+
   const roleBasedMenus: RoleBasedMenus = {
     [UserRole.Entrepreneur]: [
       {
@@ -152,6 +161,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   if (!user) return null;
 
+  const menuItems = [...baseMenuItems, ...(roleBasedMenus[user.role] || [])];
+
   return (
     <>
       <div
@@ -176,17 +187,19 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         </div>
 
         <nav className="p-4 space-y-2">
-          {roleBasedMenus[user.role].map((item) => (
-            <Button
-              key={item.path}
-              variant="ghost"
-              className="w-full justify-start gap-3"
-              onClick={() => setLocation(item.path)}
-            >
-              {item.icon}
-              {item.label}
-            </Button>
-          ))}
+          {menuItems
+            .filter(item => !item.hideWhenLoggedIn || !user)
+            .map((item) => (
+              <Button
+                key={item.path}
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => setLocation(item.path)}
+              >
+                {item.icon}
+                {item.label}
+              </Button>
+            ))}
         </nav>
       </div>
     </>
