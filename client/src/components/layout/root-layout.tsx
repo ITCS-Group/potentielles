@@ -59,7 +59,6 @@ export function RootLayout({ children }: RootLayoutProps) {
                         onClick={() => setLocation("/")}
                         className="px-3 transition-colors"
                       >
-                        <Home className="mr-2 h-4 w-4" />
                         {t.common.home}
                       </Button>
                       <Button 
@@ -67,7 +66,6 @@ export function RootLayout({ children }: RootLayoutProps) {
                         onClick={() => setLocation("/about")}
                         className="px-3 transition-colors"
                       >
-                        <Info className="mr-2 h-4 w-4" />
                         {t.common.about}
                       </Button>
                       <Button 
@@ -75,7 +73,6 @@ export function RootLayout({ children }: RootLayoutProps) {
                         onClick={() => setLocation("/faq")}
                         className="px-3 transition-colors"
                       >
-                        <HelpCircle className="mr-2 h-4 w-4" />
                         {t.common.faq}
                       </Button>
                       <Button 
@@ -83,7 +80,6 @@ export function RootLayout({ children }: RootLayoutProps) {
                         onClick={() => setLocation("/contact")}
                         className="px-3 transition-colors"
                       >
-                        <PhoneCall className="mr-2 h-4 w-4" />
                         {t.common.contact}
                       </Button>
                       <div className="flex items-center ml-2 space-x-1">
