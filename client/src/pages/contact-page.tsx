@@ -35,6 +35,23 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5 text-primary" />
                   <p className="text-lg">{t.contact.apip.email}</p>
                 </div>
+                <div className="flex items-center gap-4">
+                  <Globe className="h-5 w-5 text-primary" />
+                  <p className="text-lg">
+                    <a 
+                      href={t.contact.apip.website} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      {t.contact.apip.website}
+                    </a>
+                  </p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Clock className="h-5 w-5 text-primary" />
+                  <p className="text-lg">{t.contact.apip.officeHours}</p>
+                </div>
               </div>
             </div>
 
@@ -95,6 +112,23 @@ export default function ContactPage() {
                 <div className="flex items-center gap-4">
                   <Mail className="h-5 w-5 text-primary" />
                   <p className="text-lg">{t.contact.afd.email}</p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Globe className="h-5 w-5 text-primary" />
+                  <p className="text-lg">
+                    <a 
+                      href={t.contact.afd.website} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      {t.contact.afd.website}
+                    </a>
+                  </p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Clock className="h-5 w-5 text-primary" />
+                  <p className="text-lg">{t.contact.afd.officeHours}</p>
                 </div>
               </div>
             </div>

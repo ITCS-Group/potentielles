@@ -69,7 +69,9 @@ export const translations = {
         title: "APIP (Private Investment Promotion Agency)",
         address: "Immeuble Diamond, Cité Chemins de Fer, Kaloum, Conakry",
         phone: "+224 666 30 34 79",
-        email: "contact@apip.gov.gn"
+        email: "contact@apip.gov.gn",
+        website: "https://apip.gov.gn",
+        officeHours: "Monday to Friday: 8:00 - 16:30"
       },
       euDelegation: {
         title: "European Union Delegation in Guinea",
@@ -83,7 +85,9 @@ export const translations = {
         title: "French Development Agency (AFD)",
         address: "Corniche Sud, Cameroun, BP 1516, Conakry",
         phone: "+224 664 35 02 02",
-        email: "afdconakry@afd.fr"
+        email: "afdconakry@afd.fr",
+        website: "https://www.afd.fr/fr/page-region-pays/guinee",
+        officeHours: "Monday to Friday: 8:00 - 16:30"
       }
     },
     faq: {
@@ -285,7 +289,9 @@ export const translations = {
         title: "APIP (Agence de Promotion des Investissements Privés)",
         address: "Immeuble Diamond, Cité Chemins de Fer, Kaloum, Conakry",
         phone: "+224 666 30 34 79",
-        email: "contact@apip.gov.gn"
+        email: "contact@apip.gov.gn",
+        website: "https://apip.gov.gn",
+        officeHours: "Lundi à Vendredi: 8h00 - 16h30"
       },
       euDelegation: {
         title: "Délégation de l'Union européenne en Guinée",
@@ -299,7 +305,9 @@ export const translations = {
         title: "Agence Française de Développement (AFD)",
         address: "Corniche Sud, Cameroun, BP 1516, Conakry",
         phone: "+224 664 35 02 02",
-        email: "afdconakry@afd.fr"
+        email: "afdconakry@afd.fr",
+        website: "https://www.afd.fr/fr/page-region-pays/guinee",
+        officeHours: "Lundi à Vendredi: 8h00 - 16h30"
       }
     },
     faq: {
