@@ -27,6 +27,10 @@ export function RootLayout({ children }: RootLayoutProps) {
     logoutMutation.mutate(undefined);
   };
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow">
@@ -37,7 +41,7 @@ export function RootLayout({ children }: RootLayoutProps) {
                 <Button 
                   variant="ghost" 
                   size="icon"
-                  onClick={() => setIsSidebarOpen(true)}
+                  onClick={toggleSidebar}
                 >
                   <Menu className="h-5 w-5" />
                 </Button>
