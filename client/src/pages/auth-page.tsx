@@ -70,16 +70,16 @@ export default function AuthPage() {
             <div className="flex-1">
               <Card className="w-full">
                 <CardHeader>
-                  <CardTitle>Potenti'Elles Platform</CardTitle>
+                  <CardTitle>{t.auth[defaultTab === "login" ? "loginTitle" : "registerTitle"]}</CardTitle>
                   <CardDescription>
-                    Supporting female entrepreneurs in Guinea
+                    {t.common.welcome}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Tabs defaultValue={defaultTab}>
                     <TabsList className="grid w-full grid-cols-2">
-                      <TabsTrigger value="login">Login</TabsTrigger>
-                      <TabsTrigger value="register">Register</TabsTrigger>
+                      <TabsTrigger value="login">{t.common.login}</TabsTrigger>
+                      <TabsTrigger value="register">{t.common.register}</TabsTrigger>
                     </TabsList>
 
                     <TabsContent value="login">
@@ -95,7 +95,7 @@ export default function AuthPage() {
                             name="username"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Username</FormLabel>
+                                <FormLabel>{t.common.username}</FormLabel>
                                 <FormControl>
                                   <Input {...field} />
                                 </FormControl>
@@ -108,7 +108,7 @@ export default function AuthPage() {
                             name="password"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Password</FormLabel>
+                                <FormLabel>{t.common.password}</FormLabel>
                                 <FormControl>
                                   <Input type="password" {...field} />
                                 </FormControl>
@@ -124,7 +124,7 @@ export default function AuthPage() {
                             {loginMutation.isPending && (
                               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                             )}
-                            Login
+                            {t.common.login}
                           </Button>
                         </form>
                       </Form>
@@ -143,7 +143,7 @@ export default function AuthPage() {
                             name="name"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Full Name</FormLabel>
+                                <FormLabel>{t.common.fullName}</FormLabel>
                                 <FormControl>
                                   <Input {...field} />
                                 </FormControl>
@@ -156,7 +156,7 @@ export default function AuthPage() {
                             name="email"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Email</FormLabel>
+                                <FormLabel>{t.common.email}</FormLabel>
                                 <FormControl>
                                   <Input type="email" {...field} />
                                 </FormControl>
@@ -169,7 +169,7 @@ export default function AuthPage() {
                             name="username"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Username</FormLabel>
+                                <FormLabel>{t.common.username}</FormLabel>
                                 <FormControl>
                                   <Input {...field} />
                                 </FormControl>
@@ -182,7 +182,7 @@ export default function AuthPage() {
                             name="password"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Password</FormLabel>
+                                <FormLabel>{t.common.password}</FormLabel>
                                 <FormControl>
                                   <Input type="password" {...field} />
                                 </FormControl>
@@ -195,14 +195,14 @@ export default function AuthPage() {
                             name="role"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Role</FormLabel>
+                                <FormLabel>{t.common.role}</FormLabel>
                                 <Select
                                   onValueChange={field.onChange}
                                   defaultValue={field.value}
                                 >
                                   <FormControl>
                                     <SelectTrigger>
-                                      <SelectValue placeholder="Select a role" />
+                                      <SelectValue placeholder={t.common.selectRole} />
                                     </SelectTrigger>
                                   </FormControl>
                                   <SelectContent>
@@ -225,7 +225,7 @@ export default function AuthPage() {
                             {registerMutation.isPending && (
                               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                             )}
-                            Register
+                            {t.common.register}
                           </Button>
                         </form>
                       </Form>
@@ -237,26 +237,26 @@ export default function AuthPage() {
 
             <div className="hidden lg:block flex-1">
               <div className="bg-white rounded-lg shadow-lg p-8 h-full">
-                <h2 className="text-3xl font-bold mb-6">Join Potenti'Elles</h2>
+                <h2 className="text-3xl font-bold mb-6">{t.auth.joinPotentielles}</h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  Empowering female entrepreneurs in Guinea through:
+                  {t.auth.empoweringStatement}
                 </p>
                 <ul className="space-y-4 text-gray-600">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    Business development support and mentoring
+                    {t.auth.supportMentoring}
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    Access to resources and training materials
+                    {t.auth.accessResources}
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    Connection with support organizations
+                    {t.auth.connectOrganizations}
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    Progress tracking and performance metrics
+                    {t.auth.progressTracking}
                   </li>
                 </ul>
               </div>
