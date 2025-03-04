@@ -33,18 +33,16 @@ export function RootLayout({ children }: RootLayoutProps) {
             >
               <Home className="h-5 w-5" />
             </Button>
+            <LanguageSwitcher />
             {user ? (
-              <>
-                <LanguageSwitcher />
-                <Button
-                  variant="ghost"
-                  onClick={() => logoutMutation.mutate()}
-                  disabled={logoutMutation.isPending}
-                >
-                  <LogOut className="h-4 w-4 mr-2" />
-                  {t.common.logout}
-                </Button>
-              </>
+              <Button
+                variant="ghost"
+                onClick={() => logoutMutation.mutate()}
+                disabled={logoutMutation.isPending}
+              >
+                <LogOut className="h-4 w-4 mr-2" />
+                {t.common.logout}
+              </Button>
             ) : (
               <>
                 <Button 
