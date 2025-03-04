@@ -53,6 +53,13 @@ export function RootLayout({ children }: RootLayoutProps) {
                 {/* Desktop menu */}
                 <div className="hidden md:flex items-center gap-4">
                   <Button 
+                    variant="ghost" 
+                    onClick={() => setLocation("/")}
+                  >
+                    <Home className="mr-2 h-4 w-4" />
+                    {t.common.home}
+                  </Button>
+                  <Button 
                     variant="ghost"
                     onClick={() => setLocation("/about")}
                   >
@@ -72,13 +79,6 @@ export function RootLayout({ children }: RootLayoutProps) {
                   >
                     <PhoneCall className="mr-2 h-4 w-4" />
                     {t.common.contact}
-                  </Button>
-                  <Button 
-                    variant="ghost" 
-                    size="icon"
-                    onClick={() => setLocation("/")}
-                  >
-                    <Home className="h-5 w-5" />
                   </Button>
                   <Button 
                     variant="ghost"

@@ -2,6 +2,7 @@ export const translations = {
   en: {
     common: {
       welcome: "Welcome to Potenti'Elles",
+      home: "Home",
       login: "Login",
       register: "Register",
       logout: "Logout",
@@ -182,6 +183,7 @@ export const translations = {
   fr: {
     common: {
       welcome: "Bienvenue sur Potenti'Elles",
+      home: "Accueil",
       login: "Connexion",
       register: "S'inscrire",
       logout: "Déconnexion",
