@@ -25,6 +25,13 @@ export const translations = {
       alreadyHaveAccount: "Already have an account?",
       dontHaveAccount: "Don't have an account?",
       forgotPassword: "Forgot your password?",
+      joinPotentielles: "Join Potenti'Elles Guinea",
+      empoweringStatement: "Supporting female entrepreneurs in Guinea through digital innovation and community empowerment",
+      supportMentoring: "Business development support and personalized mentoring",
+      accessResources: "Access to digital training and resources in local languages",
+      connectOrganizations: "Direct connection with APIP and support organizations",
+      progressTracking: "Track your business growth and impact metrics",
+      selectRole: "Select a role"
     },
     roles: {
       entrepreneur: "Entrepreneur",
@@ -78,6 +85,13 @@ export const translations = {
       alreadyHaveAccount: "Vous avez déjà un compte ?",
       dontHaveAccount: "Vous n'avez pas de compte ?",
       forgotPassword: "Mot de passe oublié ?",
+      joinPotentielles: "Rejoignez Potenti'Elles Guinée",
+      empoweringStatement: "Accompagnement des femmes entrepreneures en Guinée à travers l'innovation numérique et l'autonomisation communautaire",
+      supportMentoring: "Soutien au développement d'entreprise et mentorat personnalisé",
+      accessResources: "Accès à des formations et ressources numériques en langues locales",
+      connectOrganizations: "Connexion directe avec l'APIP et les organisations de soutien",
+      progressTracking: "Suivez la croissance et l'impact de votre entreprise",
+      selectRole: "Sélectionnez un rôle"
     },
     roles: {
       entrepreneur: "Entrepreneure",
