@@ -5,8 +5,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Language, translations } from "@/i18n/translations";
+import { Language } from "@/i18n/index";
 import { useLanguage } from "@/contexts/language-context";
+import en from "@/i18n/en";
+import fr from "@/i18n/fr";
+
+const translations = { en, fr };
 
 const languageFlags = {
   fr: "🇫🇷",

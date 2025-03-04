@@ -1,10 +1,15 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
-import { translations, Language, DEFAULT_LANGUAGE } from '@/i18n/translations';
+import { Language } from '@/i18n/index';
+import en from '@/i18n/en';
+import fr from '@/i18n/fr';
+
+const translations = { en, fr };
+export const DEFAULT_LANGUAGE: Language = "fr";
 
 type LanguageContextType = {
   currentLanguage: Language;
   setLanguage: (lang: Language) => void;
-  t: typeof translations.fr;
+  t: typeof en;
 };
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
