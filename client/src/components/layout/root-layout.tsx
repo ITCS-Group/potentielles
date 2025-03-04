@@ -47,13 +47,13 @@ export function RootLayout({ children }: RootLayoutProps) {
               <>
                 <Button 
                   variant="ghost"
-                  onClick={() => setLocation("/auth?tab=login")}
+                  onClick={() => setLocation("/login")}
                 >
                   {t.common.login}
                 </Button>
                 <Button 
                   variant="default"
-                  onClick={() => setLocation("/auth?tab=register")}
+                  onClick={() => setLocation("/register")}
                 >
                   {t.common.register}
                 </Button>

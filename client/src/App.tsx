@@ -9,7 +9,8 @@ import { RootLayout } from "@/components/layout/root-layout";
 
 import LandingPage from "@/pages/landing-page";
 import HomePage from "@/pages/home-page";
-import AuthPage from "@/pages/auth-page";
+import LoginPage from "@/pages/login-page";
+import RegisterPage from "@/pages/register-page";
 import DashboardPage from "@/pages/dashboard-page";
 import NotFound from "@/pages/not-found";
 
@@ -17,7 +18,8 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={LandingPage} />
-      <Route path="/auth" component={AuthPage} />
+      <Route path="/login" component={LoginPage} />
+      <Route path="/register" component={RegisterPage} />
       <ProtectedRoute 
         path="/home" 
         component={() => (
