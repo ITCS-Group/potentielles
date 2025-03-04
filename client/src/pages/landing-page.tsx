@@ -9,37 +9,36 @@ export default function LandingPage() {
 
   return (
     <RootLayout>
-      <div 
-        className="w-full min-h-[600px] relative bg-[#1E1E2E]"
-      >
-        <div className="absolute inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h1 className="text-5xl font-bold text-white mb-6">
-                  {t.common.welcome}
-                </h1>
-                <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                  {t.landing.heroText}
-                </p>
-                <Button 
-                  size="lg" 
-                  variant="secondary"
-                  className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90"
-                  onClick={() => setLocation("/register")}
-                >
-                  {t.landing.joinButton}
-                </Button>
-              </div>
-              <div className="hidden lg:block">
-                <div className="relative rounded-xl overflow-hidden shadow-2xl">
-                  <img 
-                    src="/images/entrepreneur.jpg"
-                    alt="Femme entrepreneure en Guinée"
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-              </div>
+      <div className="relative w-full min-h-[600px]">
+        {/* Image de fond */}
+        <div className="absolute inset-0">
+          <img 
+            src="/images/entrepreneur.jpg"
+            alt="Femme entrepreneure en Guinée"
+            className="w-full h-full object-cover"
+          />
+          {/* Overlay sombre pour la lisibilité */}
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+
+        {/* Contenu */}
+        <div className="relative z-10 h-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="max-w-2xl">
+              <h1 className="text-5xl font-bold text-white mb-6">
+                {t.common.welcome}
+              </h1>
+              <p className="text-xl text-white mb-8 leading-relaxed">
+                {t.landing.heroText}
+              </p>
+              <Button 
+                size="lg" 
+                variant="secondary"
+                className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90"
+                onClick={() => setLocation("/register")}
+              >
+                {t.landing.joinButton}
+              </Button>
             </div>
           </div>
         </div>
