@@ -34,7 +34,9 @@ import { Loader2 } from "lucide-react";
 
 export default function AuthPage() {
   const { user, loginMutation, registerMutation } = useAuth();
-  const [, setLocation] = useLocation();
+  const [location, setLocation] = useLocation();
+  const searchParams = new URLSearchParams(location.split("?")[1]);
+  const defaultTab = searchParams.get("tab") || "login";
 
   useEffect(() => {
     if (user) {
@@ -74,7 +76,7 @@ export default function AuthPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Tabs defaultValue="login">
+                  <Tabs defaultValue={defaultTab}>
                     <TabsList className="grid w-full grid-cols-2">
                       <TabsTrigger value="login">Login</TabsTrigger>
                       <TabsTrigger value="register">Register</TabsTrigger>
