@@ -7,6 +7,7 @@ import {
 import { insertUserSchema, User as SelectUser, InsertUser } from "@shared/schema";
 import { getQueryFn, apiRequest, queryClient } from "../lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { DEFAULT_LANGUAGE } from "@/i18n/translations";
 
 type AuthContextType = {
   user: SelectUser | null;
@@ -38,6 +39,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     },
     onSuccess: (user: SelectUser) => {
       queryClient.setQueryData(["/api/user"], user);
+      localStorage.setItem('selectedLanguage', user.language || DEFAULT_LANGUAGE);
     },
     onError: (error: Error) => {
       toast({
@@ -55,6 +57,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     },
     onSuccess: (user: SelectUser) => {
       queryClient.setQueryData(["/api/user"], user);
+      localStorage.setItem('selectedLanguage', user.language || DEFAULT_LANGUAGE);
     },
     onError: (error: Error) => {
       toast({
@@ -71,6 +74,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     },
     onSuccess: () => {
       queryClient.setQueryData(["/api/user"], null);
+      localStorage.setItem('selectedLanguage', DEFAULT_LANGUAGE);
     },
     onError: (error: Error) => {
       toast({

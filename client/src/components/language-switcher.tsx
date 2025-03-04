@@ -23,19 +23,26 @@ export function LanguageSwitcher() {
 
   const setLanguageMutation = useMutation({
     mutationFn: async (language: Language) => {
+      if (!localStorage.getItem('selectedLanguage')) {
+        localStorage.setItem('selectedLanguage', DEFAULT_LANGUAGE);
+      }
+      localStorage.setItem('selectedLanguage', language);
       await apiRequest("POST", "/api/user/language", { language });
       return language;
     },
     onSuccess: (language) => {
       queryClient.setQueryData(["/api/user/language"], language);
+      // Force a page reload to update all translations
+      window.location.reload();
     },
   });
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="icon" className="flex items-center gap-2">
           <Globe className="h-4 w-4" />
+          <span>{languageFlags[currentLanguage as Language]}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
