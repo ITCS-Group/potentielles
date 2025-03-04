@@ -34,7 +34,7 @@ export default function LandingPage() {
               <div className="hidden lg:block">
                 <div className="relative rounded-xl overflow-hidden shadow-2xl">
                   <img 
-                    src={"/image-pot.png"}
+                    src="/images/entrepreneur.jpg"
                     alt="Femme entrepreneure en Guinée"
                     className="w-full h-auto object-cover"
                   />
