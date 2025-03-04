@@ -73,8 +73,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       await apiRequest("POST", "/api/logout");
     },
     onSuccess: () => {
+      // Clear user data from cache
       queryClient.setQueryData(["/api/user"], null);
+      // Reset language to default
       localStorage.setItem('selectedLanguage', DEFAULT_LANGUAGE);
+      // Clear all queries from the cache to prevent stale data
+      queryClient.clear();
+      // Redirect to home page after successful logout
+      window.location.href = "/";
     },
     onError: (error: Error) => {
       toast({
