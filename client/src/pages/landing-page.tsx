@@ -37,9 +37,9 @@ export default function LandingPage() {
       <main className="bg-white">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Notre Impact</h2>
+            <h2 className="text-3xl font-bold mb-4">{t.landing.impact}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Nous accompagnons les femmes entrepreneures guinéennes dans leur développement professionnel
+              {t.landing.impactDesc}
             </p>
           </div>
 
@@ -68,15 +68,15 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="text-4xl font-bold text-primary mb-2">500+</div>
-                <div className="text-gray-600">Entrepreneures accompagnées</div>
+                <div className="text-gray-600">{t.landing.stats.entrepreneurs}</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-primary mb-2">50+</div>
-                <div className="text-gray-600">Projets financés</div>
+                <div className="text-gray-600">{t.landing.stats.projects}</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-primary mb-2">15</div>
-                <div className="text-gray-600">Régions couvertes</div>
+                <div className="text-gray-600">{t.landing.stats.regions}</div>
               </div>
             </div>
           </div>
