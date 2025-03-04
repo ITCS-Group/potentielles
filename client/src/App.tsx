@@ -23,6 +23,14 @@ import SurveysPage from "@/pages/surveys/surveys-page";
 import ResourcesPage from "@/pages/resources-page";
 import ProfilePage from "@/pages/profile-page";
 
+// Private Pages - APIP Admin
+import AdminDashboardPage from "@/pages/admin/dashboard-page";
+import UserManagementPage from "@/pages/admin/users-page";
+import ProjectReviewPage from "@/pages/admin/projects-page";
+import AdminSurveysPage from "@/pages/admin/surveys-page";
+import AnalyticsPage from "@/pages/admin/analytics-page";
+import SettingsPage from "@/pages/admin/settings-page";
+
 function Router() {
   return (
     <Switch>
@@ -41,6 +49,14 @@ function Router() {
       <ProtectedRoute path="/surveys" component={SurveysPage} />
       <ProtectedRoute path="/resources" component={ResourcesPage} />
       <ProtectedRoute path="/profile" component={ProfilePage} />
+
+      {/* APIP Admin Routes */}
+      <ProtectedRoute path="/admin" component={AdminDashboardPage} />
+      <ProtectedRoute path="/admin/users" component={UserManagementPage} />
+      <ProtectedRoute path="/admin/projects" component={ProjectReviewPage} />
+      <ProtectedRoute path="/admin/surveys" component={AdminSurveysPage} />
+      <ProtectedRoute path="/admin/reports" component={AnalyticsPage} />
+      <ProtectedRoute path="/admin/settings" component={SettingsPage} />
 
       {/* 404 Route */}
       <Route component={NotFound} />
