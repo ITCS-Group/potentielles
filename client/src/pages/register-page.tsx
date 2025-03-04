@@ -39,7 +39,7 @@ export default function RegisterPage() {
 
   useEffect(() => {
     if (user) {
-      setLocation("/home");
+      setLocation("/");
     }
   }, [user, setLocation]);
 
@@ -63,7 +63,7 @@ export default function RegisterPage() {
               <Card className="w-full">
                 <CardHeader>
                   <CardTitle>{t.auth.registerTitle}</CardTitle>
-                  <CardDescription>{t.common.welcome}</CardDescription>
+                  <CardDescription>{t.auth.demoAccounts}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Form {...form}>
@@ -137,7 +137,7 @@ export default function RegisterPage() {
                             >
                               <FormControl>
                                 <SelectTrigger>
-                                  <SelectValue placeholder={t.common.selectRole} />
+                                  <SelectValue placeholder={t.auth.selectRole} />
                                 </SelectTrigger>
                               </FormControl>
                               <SelectContent>

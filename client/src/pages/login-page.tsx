@@ -50,7 +50,7 @@ export default function LoginPage() {
               <Card className="w-full">
                 <CardHeader>
                   <CardTitle>{t.auth.loginTitle}</CardTitle>
-                  <CardDescription>{t.common.welcome}</CardDescription>
+                  <CardDescription>{t.auth.demoAccounts}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Form {...form}>

@@ -52,7 +52,7 @@ export default function NewProjectPage() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Nom du projet</FormLabel>
+                      <FormLabel>{t.projects.name}</FormLabel>
                       <FormControl>
                         <Input {...field} />
                       </FormControl>
@@ -65,7 +65,7 @@ export default function NewProjectPage() {
                   name="description"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Description</FormLabel>
+                      <FormLabel>{t.projects.description}</FormLabel>
                       <FormControl>
                         <Textarea {...field} />
                       </FormControl>

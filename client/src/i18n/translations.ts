@@ -156,6 +156,19 @@ export const translations = {
       newSurvey: "New Survey",
       completeSurvey: "Complete Survey",
       pendingSurveys: "Pending Surveys"
+    },
+    projects: {
+      name: "Project Name",
+      description: "Description",
+      create: "Create Project",
+      edit: "Edit Project",
+      delete: "Delete Project",
+      view: "View Project",
+      list: "Projects List",
+      details: "Project Details",
+      status: "Status",
+      createdAt: "Created At",
+      updatedAt: "Updated At"
     }
   },
   fr: {
@@ -315,6 +328,19 @@ export const translations = {
       newSurvey: "Nouvelle Enquête",
       completeSurvey: "Compléter l'enquête",
       pendingSurveys: "Enquêtes en attente"
+    },
+    projects: {
+      name: "Nom du projet",
+      description: "Description",
+      create: "Créer un projet",
+      edit: "Modifier le projet",
+      delete: "Supprimer le projet",
+      view: "Voir le projet",
+      list: "Liste des projets",
+      details: "Détails du projet",
+      status: "Statut",
+      createdAt: "Créé le",
+      updatedAt: "Mis à jour le"
     }
   }
 };
