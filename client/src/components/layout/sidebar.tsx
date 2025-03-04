@@ -27,6 +27,7 @@ type MenuItem = {
   label: string;
   icon: JSX.Element;
   path: string;
+  showWhenLoggedIn?: boolean;
 };
 
 type RoleBasedMenus = {
@@ -47,31 +48,37 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         label: t.dashboard.overview,
         icon: <Home className="h-5 w-5" />,
         path: "/dashboard",
+        showWhenLoggedIn: true,
       },
       {
         label: t.dashboard.projects,
         icon: <FileText className="h-5 w-5" />,
         path: "/projects",
+        showWhenLoggedIn: true,
       },
       {
         label: t.common.newProject,
         icon: <FileText className="h-5 w-5" />,
         path: "/projects/new",
+        showWhenLoggedIn: true,
       },
       {
         label: t.dashboard.surveys,
         icon: <ClipboardList className="h-5 w-5" />,
         path: "/surveys",
+        showWhenLoggedIn: true,
       },
       {
         label: t.dashboard.resources,
         icon: <BookOpen className="h-5 w-5" />,
         path: "/resources",
+        showWhenLoggedIn: true,
       },
       {
         label: t.common.profile,
         icon: <User className="h-5 w-5" />,
         path: "/profile",
+        showWhenLoggedIn: true,
       },
     ],
     [UserRole.APIP]: [
@@ -79,31 +86,37 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         label: t.dashboard.overview,
         icon: <Home className="h-5 w-5" />,
         path: "/admin",
+        showWhenLoggedIn: true,
       },
       {
         label: t.admin.users,
         icon: <Users className="h-5 w-5" />,
         path: "/admin/users",
+        showWhenLoggedIn: true,
       },
       {
         label: t.admin.projects,
         icon: <FileText className="h-5 w-5" />,
         path: "/admin/projects",
+        showWhenLoggedIn: true,
       },
       {
         label: t.admin.surveys,
         icon: <ClipboardList className="h-5 w-5" />,
         path: "/admin/surveys",
+        showWhenLoggedIn: true,
       },
       {
         label: t.admin.analytics,
         icon: <BarChart3 className="h-5 w-5" />,
         path: "/admin/reports",
+        showWhenLoggedIn: true,
       },
       {
         label: t.admin.settings,
         icon: <Settings className="h-5 w-5" />,
         path: "/admin/settings",
+        showWhenLoggedIn: true,
       },
     ],
     [UserRole.SupportOrg]: [
@@ -111,16 +124,19 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         label: t.dashboard.overview,
         icon: <Home className="h-5 w-5" />,
         path: "/mentors",
+        showWhenLoggedIn: true,
       },
       {
         label: t.mentors.mentees,
         icon: <Users className="h-5 w-5" />,
         path: "/mentors/mentees",
+        showWhenLoggedIn: true,
       },
       {
         label: t.mentors.chat,
         icon: <MessageSquare className="h-5 w-5" />,
         path: "/mentors/chat",
+        showWhenLoggedIn: true,
       },
     ],
     [UserRole.Donor]: [
@@ -128,16 +144,19 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         label: t.dashboard.overview,
         icon: <Home className="h-5 w-5" />,
         path: "/donors",
+        showWhenLoggedIn: true,
       },
       {
         label: t.donors.reports,
         icon: <BarChart3 className="h-5 w-5" />,
         path: "/donors/reports",
+        showWhenLoggedIn: true,
       },
       {
         label: t.donors.success,
         icon: <FileText className="h-5 w-5" />,
         path: "/donors/success",
+        showWhenLoggedIn: true,
       },
     ],
   };
@@ -175,17 +194,19 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         </div>
 
         <nav className="p-4 space-y-2">
-          {roleBasedMenus[user.role].map((item) => (
-            <Button
-              key={item.path}
-              variant="ghost"
-              className="w-full justify-start gap-3"
-              onClick={() => setLocation(item.path)}
-            >
-              {item.icon}
-              {item.label}
-            </Button>
-          ))}
+          {roleBasedMenus[user.role]
+            .filter((item) => !item.showWhenLoggedIn || user)
+            .map((item) => (
+              <Button
+                key={item.path}
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => setLocation(item.path)}
+              >
+                {item.icon}
+                {item.label}
+              </Button>
+            ))}
         </nav>
       </div>
     </>
