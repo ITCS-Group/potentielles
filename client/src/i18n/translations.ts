@@ -18,6 +18,9 @@ export const translations = {
       loading: "Loading...",
       error: "An error occurred",
       success: "Success!",
+      newProject: "New Project",
+      profile: "Profile",
+      about: "About"
     },
     auth: {
       loginTitle: "Login to your account",
@@ -50,6 +53,22 @@ export const translations = {
       surveys: "Surveys",
       activities: "Activities",
       metrics: "Metrics",
+      resources: "Resources"
+    },
+    admin: {
+      users: "User Management",
+      projects: "Project Review",
+      surveys: "Surveys Management",
+      analytics: "Analytics",
+      settings: "Settings"
+    },
+    mentors: {
+      mentees: "My Mentees",
+      chat: "Chat"
+    },
+    donors: {
+      reports: "Reports",
+      success: "Success Stories"
     },
     features: {
       projectManagement: "Project Management",
@@ -62,7 +81,22 @@ export const translations = {
     landing: {
       heroText: "Join our platform dedicated to supporting and empowering female entrepreneurs in Guinea. Track your progress, connect with support organizations, and grow your business.",
       joinButton: "Join Now",
-    }
+    },
+    about: {
+      title: "About Potenti'Elles",
+      description: "Potenti'Elles is a digital platform dedicated to empowering female entrepreneurs in Guinea through comprehensive digital support and resources. Our mission is to create an inclusive environment where women can thrive in business.",
+    },
+    contact: {
+      title: "Contact Us",
+      description: "Get in touch with the Potenti'Elles team. We're here to help you succeed in your entrepreneurial journey.",
+      email: "contact@potentielles.org",
+      phone: "+224 XX XX XX XX",
+      address: "Conakry, Guinea",
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      description: "Find answers to common questions about Potenti'Elles platform and services.",
+    },
   },
   fr: {
     common: {
@@ -83,6 +117,9 @@ export const translations = {
       loading: "Chargement...",
       error: "Une erreur est survenue",
       success: "Succès !",
+      newProject: "Nouveau Projet",
+      profile: "Profil",
+      about: "À propos"
     },
     auth: {
       loginTitle: "Connectez-vous à votre compte",
@@ -115,6 +152,22 @@ export const translations = {
       surveys: "Enquêtes",
       activities: "Activités",
       metrics: "Métriques",
+      resources: "Ressources"
+    },
+    admin: {
+      users: "Gestion des utilisateurs",
+      projects: "Révision des projets",
+      surveys: "Gestion des enquêtes",
+      analytics: "Analyses",
+      settings: "Paramètres"
+    },
+    mentors: {
+      mentees: "Mes mentorés",
+      chat: "Discussion"
+    },
+    donors: {
+      reports: "Rapports",
+      success: "Histoires de réussite"
     },
     features: {
       projectManagement: "Gestion de Projets",
@@ -127,7 +180,22 @@ export const translations = {
     landing: {
       heroText: "Rejoignez notre plateforme dédiée au soutien et à l'autonomisation des femmes entrepreneures en Guinée. Suivez vos progrès, connectez-vous avec des organisations de soutien et développez votre entreprise.",
       joinButton: "Rejoindre",
-    }
+    },
+    about: {
+      title: "À propos de Potenti'Elles",
+      description: "Potenti'Elles est une plateforme numérique dédiée à l'autonomisation des femmes entrepreneures en Guinée à travers un soutien numérique complet et des ressources. Notre mission est de créer un environnement inclusif où les femmes peuvent s'épanouir dans les affaires.",
+    },
+    contact: {
+      title: "Contactez-nous",
+      description: "Prenez contact avec l'équipe Potenti'Elles. Nous sommes là pour vous aider à réussir dans votre parcours entrepreneurial.",
+      email: "contact@potentielles.org",
+      phone: "+224 XX XX XX XX",
+      address: "Conakry, Guinée",
+    },
+    faq: {
+      title: "Questions Fréquentes",
+      description: "Trouvez les réponses aux questions courantes sur la plateforme et les services de Potenti'Elles.",
+    },
   },
 };
 

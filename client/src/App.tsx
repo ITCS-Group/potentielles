@@ -7,35 +7,89 @@ import { LanguageProvider } from "./contexts/language-context";
 import { ProtectedRoute } from "./lib/protected-route";
 import { RootLayout } from "@/components/layout/root-layout";
 
+// Public Pages
 import LandingPage from "@/pages/landing-page";
-import HomePage from "@/pages/home-page";
+import AboutPage from "@/pages/about-page";
+import ContactPage from "@/pages/contact-page";
+import FaqPage from "@/pages/faq-page";
 import LoginPage from "@/pages/login-page";
 import RegisterPage from "@/pages/register-page";
-import DashboardPage from "@/pages/dashboard-page";
 import NotFound from "@/pages/not-found";
+
+// Private Pages - Entrepreneur
+import DashboardPage from "@/pages/dashboard-page";
+import ProjectsPage from "@/pages/projects/projects-page";
+import NewProjectPage from "@/pages/projects/new-project-page";
+import SurveysPage from "@/pages/surveys/surveys-page";
+import ResourcesPage from "@/pages/resources-page";
+import ProfilePage from "@/pages/profile-page";
+
+// Private Pages - APIP Admin
+import AdminDashboardPage from "@/pages/admin/dashboard-page";
+import UserManagementPage from "@/pages/admin/users-page";
+import ProjectReviewPage from "@/pages/admin/projects-page";
+import AdminSurveysPage from "@/pages/admin/surveys-page";
+import AnalyticsPage from "@/pages/admin/analytics-page";
+import SettingsPage from "@/pages/admin/settings-page";
+
+// Private Pages - M&E Team
+import MEDashboardPage from "@/pages/me/dashboard-page";
+import ImpactPage from "@/pages/me/impact-page";
+import ExportPage from "@/pages/me/export-page";
+
+// Private Pages - Mentors
+import MentorDashboardPage from "@/pages/mentors/dashboard-page";
+import MenteesPage from "@/pages/mentors/mentees-page";
+import ChatPage from "@/pages/mentors/chat-page";
+
+// Private Pages - Donors
+import DonorDashboardPage from "@/pages/donors/dashboard-page";
+import ReportsPage from "@/pages/donors/reports-page";
+import SuccessStoriesPage from "@/pages/donors/success-page";
 
 function Router() {
   return (
     <Switch>
+      {/* Public Routes */}
       <Route path="/" component={LandingPage} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/contact" component={ContactPage} />
+      <Route path="/faq" component={FaqPage} />
       <Route path="/login" component={LoginPage} />
       <Route path="/register" component={RegisterPage} />
-      <ProtectedRoute 
-        path="/home" 
-        component={() => (
-          <RootLayout>
-            <HomePage />
-          </RootLayout>
-        )} 
-      />
-      <ProtectedRoute 
-        path="/dashboard" 
-        component={() => (
-          <RootLayout>
-            <DashboardPage />
-          </RootLayout>
-        )} 
-      />
+
+      {/* Protected Routes */}
+      <ProtectedRoute path="/dashboard" component={DashboardPage} />
+      <ProtectedRoute path="/projects" component={ProjectsPage} />
+      <ProtectedRoute path="/projects/new" component={NewProjectPage} />
+      <ProtectedRoute path="/surveys" component={SurveysPage} />
+      <ProtectedRoute path="/resources" component={ResourcesPage} />
+      <ProtectedRoute path="/profile" component={ProfilePage} />
+
+      {/* APIP Admin Routes */}
+      <ProtectedRoute path="/admin" component={AdminDashboardPage} />
+      <ProtectedRoute path="/admin/users" component={UserManagementPage} />
+      <ProtectedRoute path="/admin/projects" component={ProjectReviewPage} />
+      <ProtectedRoute path="/admin/surveys" component={AdminSurveysPage} />
+      <ProtectedRoute path="/admin/reports" component={AnalyticsPage} />
+      <ProtectedRoute path="/admin/settings" component={SettingsPage} />
+
+      {/* M&E Team Routes */}
+      <ProtectedRoute path="/me" component={MEDashboardPage} />
+      <ProtectedRoute path="/me/impact" component={ImpactPage} />
+      <ProtectedRoute path="/me/export" component={ExportPage} />
+
+      {/* Mentors Routes */}
+      <ProtectedRoute path="/mentors" component={MentorDashboardPage} />
+      <ProtectedRoute path="/mentors/mentees" component={MenteesPage} />
+      <ProtectedRoute path="/mentors/chat" component={ChatPage} />
+
+      {/* Donors Routes */}
+      <ProtectedRoute path="/donors" component={DonorDashboardPage} />
+      <ProtectedRoute path="/donors/reports" component={ReportsPage} />
+      <ProtectedRoute path="/donors/success" component={SuccessStoriesPage} />
+
+      {/* 404 Route */}
       <Route component={NotFound} />
     </Switch>
   );
@@ -46,7 +100,9 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
         <AuthProvider>
-          <Router />
+          <RootLayout>
+            <Router />
+          </RootLayout>
           <Toaster />
         </AuthProvider>
       </LanguageProvider>

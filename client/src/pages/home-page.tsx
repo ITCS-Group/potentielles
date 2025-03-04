@@ -11,12 +11,27 @@ import {
   Users,
 } from "lucide-react";
 
+type CardInfo = {
+  title: string;
+  description: string;
+  icon: JSX.Element;
+  image: string;
+  path: string;
+};
+
+type RoleBasedCards = {
+  [UserRole.Entrepreneur]: CardInfo[];
+  [UserRole.APIP]: CardInfo[];
+  [UserRole.SupportOrg]: CardInfo[];
+  [UserRole.Donor]: CardInfo[];
+};
+
 export default function HomePage() {
   const { user } = useAuth();
   const [, setLocation] = useLocation();
   const { t } = useLanguage();
 
-  const roleBasedCards = {
+  const roleBasedCards: RoleBasedCards = {
     [UserRole.Entrepreneur]: [
       {
         title: t.dashboard.projects,
@@ -39,14 +54,14 @@ export default function HomePage() {
         description: t.features.progress,
         icon: <BarChart3 className="h-6 w-6" />,
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-        path: "/dashboard",
+        path: "/admin",
       },
       {
         title: t.roles.entrepreneur,
         description: t.features.support,
         icon: <Users className="h-6 w-6" />,
         image: "https://images.unsplash.com/photo-1487546331507-fcf8a5d27ab3",
-        path: "/entrepreneurs",
+        path: "/admin/users",
       },
     ],
     [UserRole.SupportOrg]: [
@@ -55,14 +70,14 @@ export default function HomePage() {
         description: t.features.support,
         icon: <Users className="h-6 w-6" />,
         image: "https://images.unsplash.com/photo-1474888505161-1ace11ae3d81",
-        path: "/dashboard",
+        path: "/mentors",
       },
       {
         title: t.dashboard.surveys,
         description: t.features.progressDesc,
         icon: <ClipboardList className="h-6 w-6" />,
         image: "https://images.unsplash.com/photo-1659018966825-43297e655ccf",
-        path: "/surveys/create",
+        path: "/mentors/mentees",
       },
     ],
     [UserRole.Donor]: [
@@ -71,7 +86,7 @@ export default function HomePage() {
         description: t.features.progress,
         icon: <BarChart3 className="h-6 w-6" />,
         image: "https://images.unsplash.com/photo-1634807010323-4309f645e5a4",
-        path: "/dashboard",
+        path: "/donors",
       },
     ],
   };
@@ -81,9 +96,9 @@ export default function HomePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {user &&
-            roleBasedCards[user.role].map((card, index) => (
+            roleBasedCards[user.role].map((card, idx) => (
               <Card
-                key={index}
+                key={idx}
                 className="cursor-pointer hover:shadow-lg transition-shadow"
                 onClick={() => setLocation(card.path)}
               >

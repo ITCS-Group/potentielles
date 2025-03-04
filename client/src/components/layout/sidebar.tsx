@@ -9,7 +9,12 @@ import {
   FileText,
   ClipboardList,
   Users,
+  Settings,
+  MessageSquare,
+  BookOpen,
+  User,
   X,
+  Home,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -18,53 +23,121 @@ interface SidebarProps {
   onClose: () => void;
 }
 
+type MenuItem = {
+  label: string;
+  icon: JSX.Element;
+  path: string;
+};
+
+type RoleBasedMenus = {
+  [UserRole.Entrepreneur]: MenuItem[];
+  [UserRole.APIP]: MenuItem[];
+  [UserRole.SupportOrg]: MenuItem[];
+  [UserRole.Donor]: MenuItem[];
+};
+
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const { user } = useAuth();
   const [, setLocation] = useLocation();
   const { t } = useLanguage();
 
-  const roleBasedMenus = {
+  const roleBasedMenus: RoleBasedMenus = {
     [UserRole.Entrepreneur]: [
+      {
+        label: t.dashboard.overview,
+        icon: <Home className="h-5 w-5" />,
+        path: "/dashboard",
+      },
       {
         label: t.dashboard.projects,
         icon: <FileText className="h-5 w-5" />,
         path: "/projects",
       },
       {
+        label: t.common.newProject,
+        icon: <FileText className="h-5 w-5" />,
+        path: "/projects/new",
+      },
+      {
         label: t.dashboard.surveys,
         icon: <ClipboardList className="h-5 w-5" />,
         path: "/surveys",
+      },
+      {
+        label: t.dashboard.resources,
+        icon: <BookOpen className="h-5 w-5" />,
+        path: "/resources",
+      },
+      {
+        label: t.common.profile,
+        icon: <User className="h-5 w-5" />,
+        path: "/profile",
       },
     ],
     [UserRole.APIP]: [
       {
         label: t.dashboard.overview,
-        icon: <BarChart3 className="h-5 w-5" />,
-        path: "/dashboard",
+        icon: <Home className="h-5 w-5" />,
+        path: "/admin",
       },
       {
-        label: t.roles.entrepreneur,
+        label: t.admin.users,
         icon: <Users className="h-5 w-5" />,
-        path: "/entrepreneurs",
+        path: "/admin/users",
+      },
+      {
+        label: t.admin.projects,
+        icon: <FileText className="h-5 w-5" />,
+        path: "/admin/projects",
+      },
+      {
+        label: t.admin.surveys,
+        icon: <ClipboardList className="h-5 w-5" />,
+        path: "/admin/surveys",
+      },
+      {
+        label: t.admin.analytics,
+        icon: <BarChart3 className="h-5 w-5" />,
+        path: "/admin/reports",
+      },
+      {
+        label: t.admin.settings,
+        icon: <Settings className="h-5 w-5" />,
+        path: "/admin/settings",
       },
     ],
     [UserRole.SupportOrg]: [
       {
         label: t.dashboard.overview,
-        icon: <BarChart3 className="h-5 w-5" />,
-        path: "/dashboard",
+        icon: <Home className="h-5 w-5" />,
+        path: "/mentors",
       },
       {
-        label: t.dashboard.surveys,
-        icon: <ClipboardList className="h-5 w-5" />,
-        path: "/surveys/create",
+        label: t.mentors.mentees,
+        icon: <Users className="h-5 w-5" />,
+        path: "/mentors/mentees",
+      },
+      {
+        label: t.mentors.chat,
+        icon: <MessageSquare className="h-5 w-5" />,
+        path: "/mentors/chat",
       },
     ],
     [UserRole.Donor]: [
       {
         label: t.dashboard.overview,
+        icon: <Home className="h-5 w-5" />,
+        path: "/donors",
+      },
+      {
+        label: t.donors.reports,
         icon: <BarChart3 className="h-5 w-5" />,
-        path: "/dashboard",
+        path: "/donors/reports",
+      },
+      {
+        label: t.donors.success,
+        icon: <FileText className="h-5 w-5" />,
+        path: "/donors/success",
       },
     ],
   };
