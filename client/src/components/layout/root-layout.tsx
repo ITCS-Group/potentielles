@@ -45,13 +45,15 @@ export function RootLayout({ children }: RootLayoutProps) {
           </div>
 
           <div className="flex items-center gap-4">
-            <Button 
-              variant="ghost" 
-              size="icon"
-              onClick={() => setLocation("/")}
-            >
-              <Home className="h-5 w-5" />
-            </Button>
+            {!user && (
+              <Button 
+                variant="ghost" 
+                size="icon"
+                onClick={() => setLocation("/")}
+              >
+                <Home className="h-5 w-5" />
+              </Button>
+            )}
             <LanguageSwitcher />
             {user ? (
               <Button
