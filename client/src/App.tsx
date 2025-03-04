@@ -29,7 +29,7 @@ import UserManagementPage from "@/pages/admin/users-page";
 import ProjectReviewPage from "@/pages/admin/projects-page";
 import AdminSurveysPage from "@/pages/admin/surveys-page";
 import AnalyticsPage from "@/pages/admin/analytics-page";
-import SettingsPage from "@/pages/admin/settings-page";
+import SettingsPage from "@/pages/admin/settings-page"; // Added import
 
 // Private Pages - Support Organization
 import MentorDashboardPage from "@/pages/mentors/dashboard-page";
@@ -78,6 +78,7 @@ function Router() {
       <ProtectedRoute path="/surveys" component={SurveysPage} />
       <ProtectedRoute path="/resources" component={ResourcesPage} />
       <ProtectedRoute path="/profile" component={ProfilePage} />
+      <ProtectedRoute path="/settings" component={SettingsPage} /> {/* Added route */}
 
       {/* APIP Admin Routes */}
       <ProtectedRoute path="/admin" component={AdminDashboardPage} />
