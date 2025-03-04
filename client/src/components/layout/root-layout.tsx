@@ -25,11 +25,7 @@ export function RootLayout({ children }: RootLayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleLogout = () => {
-    logoutMutation.mutate(undefined, {
-      onSuccess: () => {
-        setLocation("/");
-      }
-    });
+    logoutMutation.mutate(undefined);
   };
 
   return (
@@ -53,13 +49,33 @@ export function RootLayout({ children }: RootLayoutProps) {
 
           <div className="flex items-center gap-4">
             {!user && (
-              <Button 
-                variant="ghost" 
-                size="icon"
-                onClick={() => setLocation("/")}
-              >
-                <Home className="h-5 w-5" />
-              </Button>
+              <>
+                <Button 
+                  variant="ghost"
+                  onClick={() => setLocation("/about")}
+                >
+                  {t.common.about}
+                </Button>
+                <Button 
+                  variant="ghost"
+                  onClick={() => setLocation("/faq")}
+                >
+                  {t.common.faq}
+                </Button>
+                <Button 
+                  variant="ghost"
+                  onClick={() => setLocation("/contact")}
+                >
+                  {t.common.contact}
+                </Button>
+                <Button 
+                  variant="ghost" 
+                  size="icon"
+                  onClick={() => setLocation("/")}
+                >
+                  <Home className="h-5 w-5" />
+                </Button>
+              </>
             )}
             <LanguageSwitcher />
             {user ? (

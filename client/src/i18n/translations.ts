@@ -21,12 +21,43 @@ export const translations = {
       newProject: "New Project",
       profile: "Profile",
       about: "About",
+      faq: "FAQ",
+      contact: "Contact",
       menu: "Menu",
       userMenu: {
         profile: "Profile",
         settings: "Settings",
         users: "Users",
         logout: "Logout"
+      }
+    },
+    about: {
+      title: "About Potenti'Elles",
+      description: "Potenti'Elles is a digital platform dedicated to empowering female entrepreneurs in Guinea through comprehensive digital support and resources. Our mission is to create an inclusive environment where women can thrive in business."
+    },
+    contact: {
+      title: "Contact Us",
+      description: "Get in touch with the Potenti'Elles team. We're here to help you succeed in your entrepreneurial journey.",
+      email: "contact@potentielles.org",
+      phone: "+224 XX XX XX XX",
+      address: "Conakry, Guinea",
+      send: "Send Message",
+      success: "Message sent successfully!",
+      form: {
+        name: "Your Name",
+        email: "Your Email",
+        message: "Your Message",
+        subject: "Subject"
+      }
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      description: "Find answers to common questions about Potenti'Elles platform and services.",
+      questions: {
+        account: "How do I create an account?",
+        accountAnswer: "Click the 'Register' button in the top right of the homepage. Fill out the form with your information and select your role.",
+        roles: "What are the different roles on the platform?",
+        rolesAnswer: "The platform offers different roles: Entrepreneur, APIP, Support Organization, and Donor. Each role has specific features tailored to their needs."
       }
     },
     auth: {
@@ -112,35 +143,6 @@ export const translations = {
         regions: "Regions covered"
       }
     },
-    about: {
-      title: "About Potenti'Elles",
-      description: "Potenti'Elles is a digital platform dedicated to empowering female entrepreneurs in Guinea through comprehensive digital support and resources. Our mission is to create an inclusive environment where women can thrive in business."
-    },
-    contact: {
-      title: "Contact Us",
-      description: "Get in touch with the Potenti'Elles team. We're here to help you succeed in your entrepreneurial journey.",
-      email: "contact@potentielles.org",
-      phone: "+224 XX XX XX XX",
-      address: "Conakry, Guinea",
-      send: "Send Message",
-      success: "Message sent successfully!",
-      form: {
-        name: "Your Name",
-        email: "Your Email",
-        message: "Your Message",
-        subject: "Subject"
-      }
-    },
-    faq: {
-      title: "Frequently Asked Questions",
-      description: "Find answers to common questions about Potenti'Elles platform and services.",
-      questions: {
-        account: "How do I create an account?",
-        accountAnswer: "Click the 'Register' button in the top right of the homepage. Fill out the form with your information and select your role.",
-        roles: "What are the different roles on the platform?",
-        rolesAnswer: "The platform offers different roles: Entrepreneur, APIP, Support Organization, and Donor. Each role has specific features tailored to their needs."
-      }
-    },
     resources: {
       title: "Resources",
       entrepreneurshipGuide: {
@@ -199,12 +201,43 @@ export const translations = {
       newProject: "Nouveau Projet",
       profile: "Profil",
       about: "À propos",
+      faq: "FAQ",
+      contact: "Contact",
       menu: "Menu",
       userMenu: {
         profile: "Profil",
         settings: "Paramètres",
         users: "Utilisateurs",
         logout: "Déconnexion"
+      }
+    },
+    about: {
+      title: "À propos de Potenti'Elles",
+      description: "Potenti'Elles est une plateforme numérique dédiée à l'autonomisation des femmes entrepreneures en Guinée à travers un soutien numérique complet et des ressources. Notre mission est de créer un environnement inclusif où les femmes peuvent s'épanouir dans les affaires."
+    },
+    contact: {
+      title: "Contactez-nous",
+      description: "Prenez contact avec l'équipe Potenti'Elles. Nous sommes là pour vous aider à réussir dans votre parcours entrepreneurial.",
+      email: "contact@potentielles.org",
+      phone: "+224 XX XX XX XX",
+      address: "Conakry, Guinée",
+      send: "Envoyer le message",
+      success: "Message envoyé avec succès !",
+      form: {
+        name: "Votre nom",
+        email: "Votre email",
+        message: "Votre message",
+        subject: "Sujet"
+      }
+    },
+    faq: {
+      title: "Questions Fréquentes",
+      description: "Trouvez les réponses aux questions courantes sur la plateforme et les services de Potenti'Elles.",
+      questions: {
+        account: "Comment créer un compte ?",
+        accountAnswer: "Cliquez sur le bouton 'S'inscrire' en haut à droite de la page d'accueil. Remplissez le formulaire avec vos informations et choisissez votre rôle.",
+        roles: "Quels sont les différents rôles sur la plateforme ?",
+        rolesAnswer: "La plateforme propose différents rôles : Entrepreneure, APIP, Organisation de soutien, et Donateur. Chaque rôle a des fonctionnalités spécifiques adaptées à ses besoins."
       }
     },
     auth: {
@@ -288,35 +321,6 @@ export const translations = {
         entrepreneurs: "Entrepreneures accompagnées",
         projects: "Projets financés",
         regions: "Régions couvertes"
-      }
-    },
-    about: {
-      title: "À propos de Potenti'Elles",
-      description: "Potenti'Elles est une plateforme numérique dédiée à l'autonomisation des femmes entrepreneures en Guinée à travers un soutien numérique complet et des ressources. Notre mission est de créer un environnement inclusif où les femmes peuvent s'épanouir dans les affaires."
-    },
-    contact: {
-      title: "Contactez-nous",
-      description: "Prenez contact avec l'équipe Potenti'Elles. Nous sommes là pour vous aider à réussir dans votre parcours entrepreneurial.",
-      email: "contact@potentielles.org",
-      phone: "+224 XX XX XX XX",
-      address: "Conakry, Guinée",
-      send: "Envoyer le message",
-      success: "Message envoyé avec succès !",
-      form: {
-        name: "Votre nom",
-        email: "Votre email",
-        message: "Votre message",
-        subject: "Sujet"
-      }
-    },
-    faq: {
-      title: "Questions Fréquentes",
-      description: "Trouvez les réponses aux questions courantes sur la plateforme et les services de Potenti'Elles.",
-      questions: {
-        account: "Comment créer un compte ?",
-        accountAnswer: "Cliquez sur le bouton 'S'inscrire' en haut à droite de la page d'accueil. Remplissez le formulaire avec vos informations et choisissez votre rôle.",
-        roles: "Quels sont les différents rôles sur la plateforme ?",
-        rolesAnswer: "La plateforme propose différents rôles : Entrepreneure, APIP, Organisation de soutien, et Donateur. Chaque rôle a des fonctionnalités spécifiques adaptées à ses besoins."
       }
     },
     resources: {
