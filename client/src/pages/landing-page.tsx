@@ -59,12 +59,13 @@ export default function LandingPage() {
               {/* Carte avec marqueur */}
               <div className="w-full max-w-3xl h-64 rounded-lg overflow-hidden border border-gray-200">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.904484742846!2d-13.720721!3d9.535194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf1cd9de6a42c3a7%3A0x6d7f1b0f1b0f1b0f!2sAPIP%20-%20Agence%20de%20Promotion%20des%20Investissements%20Priv%C3%A9s!5e0!3m2!1sfr!2sgn!4v1620000000000!5m2!1sfr!2sgn"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.9928464666627!2d-13.722397424827583!3d9.534859982430287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf1cd9de6a42c3a7%3A0x6c7f1b0f1b0f1b0f!2sAgence%20Guin%C3%A9enne%20Pour%20La%20Promotion%20De%20l&#39;Emploi!5e0!3m2!1sfr!2sfr!4v1709590144561!5m2!1sfr!2sfr"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
               <p className="text-xl text-gray-600 max-w-3xl">
