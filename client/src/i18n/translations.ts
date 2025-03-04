@@ -20,7 +20,8 @@ export const translations = {
       success: "Success!",
       newProject: "New Project",
       profile: "Profile",
-      about: "About"
+      about: "About",
+      menu: "Menu"
     },
     auth: {
       loginTitle: "Login to your account",
@@ -70,7 +71,10 @@ export const translations = {
       mentees: "My Mentees",
       chat: "Chat",
       totalMentees: "Number of mentees",
-      messagePreview: "Chat feature coming soon"
+      messagePreview: "Chat feature coming soon",
+      communication: "Communication",
+      progress: "Progress Tracking",
+      schedule: "Schedule a Meeting"
     },
     donors: {
       reports: "Reports",
@@ -79,7 +83,9 @@ export const translations = {
       totalFunded: "Total projects funded",
       impactReports: "Project Impact Reports",
       reportsDesc: "Detailed impact reports will be available here",
-      storiesDesc: "Success stories from our entrepreneurs will be shared here"
+      storiesDesc: "Success stories from our entrepreneurs will be shared here",
+      donationHistory: "Donation History",
+      projectTracking: "Project Tracking"
     },
     features: {
       projectManagement: "Project Management",
@@ -103,6 +109,21 @@ export const translations = {
     about: {
       title: "About Potenti'Elles",
       description: "Potenti'Elles is a digital platform dedicated to empowering female entrepreneurs in Guinea through comprehensive digital support and resources. Our mission is to create an inclusive environment where women can thrive in business."
+    },
+    contact: {
+      title: "Contact Us",
+      description: "Get in touch with the Potenti'Elles team. We're here to help you succeed in your entrepreneurial journey.",
+      email: "contact@potentielles.org",
+      phone: "+224 XX XX XX XX",
+      address: "Conakry, Guinea",
+      send: "Send Message",
+      success: "Message sent successfully!",
+      form: {
+        name: "Your Name",
+        email: "Your Email",
+        message: "Your Message",
+        subject: "Subject"
+      }
     },
     faq: {
       title: "Frequently Asked Questions",
@@ -128,6 +149,13 @@ export const translations = {
         title: "Video Training",
         description: "Video trainings on various aspects of entrepreneurship"
       }
+    },
+    surveys: {
+      businessTitle: "Business Development Survey",
+      businessDescription: "Complete this survey to help us better understand your needs and progress.",
+      newSurvey: "New Survey",
+      completeSurvey: "Complete Survey",
+      pendingSurveys: "Pending Surveys"
     }
   },
   fr: {
@@ -151,7 +179,8 @@ export const translations = {
       success: "Succès !",
       newProject: "Nouveau Projet",
       profile: "Profil",
-      about: "À propos"
+      about: "À propos",
+      menu: "Menu"
     },
     auth: {
       loginTitle: "Connectez-vous à votre compte",
@@ -201,7 +230,10 @@ export const translations = {
       mentees: "Mes mentorés",
       chat: "Discussion",
       totalMentees: "Nombre de mentorés",
-      messagePreview: "La fonctionnalité de chat sera bientôt disponible"
+      messagePreview: "La fonctionnalité de chat sera bientôt disponible",
+      communication: "Communication",
+      progress: "Suivi des progrès",
+      schedule: "Planifier une réunion"
     },
     donors: {
       reports: "Rapports",
@@ -210,7 +242,9 @@ export const translations = {
       totalFunded: "Total des projets financés",
       impactReports: "Rapports d'impact des projets",
       reportsDesc: "Les rapports d'impact détaillés seront disponibles ici",
-      storiesDesc: "Les histoires de réussite de nos entrepreneurs seront partagées ici"
+      storiesDesc: "Les histoires de réussite de nos entrepreneurs seront partagées ici",
+      donationHistory: "Historique des dons",
+      projectTracking: "Suivi des projets"
     },
     features: {
       projectManagement: "Gestion de Projets",
@@ -234,6 +268,21 @@ export const translations = {
     about: {
       title: "À propos de Potenti'Elles",
       description: "Potenti'Elles est une plateforme numérique dédiée à l'autonomisation des femmes entrepreneures en Guinée à travers un soutien numérique complet et des ressources. Notre mission est de créer un environnement inclusif où les femmes peuvent s'épanouir dans les affaires."
+    },
+    contact: {
+      title: "Contactez-nous",
+      description: "Prenez contact avec l'équipe Potenti'Elles. Nous sommes là pour vous aider à réussir dans votre parcours entrepreneurial.",
+      email: "contact@potentielles.org",
+      phone: "+224 XX XX XX XX",
+      address: "Conakry, Guinée",
+      send: "Envoyer le message",
+      success: "Message envoyé avec succès !",
+      form: {
+        name: "Votre nom",
+        email: "Votre email",
+        message: "Votre message",
+        subject: "Sujet"
+      }
     },
     faq: {
       title: "Questions Fréquentes",
@@ -259,6 +308,13 @@ export const translations = {
         title: "Formations en vidéo",
         description: "Des formations vidéo sur divers aspects de l'entrepreneuriat"
       }
+    },
+    surveys: {
+      businessTitle: "Enquête sur le développement de l'entreprise",
+      businessDescription: "Complétez cette enquête pour nous aider à mieux comprendre vos besoins et votre progression.",
+      newSurvey: "Nouvelle Enquête",
+      completeSurvey: "Compléter l'enquête",
+      pendingSurveys: "Enquêtes en attente"
     }
   }
 };

@@ -11,11 +11,11 @@ export default function ChatPage() {
         <h1 className="text-3xl font-bold mb-8">{t.mentors.chat}</h1>
         <Card>
           <CardHeader>
-            <CardTitle>Messages</CardTitle>
+            <CardTitle>{t.mentors.communication}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-gray-600">
-              La fonctionnalité de chat sera bientôt disponible.
+              {t.mentors.messagePreview}
             </p>
           </CardContent>
         </Card>

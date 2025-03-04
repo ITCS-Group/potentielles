@@ -142,7 +142,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     ],
   };
 
-  // Fermer la sidebar sur les petits écrans lors du changement de page
   const [location] = useLocation();
   useEffect(() => {
     if (window.innerWidth < 768) {
@@ -154,7 +153,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   return (
     <>
-      {/* Overlay sur mobile */}
       <div
         className={cn(
           "fixed inset-0 bg-black/50 z-40 lg:hidden",
@@ -163,7 +161,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         onClick={onClose}
       />
 
-      {/* Sidebar */}
       <div
         className={cn(
           "fixed top-0 left-0 z-50 h-full w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out",
@@ -171,7 +168,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         )}
       >
         <div className="p-4 flex justify-between items-center border-b">
-          <h2 className="text-xl font-semibold">Menu</h2>
+          <h2 className="text-xl font-semibold">{t.common.menu}</h2>
           <Button variant="ghost" size="icon" onClick={onClose}>
             <X className="h-5 w-5" />
           </Button>

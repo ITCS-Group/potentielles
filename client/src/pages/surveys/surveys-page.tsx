@@ -13,11 +13,11 @@ export default function SurveysPage() {
         <div className="grid gap-6">
           <Card>
             <CardHeader>
-              <CardTitle>Enquête sur le développement de l'entreprise</CardTitle>
+              <CardTitle>{t.surveys.businessTitle}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-gray-600">
-                Complétez cette enquête pour nous aider à mieux comprendre vos besoins et votre progression.
+                {t.surveys.businessDescription}
               </p>
             </CardContent>
           </Card>
