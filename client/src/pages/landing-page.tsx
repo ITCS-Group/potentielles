@@ -49,13 +49,28 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">{t.landing.impact}</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              <span className="flex items-center justify-center gap-2">
-                <MapPin className="h-5 w-5 text-primary" />
-                APIP - Agence de Promotion des Investissements Privés
-              </span>
-              {t.landing.impactDesc}
-            </p>
+            <div className="flex flex-col items-center gap-4 mb-8">
+              <div className="flex items-center justify-center gap-2 text-primary">
+                <MapPin className="h-6 w-6" />
+                <span className="text-xl font-semibold">
+                  APIP - Agence de Promotion des Investissements Privés
+                </span>
+              </div>
+              {/* Carte avec marqueur */}
+              <div className="w-full max-w-3xl h-64 rounded-lg overflow-hidden border border-gray-200">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.904484742846!2d-13.720721!3d9.535194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf1cd9de6a42c3a7%3A0x6d7f1b0f1b0f1b0f!2sAPIP%20-%20Agence%20de%20Promotion%20des%20Investissements%20Priv%C3%A9s!5e0!3m2!1sfr!2sgn!4v1620000000000!5m2!1sfr!2sgn"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <p className="text-xl text-gray-600 max-w-3xl">
+                {t.landing.impactDesc}
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
