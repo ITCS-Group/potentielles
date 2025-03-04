@@ -65,6 +65,12 @@ export const translations = {
         message: "Your Message",
         subject: "Subject"
       },
+      apip: {
+        title: "APIP (Private Investment Promotion Agency)",
+        address: "Immeuble Diamond, Cité Chemins de Fer, Kaloum, Conakry",
+        phone: "+224 666 30 34 79",
+        email: "contact@apip.gov.gn"
+      },
       euDelegation: {
         title: "European Union Delegation in Guinea",
         address: "Corniche Sud, Madina Dispensaire, Commune de Matam, Conakry, République de Guinée",
@@ -72,6 +78,12 @@ export const translations = {
         email: "delegation-guinee-conakry@ec.europa.eu",
         website: "https://www.eeas.europa.eu/guinea",
         officeHours: "Monday to Thursday: 8:00 - 17:00, Friday: 8:00 - 13:00"
+      },
+      afd: {
+        title: "French Development Agency (AFD)",
+        address: "Corniche Sud, Cameroun, BP 1516, Conakry",
+        phone: "+224 664 35 02 02",
+        email: "afdconakry@afd.fr"
       }
     },
     faq: {
@@ -269,6 +281,12 @@ export const translations = {
         message: "Votre message",
         subject: "Sujet"
       },
+      apip: {
+        title: "APIP (Agence de Promotion des Investissements Privés)",
+        address: "Immeuble Diamond, Cité Chemins de Fer, Kaloum, Conakry",
+        phone: "+224 666 30 34 79",
+        email: "contact@apip.gov.gn"
+      },
       euDelegation: {
         title: "Délégation de l'Union européenne en Guinée",
         address: "Corniche Sud, Madina Dispensaire, Commune de Matam, Conakry, République de Guinée",
@@ -276,6 +294,12 @@ export const translations = {
         email: "delegation-guinee-conakry@ec.europa.eu",
         website: "https://www.eeas.europa.eu/guinea",
         officeHours: "Lundi à Jeudi: 8h00 - 17h00, Vendredi: 8h00 - 13h00"
+      },
+      afd: {
+        title: "Agence Française de Développement (AFD)",
+        address: "Corniche Sud, Cameroun, BP 1516, Conakry",
+        phone: "+224 664 35 02 02",
+        email: "afdconakry@afd.fr"
       }
     },
     faq: {

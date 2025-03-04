@@ -20,20 +20,20 @@ export default function ContactPage() {
             <div className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
                 <Building2 className="h-6 w-6 text-primary" />
-                APIP (Agence pour la Promotion des Investissements Privés)
+                {t.contact.apip.title}
               </h2>
               <div className="space-y-4 ml-8">
                 <div className="flex items-center gap-4">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <p className="text-lg">Immeuble Diamond, Cité Chemins de Fer, Kaloum, Conakry</p>
+                  <p className="text-lg">{t.contact.apip.address}</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="h-5 w-5 text-primary" />
-                  <p className="text-lg">+224 666 30 34 79</p>
+                  <p className="text-lg">{t.contact.apip.phone}</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <Mail className="h-5 w-5 text-primary" />
-                  <p className="text-lg">contact@apip.gov.gn</p>
+                  <p className="text-lg">{t.contact.apip.email}</p>
                 </div>
               </div>
             </div>
@@ -81,20 +81,20 @@ export default function ContactPage() {
             <div className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
                 <Wallet className="h-6 w-6 text-primary" />
-                AFD (Agence Française de Développement)
+                {t.contact.afd.title}
               </h2>
               <div className="space-y-4 ml-8">
                 <div className="flex items-center gap-4">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <p className="text-lg">Corniche Sud, Cameroun, BP 1516, Conakry</p>
+                  <p className="text-lg">{t.contact.afd.address}</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="h-5 w-5 text-primary" />
-                  <p className="text-lg">+224 664 35 02 02</p>
+                  <p className="text-lg">{t.contact.afd.phone}</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <Mail className="h-5 w-5 text-primary" />
-                  <p className="text-lg">afdconakry@afd.fr</p>
+                  <p className="text-lg">{t.contact.afd.email}</p>
                 </div>
               </div>
             </div>
