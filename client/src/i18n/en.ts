@@ -2,6 +2,12 @@ export const en = {
   common: {
     welcome: "Welcome to Potenti'Elles"
   },
+  landing: {
+    heroText: "Your support platform for women entrepreneurs in Guinea",
+    joinButton: "Join the platform",
+    impact: "Our Impact",
+    impactDesc: "Comprehensive support for women's entrepreneurship development"
+  },
   faq: {
     title: "Frequently Asked Questions",
     description: "Find answers to the most frequently asked questions about the Potenti'Elles platform.",

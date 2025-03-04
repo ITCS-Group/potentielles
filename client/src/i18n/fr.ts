@@ -2,6 +2,12 @@ export const fr = {
   common: {
     welcome: "Bienvenue sur Potenti'Elles"
   },
+  landing: {
+    heroText: "Votre plateforme d'accompagnement pour les femmes entrepreneures en Guinée",
+    joinButton: "Rejoindre la plateforme",
+    impact: "Notre Impact",
+    impactDesc: "Un accompagnement complet pour le développement de l'entrepreneuriat féminin"
+  },
   faq: {
     title: "Questions Fréquentes",
     description: "Retrouvez ici les réponses aux questions les plus fréquemment posées sur la plateforme Potenti'Elles.",
