@@ -1,7 +1,7 @@
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
-import { LogOut, Home, Menu, User, Settings, Users } from "lucide-react";
+import { LogOut, Home, Menu, User, Settings, Users, Info, HelpCircle, PhoneCall } from "lucide-react";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/contexts/language-context";
 import { Sidebar } from "./sidebar";
@@ -56,18 +56,21 @@ export function RootLayout({ children }: RootLayoutProps) {
                     variant="ghost"
                     onClick={() => setLocation("/about")}
                   >
+                    <Info className="mr-2 h-4 w-4" />
                     {t.common.about}
                   </Button>
                   <Button 
                     variant="ghost"
                     onClick={() => setLocation("/faq")}
                   >
+                    <HelpCircle className="mr-2 h-4 w-4" />
                     {t.common.faq}
                   </Button>
                   <Button 
                     variant="ghost"
                     onClick={() => setLocation("/contact")}
                   >
+                    <PhoneCall className="mr-2 h-4 w-4" />
                     {t.common.contact}
                   </Button>
                   <Button 
@@ -132,12 +135,15 @@ export function RootLayout({ children }: RootLayoutProps) {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end" className="w-56">
                     <DropdownMenuItem onClick={() => setLocation("/about")}>
+                      <Info className="mr-2 h-4 w-4" />
                       {t.common.about}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setLocation("/faq")}>
+                      <HelpCircle className="mr-2 h-4 w-4" />
                       {t.common.faq}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setLocation("/contact")}>
+                      <PhoneCall className="mr-2 h-4 w-4" />
                       {t.common.contact}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setLocation("/")}>
