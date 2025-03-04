@@ -45,6 +45,14 @@ export const en = {
       donor: "Track impact and view reports"
     }
   },
+  features: {
+    projectManagement: "Project Management",
+    projectManagementDesc: "Track and manage your business projects with ease",
+    support: "Support Network",
+    supportDesc: "Connect with mentors and support organizations",
+    progress: "Progress Tracking",
+    progressDesc: "Monitor your business growth and achievements"
+  },
   auth: {
     loginTitle: "Login to your account",
     registerTitle: "Create your account",
@@ -75,32 +83,20 @@ export const en = {
       regions: "Regions covered"
     }
   },
-  about: {
-    title: "About Potenti'Elles",
-    description: "The Potenti'Elles project is an ambitious and comprehensive initiative aimed at economically empowering women in Guinea through structured support across several strategic areas: capacity building, access to financing, and business development support.",
-    keyPartners: "A Project Supported by Key Partners",
-    funding: "The Republic of Guinea has received funding of EUR 15 million, with EUR 10 million from the European Union (EU) and EUR 5 million from the French Development Agency (AFD). This financial support enables structured assistance for women's entrepreneurship in Guinea, particularly in Lower Guinea and Forest Guinea.",
-    implementation: "The project implementation is managed by the Private Investment Promotion Agency (APIP), which oversees actions aimed at strengthening the female entrepreneurial ecosystem and promoting the economic integration of women entrepreneurs.",
-    digitalPlatform: "A Digital Platform as a Lever for Empowerment",
-    platformDescription: "Among the major components of the project, the Potenti'Elles digital platform is an essential lever for the digitalization of female entrepreneurship in Guinea. Designed to facilitate access to information, training, and strategic resources, it plays a key role in the digital transformation of women-led businesses.",
-    platformFeatures: "This platform specifically enables:",
-    features: {
-      title: "Platform Features",
-      training: "• Provide online training to enhance digital literacy and entrepreneurial skills for women",
-      financing: "• Facilitate access to financing by connecting entrepreneurs with appropriate support mechanisms",
-      networking: "• Create networking opportunities by connecting women entrepreneurs with partners, mentors, and investors",
-      professionalization: "• Structure and professionalize women's businesses by providing practical tools for their management and development"
-    },
-    ecosystem: "An Ecosystem Serving Women Entrepreneurs",
-    conclusion: "Thanks to the synergy between EU and AFD funding, and implementation by APIP, Potenti'Elles aims to sustainably transform the female entrepreneurial landscape in Guinea. This project is based on an integrated approach combining field support and digital solutions to create an inclusive and favorable environment for Guinean women entrepreneurs."
-  },
   dashboard: {
     overview: "Overview",
     projects: "Projects",
     surveys: "Surveys",
     activities: "Activities",
     metrics: "Metrics",
-    resources: "Resources"
+    resources: "Resources",
+    menu: "Menu",
+    welcome: "Welcome back",
+    stats: {
+      total: "Total",
+      active: "Active",
+      completed: "Completed"
+    }
   },
   admin: {
     users: "User Management",
@@ -111,7 +107,11 @@ export const en = {
     userCount: "Total users",
     projectCount: "Projects to review",
     settingsDesc: "Configure platform settings and general preferences",
-    settingsTitle: "Platform Settings"
+    settingsTitle: "Platform Settings",
+    overview: {
+      title: "Admin Dashboard",
+      description: "Manage users, projects, and platform settings"
+    }
   },
   mentors: {
     mentees: "My Mentees",
@@ -133,13 +133,32 @@ export const en = {
     donationHistory: "Donation History",
     projectTracking: "Project Tracking"
   },
-  features: {
-    projectManagement: "Project Management",
-    projectManagementDesc: "Track and manage your business projects with ease",
-    support: "Support Network",
-    supportDesc: "Connect with mentors and support organizations",
-    progress: "Progress Tracking",
-    progressDesc: "Monitor your business growth and achievements"
+  projects: {
+    name: "Project Name",
+    description: "Project Description",
+    new: "New Project",
+    create: "Create Project",
+    details: "Project Details",
+    list: "Projects List",
+    status: "Status",
+    submit: "Submit Project",
+    success: "Project created successfully",
+    error: "Error creating project"
+  },
+  resources: {
+    title: "Resources",
+    entrepreneurshipGuide: {
+      title: "Entrepreneurship Guide",
+      description: "Comprehensive guide to starting and growing your business"
+    },
+    documentTemplates: {
+      title: "Document Templates",
+      description: "Ready-to-use business document templates"
+    },
+    videoTraining: {
+      title: "Video Training",
+      description: "Educational videos on business management and entrepreneurship"
+    }
   },
   faq: {
     title: "Frequently Asked Questions",
@@ -206,17 +225,24 @@ export const en = {
       officeHours: "Monday to Friday: 8:00 - 16:30"
     }
   },
-  projects: {
-    name: "Project Name",
-    description: "Project Description",
-    new: "New Project",
-    create: "Create Project",
-    details: "Project Details",
-    list: "Projects List",
-    status: "Status",
-    submit: "Submit Project",
-    success: "Project created successfully",
-    error: "Error creating project"
+  about: {
+    title: "About Potenti'Elles",
+    description: "The Potenti'Elles project is an ambitious and comprehensive initiative aimed at economically empowering women in Guinea through structured support across several strategic areas: capacity building, access to financing, and business development support.",
+    keyPartners: "A Project Supported by Key Partners",
+    funding: "The Republic of Guinea has received funding of EUR 15 million, with EUR 10 million from the European Union (EU) and EUR 5 million from the French Development Agency (AFD). This financial support enables structured assistance for women's entrepreneurship in Guinea, particularly in Lower Guinea and Forest Guinea.",
+    implementation: "The project implementation is managed by the Private Investment Promotion Agency (APIP), which oversees actions aimed at strengthening the female entrepreneurial ecosystem and promoting the economic integration of women entrepreneurs.",
+    digitalPlatform: "A Digital Platform as a Lever for Empowerment",
+    platformDescription: "Among the major components of the project, the Potenti'Elles digital platform is an essential lever for the digitalization of female entrepreneurship in Guinea. Designed to facilitate access to information, training, and strategic resources, it plays a key role in the digital transformation of women-led businesses.",
+    platformFeatures: "This platform specifically enables:",
+    features: {
+      title: "Platform Features",
+      training: "• Provide online training to enhance digital literacy and entrepreneurial skills for women",
+      financing: "• Facilitate access to financing by connecting entrepreneurs with appropriate support mechanisms",
+      networking: "• Create networking opportunities by connecting women entrepreneurs with partners, mentors, and investors",
+      professionalization: "• Structure and professionalize women's businesses by providing practical tools for their management and development"
+    },
+    ecosystem: "An Ecosystem Serving Women Entrepreneurs",
+    conclusion: "Thanks to the synergy between EU and AFD funding, and implementation by APIP, Potenti'Elles aims to sustainably transform the female entrepreneurial landscape in Guinea. This project is based on an integrated approach combining field support and digital solutions to create an inclusive and favorable environment for Guinean women entrepreneurs."
   }
 };
 
