@@ -90,6 +90,23 @@ export function RootLayout({ children }: RootLayoutProps) {
                       >
                         {t.common.contact}
                       </Button>
+                      <div className="flex items-center ml-2 space-x-1">
+                        <LanguageSwitcher />
+                        <Button 
+                          variant="ghost"
+                          onClick={() => setLocation("/login")}
+                          className="px-3 transition-colors"
+                        >
+                          {t.common.login}
+                        </Button>
+                        <Button 
+                          variant="default"
+                          onClick={() => setLocation("/register")}
+                          className="px-3"
+                        >
+                          {t.common.register}
+                        </Button>
+                      </div>
                     </nav>
                   </div>
                 </>
@@ -123,6 +140,7 @@ export function RootLayout({ children }: RootLayoutProps) {
               ) : (
                 /* Mobile menu */
                 <div className="md:hidden flex items-center gap-2">
+                  <LanguageSwitcher />
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" size="icon">
