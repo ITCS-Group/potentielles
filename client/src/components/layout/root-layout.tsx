@@ -86,25 +86,28 @@ export function RootLayout({ children }: RootLayoutProps) {
                         <PhoneCall className="mr-2 h-4 w-4" />
                         {t.common.contact}
                       </Button>
-                      <Button 
-                        variant="ghost"
-                        onClick={() => setLocation("/login")}
-                        className="px-3 transition-colors"
-                      >
-                        {t.common.login}
-                      </Button>
-                      <Button 
-                        variant="default"
-                        onClick={() => setLocation("/register")}
-                        className="px-3"
-                      >
-                        {t.common.register}
-                      </Button>
+                      <div className="flex items-center ml-2 space-x-1">
+                        <LanguageSwitcher />
+                        <Button 
+                          variant="ghost"
+                          onClick={() => setLocation("/login")}
+                          className="px-3 transition-colors"
+                        >
+                          {t.common.login}
+                        </Button>
+                        <Button 
+                          variant="default"
+                          onClick={() => setLocation("/register")}
+                          className="px-3"
+                        >
+                          {t.common.register}
+                        </Button>
+                      </div>
                     </nav>
                   </div>
                 </>
               )}
-              <LanguageSwitcher />
+
               {user ? (
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
@@ -129,7 +132,8 @@ export function RootLayout({ children }: RootLayoutProps) {
                 </DropdownMenu>
               ) : (
                 /* Mobile menu */
-                <div className="md:hidden">
+                <div className="md:hidden flex items-center gap-2">
+                  <LanguageSwitcher />
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" size="icon">
