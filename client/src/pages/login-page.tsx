@@ -21,7 +21,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Loader2 } from "lucide-react";
+import { Loader2, User, Building2, Users, Wallet } from "lucide-react";
 
 export default function LoginPage() {
   const { user, loginMutation } = useAuth();
@@ -50,9 +50,31 @@ export default function LoginPage() {
               <Card className="w-full">
                 <CardHeader>
                   <CardTitle>{t.auth.loginTitle}</CardTitle>
-                  <CardDescription>{t.auth.demoAccounts}</CardDescription>
+                  <CardDescription className="text-lg font-semibold text-primary">
+                    {t.auth.demoAccounts}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
+                  <div className="mb-6 bg-gray-50 p-4 rounded-lg border">
+                    <ul className="space-y-3">
+                      <li className="flex items-center gap-2 text-sm">
+                        <User className="h-4 w-4 text-primary" />
+                        {t.auth.demoEntrepreneur}
+                      </li>
+                      <li className="flex items-center gap-2 text-sm">
+                        <Building2 className="h-4 w-4 text-primary" />
+                        {t.auth.demoApip}
+                      </li>
+                      <li className="flex items-center gap-2 text-sm">
+                        <Users className="h-4 w-4 text-primary" />
+                        {t.auth.demoSupport}
+                      </li>
+                      <li className="flex items-center gap-2 text-sm">
+                        <Wallet className="h-4 w-4 text-primary" />
+                        {t.auth.demoDonor}
+                      </li>
+                    </ul>
+                  </div>
                   <Form {...form}>
                     <form
                       onSubmit={form.handleSubmit((data) =>
