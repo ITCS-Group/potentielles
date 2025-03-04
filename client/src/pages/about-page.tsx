@@ -48,7 +48,7 @@ export default function AboutPage() {
 
                 {/* Partners Logos */}
                 <div className="mt-12 bg-white rounded-lg p-8 shadow-sm">
-                  <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-12">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Logo UE */}
                     <div className="flex flex-col items-center">
                       <div className="h-20 w-32 flex items-center justify-center">
@@ -91,11 +91,25 @@ export default function AboutPage() {
                       </span>
                     </div>
 
-                    {/* Logo Ministère du Commerce */}
+                    {/* Logo Ministère de la Féminisation */}
                     <div className="flex flex-col items-center">
                       <div className="h-20 w-32 flex items-center justify-center">
                         <img
-                          src="/logos/commerce-guinea-logo.svg"
+                          src="/logos/min-fem.jpeg"
+                          alt="Ministère de la Féminisation"
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <span className="text-sm text-gray-600 text-center mt-2">
+                        Ministère de la Féminisation
+                      </span>
+                    </div>
+
+                    {/* Logo Ministère du Commerce - Placé en dessous */}
+                    <div className="flex flex-col items-center md:col-span-2 lg:col-span-3">
+                      <div className="h-20 w-32 flex items-center justify-center">
+                        <img
+                          src="/logos/min-com.jpeg"
                           alt="Ministère du Commerce de Guinée"
                           className="w-full h-full object-contain"
                         />
