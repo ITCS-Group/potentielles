@@ -51,7 +51,7 @@ export default function AboutPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Logo UE */}
                     <div className="flex flex-col items-center">
-                      <div className="h-20 w-32 flex items-center justify-center">
+                      <div className="h-24 w-36 flex items-center justify-center">
                         <img
                           src="/logos/cofi-ue.png"
                           alt="Union Européenne"
@@ -65,7 +65,7 @@ export default function AboutPage() {
 
                     {/* Logo AFD */}
                     <div className="flex flex-col items-center">
-                      <div className="h-20 w-40 flex items-center justify-center">
+                      <div className="h-24 w-44 flex items-center justify-center">
                         <img
                           src="/logos/logo-afd.png"
                           alt="Agence Française de Développement"
@@ -79,7 +79,7 @@ export default function AboutPage() {
 
                     {/* Logo APIP */}
                     <div className="flex flex-col items-center">
-                      <div className="h-20 w-32 flex items-center justify-center">
+                      <div className="h-24 w-36 flex items-center justify-center">
                         <img
                           src="/logos/logo-apip.png"
                           alt="APIP Guinée"
@@ -92,8 +92,8 @@ export default function AboutPage() {
                     </div>
 
                     {/* Logo Ministère de la Féminisation */}
-                    <div className="flex flex-col items-center">
-                      <div className="h-20 w-32 flex items-center justify-center">
+                    <div className="flex flex-col items-center lg:col-start-2">
+                      <div className="h-24 w-36 flex items-center justify-center">
                         <img
                           src="/logos/min-fem.jpeg"
                           alt="Ministère de la Féminisation"
@@ -105,9 +105,9 @@ export default function AboutPage() {
                       </span>
                     </div>
 
-                    {/* Logo Ministère du Commerce - Placé en dessous */}
-                    <div className="flex flex-col items-center md:col-span-2 lg:col-span-3">
-                      <div className="h-20 w-32 flex items-center justify-center">
+                    {/* Logo Ministère du Commerce */}
+                    <div className="flex flex-col items-center">
+                      <div className="h-24 w-36 flex items-center justify-center">
                         <img
                           src="/logos/min-com.jpeg"
                           alt="Ministère du Commerce de Guinée"
