@@ -180,7 +180,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed top-0 left-0 z-40 h-full w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out md:translate-x-0",
+          "fixed top-0 left-0 z-40 h-full w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out md:translate-x-0 mt-14",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >

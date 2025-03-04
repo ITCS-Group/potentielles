@@ -32,9 +32,9 @@ export function RootLayout({ children }: RootLayoutProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 relative">
-      <header className="bg-white shadow relative z-20">
-        <div className="container mx-auto px-4 py-4">
+    <div className="min-h-screen bg-gray-50">
+      <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <div className="px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
               {user && (
@@ -90,23 +90,6 @@ export function RootLayout({ children }: RootLayoutProps) {
                       >
                         {t.common.contact}
                       </Button>
-                      <div className="flex items-center ml-2 space-x-1">
-                        <LanguageSwitcher />
-                        <Button 
-                          variant="ghost"
-                          onClick={() => setLocation("/login")}
-                          className="px-3 transition-colors"
-                        >
-                          {t.common.login}
-                        </Button>
-                        <Button 
-                          variant="default"
-                          onClick={() => setLocation("/register")}
-                          className="px-3"
-                        >
-                          {t.common.register}
-                        </Button>
-                      </div>
                     </nav>
                   </div>
                 </>
@@ -187,7 +170,7 @@ export function RootLayout({ children }: RootLayoutProps) {
         />
       )}
 
-      <main className="container mx-auto relative z-10">{children}</main>
+      <main className="pt-16">{children}</main>
     </div>
   );
 }
