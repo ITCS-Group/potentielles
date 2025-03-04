@@ -1,6 +1,37 @@
+export type Language = 'en' | 'fr';
+
 export const en = {
   common: {
-    welcome: "Welcome to Potenti'Elles"
+    welcome: "Welcome to Potenti'Elles",
+    home: "Home",
+    login: "Login",
+    register: "Register",
+    logout: "Logout",
+    email: "Email",
+    password: "Password",
+    username: "Username",
+    fullName: "Full Name",
+    role: "Role",
+    submit: "Submit",
+    cancel: "Cancel",
+    save: "Save",
+    delete: "Delete",
+    edit: "Edit",
+    loading: "Loading...",
+    error: "An error occurred",
+    success: "Success!",
+    newProject: "New Project",
+    profile: "Profile",
+    about: "About",
+    faq: "FAQ",
+    contact: "Contact",
+    menu: "Menu",
+    userMenu: {
+      profile: "Profile",
+      settings: "Settings",
+      users: "Users",
+      logout: "Logout"
+    }
   },
   landing: {
     heroText: "Your support platform for women entrepreneurs in Guinea",
@@ -15,13 +46,13 @@ export const en = {
   },
   faq: {
     title: "Frequently Asked Questions",
-    description: "Find answers to the most frequently asked questions about the Potenti'Elles platform.",
+    description: "Find answers to common questions about Potenti'Elles platform and services.",
     questions: {
-      account: "How do I create an account on the platform?",
-      accountAnswer: "To create an account, click on 'Register' at the top of the page. Fill out the form with your personal information. You will receive a confirmation email to activate your account.",
+      account: "How do I create an account?",
+      accountAnswer: "Click the 'Register' button in the top right of the homepage. Fill out the form with your information and select your role.",
 
-      roles: "What are the different types of profiles on the platform?",
-      rolesAnswer: "The platform hosts four types of profiles: entrepreneurs, APIP agents, support organizations, and donors. Each profile has specific features adapted to its role.",
+      roles: "What are the different roles on the platform?",
+      rolesAnswer: "The platform offers different roles: Entrepreneur, APIP, Support Organization, and Donor. Each role has specific features tailored to their needs.",
 
       support: "What type of support is available?",
       supportAnswer: "We offer comprehensive support including: personalized mentoring, business management training, access to documentary resources, and networking with industry experts.",
@@ -49,3 +80,5 @@ export const en = {
     }
   }
 };
+
+export default en;

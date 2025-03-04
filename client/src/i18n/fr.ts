@@ -1,6 +1,37 @@
+export type Language = 'en' | 'fr';
+
 export const fr = {
   common: {
-    welcome: "Bienvenue sur Potenti'Elles"
+    welcome: "Bienvenue sur Potenti'Elles",
+    home: "Accueil",
+    login: "Connexion",
+    register: "S'inscrire",
+    logout: "Déconnexion",
+    email: "Email",
+    password: "Mot de passe",
+    username: "Nom d'utilisateur",
+    fullName: "Nom complet",
+    role: "Rôle",
+    submit: "Soumettre",
+    cancel: "Annuler",
+    save: "Enregistrer",
+    delete: "Supprimer",
+    edit: "Modifier",
+    loading: "Chargement...",
+    error: "Une erreur est survenue",
+    success: "Succès !",
+    newProject: "Nouveau Projet",
+    profile: "Profil",
+    about: "À propos",
+    faq: "FAQ",
+    contact: "Contact",
+    menu: "Menu",
+    userMenu: {
+      profile: "Profil",
+      settings: "Paramètres",
+      users: "Utilisateurs",
+      logout: "Déconnexion"
+    }
   },
   landing: {
     heroText: "Votre plateforme d'accompagnement pour les femmes entrepreneures en Guinée",
@@ -49,3 +80,5 @@ export const fr = {
     }
   }
 };
+
+export default fr;
