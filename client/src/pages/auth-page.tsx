@@ -5,6 +5,7 @@ import { insertUserSchema, UserRole } from "@shared/schema";
 import { useLocation } from "wouter";
 import { useEffect } from "react";
 import { RootLayout } from "@/components/layout/root-layout";
+import { useLanguage } from "@/contexts/language-context";
 import {
   Card,
   CardContent,
@@ -37,6 +38,7 @@ export default function AuthPage() {
   const [location, setLocation] = useLocation();
   const searchParams = new URLSearchParams(location.split("?")[1]);
   const defaultTab = searchParams.get("tab") || "login";
+  const { t } = useLanguage();
 
   useEffect(() => {
     if (user) {
@@ -208,7 +210,7 @@ export default function AuthPage() {
                                   <SelectContent>
                                     {Object.values(UserRole).map((role) => (
                                       <SelectItem key={role} value={role}>
-                                        {role}
+                                        {t.roles[role.toLowerCase()]}
                                       </SelectItem>
                                     ))}
                                   </SelectContent>

@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
-import { translations, DEFAULT_LANGUAGE } from "@/i18n/translations";
 import { RootLayout } from "@/components/layout/root-layout";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function LandingPage() {
   const [, setLocation] = useLocation();
-  const t = translations[DEFAULT_LANGUAGE];
+  const { t } = useLanguage();
 
   return (
     <RootLayout>
@@ -22,12 +22,10 @@ export default function LandingPage() {
                 {t.common.welcome}
               </h1>
               <p className="text-xl text-white/90 mb-8">
-                Rejoignez notre plateforme dédiée au soutien et à l'autonomisation des femmes 
-                entrepreneures en Guinée. Suivez vos progrès, connectez-vous avec des 
-                organisations de soutien et développez votre entreprise.
+                {t.landing.heroText}
               </p>
               <Button size="lg" onClick={() => setLocation("/auth?tab=register")}>
-                {t.common.register}
+                {t.landing.joinButton}
               </Button>
             </div>
           </div>

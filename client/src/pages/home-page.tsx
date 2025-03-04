@@ -2,9 +2,8 @@ import { useAuth } from "@/hooks/use-auth";
 import { UserRole } from "@shared/schema";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { LanguageSwitcher } from "@/components/language-switcher";
 import { useLocation } from "wouter";
-import { translations } from "@/i18n/translations";
+import { useLanguage } from "@/contexts/language-context";
 import {
   BarChart3,
   ClipboardList,
@@ -16,20 +15,20 @@ import {
 export default function HomePage() {
   const { user, logoutMutation } = useAuth();
   const [, setLocation] = useLocation();
-  const t = translations[user?.language || "fr"];
+  const { t } = useLanguage();
 
   const roleBasedCards = {
     [UserRole.Entrepreneur]: [
       {
         title: t.dashboard.projects,
-        description: "View and manage your business projects",
+        description: t.features.projectManagementDesc,
         icon: <FileText className="h-6 w-6" />,
         image: "https://images.unsplash.com/photo-1573798484153-da43eda898f6",
         path: "/dashboard",
       },
       {
         title: t.dashboard.surveys,
-        description: "Complete surveys and assessments",
+        description: t.features.supportDesc,
         icon: <ClipboardList className="h-6 w-6" />,
         image: "https://images.unsplash.com/photo-1705242431246-e99952d509a5",
         path: "/surveys",
@@ -38,14 +37,14 @@ export default function HomePage() {
     [UserRole.APIP]: [
       {
         title: t.dashboard.overview,
-        description: "Monitor entrepreneur progress",
+        description: t.features.progress,
         icon: <BarChart3 className="h-6 w-6" />,
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
         path: "/dashboard",
       },
       {
-        title: "Entrepreneurs",
-        description: "View registered entrepreneurs",
+        title: t.roles.entrepreneur,
+        description: t.features.support,
         icon: <Users className="h-6 w-6" />,
         image: "https://images.unsplash.com/photo-1487546331507-fcf8a5d27ab3",
         path: "/entrepreneurs",
@@ -53,15 +52,15 @@ export default function HomePage() {
     ],
     [UserRole.SupportOrg]: [
       {
-        title: "Support Dashboard",
-        description: "View assigned entrepreneurs",
+        title: t.dashboard.overview,
+        description: t.features.support,
         icon: <Users className="h-6 w-6" />,
         image: "https://images.unsplash.com/photo-1474888505161-1ace11ae3d81",
         path: "/dashboard",
       },
       {
-        title: t.surveys.create,
-        description: "Create assessment surveys",
+        title: t.dashboard.surveys,
+        description: t.features.progressDesc,
         icon: <ClipboardList className="h-6 w-6" />,
         image: "https://images.unsplash.com/photo-1659018966825-43297e655ccf",
         path: "/surveys/create",
@@ -69,8 +68,8 @@ export default function HomePage() {
     ],
     [UserRole.Donor]: [
       {
-        title: "Impact Overview",
-        description: "View program impact metrics",
+        title: t.dashboard.overview,
+        description: t.features.progress,
         icon: <BarChart3 className="h-6 w-6" />,
         image: "https://images.unsplash.com/photo-1634807010323-4309f645e5a4",
         path: "/dashboard",
