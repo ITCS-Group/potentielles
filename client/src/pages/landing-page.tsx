@@ -26,7 +26,7 @@ export default function LandingPage() {
                   size="lg" 
                   variant="secondary"
                   className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90"
-                  onClick={() => setLocation("/auth?tab=register")}
+                  onClick={() => setLocation("/register")}
                 >
                   {t.landing.joinButton}
                 </Button>
@@ -34,7 +34,7 @@ export default function LandingPage() {
               <div className="hidden lg:block">
                 <div className="relative rounded-xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/images/hero-image.png" 
+                    src={"/image-pot.png"}
                     alt="Femme entrepreneure en Guinée"
                     className="w-full h-auto object-cover"
                   />
