@@ -10,25 +10,36 @@ export default function LandingPage() {
   return (
     <RootLayout>
       <div 
-        className="w-full h-[600px] relative bg-[#1E1E2E]"
+        className="w-full min-h-[600px] relative bg-[#1E1E2E]"
       >
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="max-w-2xl">
-              <h1 className="text-5xl font-bold text-white mb-6">
-                {t.common.welcome}
-              </h1>
-              <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                {t.landing.heroText}
-              </p>
-              <Button 
-                size="lg" 
-                variant="secondary"
-                className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90"
-                onClick={() => setLocation("/auth?tab=register")}
-              >
-                {t.landing.joinButton}
-              </Button>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h1 className="text-5xl font-bold text-white mb-6">
+                  {t.common.welcome}
+                </h1>
+                <p className="text-xl text-white/90 mb-8 leading-relaxed">
+                  {t.landing.heroText}
+                </p>
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90"
+                  onClick={() => setLocation("/auth?tab=register")}
+                >
+                  {t.landing.joinButton}
+                </Button>
+              </div>
+              <div className="hidden lg:block">
+                <div className="relative rounded-xl overflow-hidden shadow-2xl">
+                  <img 
+                    src="/images/hero-image.png" 
+                    alt="Femme entrepreneure en Guinée"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
