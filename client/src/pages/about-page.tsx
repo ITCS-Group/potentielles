@@ -91,22 +91,8 @@ export default function AboutPage() {
                       </span>
                     </div>
 
-                    {/* Logo Ministère de la Féminisation */}
-                    <div className="flex flex-col items-center lg:col-start-2">
-                      <div className="h-24 w-36 flex items-center justify-center">
-                        <img
-                          src="/logos/min-fem.jpeg"
-                          alt="Ministère de la Féminisation"
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                      <span className="text-sm text-gray-600 text-center mt-2">
-                        Ministère de la Féminisation
-                      </span>
-                    </div>
-
                     {/* Logo Ministère du Commerce */}
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center lg:col-start-2">
                       <div className="h-24 w-36 flex items-center justify-center">
                         <img
                           src="/logos/min-com.jpeg"
@@ -116,6 +102,20 @@ export default function AboutPage() {
                       </div>
                       <span className="text-sm text-gray-600 text-center mt-2">
                         Ministère du Commerce
+                      </span>
+                    </div>
+
+                    {/* Logo Ministère de la Féminisation */}
+                    <div className="flex flex-col items-center">
+                      <div className="h-24 w-36 flex items-center justify-center">
+                        <img
+                          src="/logos/min-fem.jpeg"
+                          alt="Ministère de la Féminisation"
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <span className="text-sm text-gray-600 text-center mt-2">
+                        Ministère de la Féminisation
                       </span>
                     </div>
                   </div>
