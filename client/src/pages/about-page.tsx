@@ -87,43 +87,41 @@ export default function AboutPage() {
                         />
                       </div>
                       <span className="text-sm text-gray-600 text-center mt-2">
-                        APIP
+                        Agence de Promotion des Investissements Privés
                       </span>
                     </div>
 
                     {/* Ministères - Conteneur centré */}
                     <div className="lg:col-span-3 flex justify-center gap-8">
-                      <div className="flex flex-col md:flex-row gap-8">
-                        {/* Logo Ministère du Commerce */}
-                        <div className="flex flex-col items-center">
-                          <div className="h-24 w-36 flex items-center justify-center">
-                            <img
-                              src="/logos/min-com.jpeg"
-                              alt="Ministère du Commerce de Guinée"
-                              className="w-full h-full object-contain"
-                            />
-                          </div>
-                          <span className="text-sm text-gray-600 text-center mt-2">
-                            Ministère du Commerce, <br />
-                            de l'Industrie et des PME de Guinée
-                          </span>
+                      {/* Logo Ministère du Commerce */}
+                      <div className="flex flex-col items-center">
+                        <div className="h-24 w-36 flex items-center justify-center">
+                          <img
+                            src="/logos/min-com.jpeg"
+                            alt="Ministère du Commerce de Guinée"
+                            className="w-full h-full object-contain"
+                          />
                         </div>
+                        <span className="text-sm text-gray-600 text-center mt-2">
+                          Ministère du Commerce, <br />
+                          de l’Industrie et des PME de Guinée
+                        </span>
+                      </div>
 
-                        {/* Logo Ministère de la Féminisation */}
-                        <div className="flex flex-col items-center">
-                          <div className="h-24 w-36 flex items-center justify-center">
-                            <img
-                              src="/logos/min-fem.jpeg"
-                              alt="Ministère de la Féminisation"
-                              className="w-full h-full object-contain"
-                            />
-                          </div>
-                          <span className="text-sm text-gray-600 text-center mt-2">
-                            Ministère de la Promotion féminine,
-                            <br />
-                            de l'Enfance et des Personnes vulnérables
-                          </span>
+                      {/* Logo Ministère de la Féminisation */}
+                      <div className="flex flex-col items-center">
+                        <div className="h-24 w-36 flex items-center justify-center">
+                          <img
+                            src="/logos/min-fem.jpeg"
+                            alt="Ministère de la Féminisation"
+                            className="w-full h-full object-contain"
+                          />
                         </div>
+                        <span className="text-sm text-gray-600 text-center mt-2">
+                          Ministère de la Promotion féminine,
+                          <br />
+                          de l'Enfance et des Personnes vulnérables
+                        </span>
                       </div>
                     </div>
                   </div>
