@@ -31,10 +31,7 @@ type MenuItem = {
 };
 
 type RoleBasedMenus = {
-  [UserRole.Entrepreneur]: MenuItem[];
-  [UserRole.APIP]: MenuItem[];
-  [UserRole.SupportOrg]: MenuItem[];
-  [UserRole.Donor]: MenuItem[];
+  [key in UserRole]: MenuItem[];
 };
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
@@ -161,21 +158,28 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   if (!user) return null;
 
-  const menuItems = [...baseMenuItems, ...(roleBasedMenus[user.role] || [])];
+  const menuItems = [...baseMenuItems, ...(roleBasedMenus[user.role as UserRole] || [])];
+
+  const handleNavigation = (path: string) => {
+    setLocation(path);
+    onClose();
+  };
 
   return (
     <>
+      {/* Overlay */}
       <div
         className={cn(
-          "fixed inset-0 bg-black/50 z-40 lg:hidden",
-          isOpen ? "block" : "hidden"
+          "fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300",
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
         onClick={onClose}
       />
 
+      {/* Sidebar */}
       <div
         className={cn(
-          "fixed top-0 left-0 z-50 h-full w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out",
+          "fixed top-0 left-0 z-50 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
@@ -194,7 +198,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 key={item.path}
                 variant="ghost"
                 className="w-full justify-start gap-3"
-                onClick={() => setLocation(item.path)}
+                onClick={() => handleNavigation(item.path)}
               >
                 {item.icon}
                 {item.label}
