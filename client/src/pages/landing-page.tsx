@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 import { RootLayout } from "@/components/layout/root-layout";
 import { useLanguage } from "@/contexts/language-context";
-import { MapPin } from "lucide-react";
 
 export default function LandingPage() {
   const [, setLocation] = useLocation();
@@ -49,17 +48,9 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">{t.landing.impact}</h2>
-            <div className="flex flex-col items-center gap-4 mb-8">
-              <div className="flex items-center justify-center gap-2 text-primary">
-                <MapPin className="h-6 w-6" />
-                <span className="text-xl font-semibold">
-                  APIP - Agence de Promotion des Investissements Privés
-                </span>
-              </div>
-              <p className="text-xl text-gray-600 max-w-3xl">
-                {t.landing.impactDesc}
-              </p>
-            </div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {t.landing.impactDesc}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
