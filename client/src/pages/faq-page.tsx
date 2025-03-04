@@ -20,21 +20,101 @@ export default function FaqPage() {
             <p className="text-lg text-gray-600 mb-8">
               {t.faq.description}
             </p>
-            <Accordion type="single" collapsible>
+            <Accordion type="single" collapsible className="space-y-4">
+              {/* Inscription et Profils */}
               <AccordionItem value="item-1">
                 <AccordionTrigger>
                   {t.faq.questions.account}
                 </AccordionTrigger>
                 <AccordionContent>
-                  {t.faq.questions.accountAnswer}
+                  {t.faq.answers.account}
                 </AccordionContent>
               </AccordionItem>
+
               <AccordionItem value="item-2">
                 <AccordionTrigger>
-                  {t.faq.questions.roles}
+                  {t.faq.questions.eligibility}
                 </AccordionTrigger>
                 <AccordionContent>
-                  {t.faq.questions.rolesAnswer}
+                  {t.faq.answers.eligibility}
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Accompagnement */}
+              <AccordionItem value="item-3">
+                <AccordionTrigger>
+                  {t.faq.questions.support}
+                </AccordionTrigger>
+                <AccordionContent>
+                  {t.faq.answers.support}
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4">
+                <AccordionTrigger>
+                  {t.faq.questions.mentoring}
+                </AccordionTrigger>
+                <AccordionContent>
+                  {t.faq.answers.mentoring}
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Formation et Ressources */}
+              <AccordionItem value="item-5">
+                <AccordionTrigger>
+                  {t.faq.questions.resources}
+                </AccordionTrigger>
+                <AccordionContent>
+                  {t.faq.answers.resources}
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6">
+                <AccordionTrigger>
+                  {t.faq.questions.training}
+                </AccordionTrigger>
+                <AccordionContent>
+                  {t.faq.answers.training}
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Support Technique */}
+              <AccordionItem value="item-7">
+                <AccordionTrigger>
+                  {t.faq.questions.technical}
+                </AccordionTrigger>
+                <AccordionContent>
+                  {t.faq.answers.technical}
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Confidentialité */}
+              <AccordionItem value="item-8">
+                <AccordionTrigger>
+                  {t.faq.questions.privacy}
+                </AccordionTrigger>
+                <AccordionContent>
+                  {t.faq.answers.privacy}
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Partenariats */}
+              <AccordionItem value="item-9">
+                <AccordionTrigger>
+                  {t.faq.questions.partners}
+                </AccordionTrigger>
+                <AccordionContent>
+                  {t.faq.answers.partners}
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Financement */}
+              <AccordionItem value="item-10">
+                <AccordionTrigger>
+                  {t.faq.questions.funding}
+                </AccordionTrigger>
+                <AccordionContent>
+                  {t.faq.answers.funding}
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
