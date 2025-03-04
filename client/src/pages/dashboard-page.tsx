@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Project, Activity, UserRole } from "@shared/schema";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { translations } from "@/i18n/translations";
+import { useLanguage } from "@/contexts/language-context";
 import { SurveyBuilder } from "@/components/survey-builder";
 import { ActivityTimeline } from "@/components/activity-timeline";
 import {
@@ -21,7 +21,7 @@ import { Loader2 } from "lucide-react";
 
 export default function DashboardPage() {
   const { user } = useAuth();
-  const t = translations[user?.language || "fr"];
+  const { t } = useLanguage();
 
   const { data: projects, isLoading: projectsLoading } = useQuery<Project[]>({
     queryKey: ["/api/projects", user?.id],
