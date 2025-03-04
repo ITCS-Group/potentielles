@@ -17,23 +17,33 @@ export default function AboutPage() {
                 <p className="text-justify">{t.about.description}</p>
 
                 {/* Key Partners Section */}
-                <h2 className="text-2xl font-semibold mt-8 mb-4">{t.about.keyPartners}</h2>
+                <h2 className="text-2xl font-semibold mt-8 mb-4">
+                  {t.about.keyPartners}
+                </h2>
                 <p className="text-justify">{t.about.funding}</p>
                 <p className="text-justify">{t.about.implementation}</p>
 
                 {/* Digital Platform Section */}
-                <h2 className="text-2xl font-semibold mt-8 mb-4">{t.about.digitalPlatform}</h2>
+                <h2 className="text-2xl font-semibold mt-8 mb-4">
+                  {t.about.digitalPlatform}
+                </h2>
                 <p className="text-justify">{t.about.platformDescription}</p>
                 <p className="text-justify mb-2">{t.about.platformFeatures}</p>
                 <ul className="list-none space-y-2 pl-4">
                   <li className="text-justify">{t.about.features.training}</li>
                   <li className="text-justify">{t.about.features.financing}</li>
-                  <li className="text-justify">{t.about.features.networking}</li>
-                  <li className="text-justify">{t.about.features.professionalization}</li>
+                  <li className="text-justify">
+                    {t.about.features.networking}
+                  </li>
+                  <li className="text-justify">
+                    {t.about.features.professionalization}
+                  </li>
                 </ul>
 
                 {/* Ecosystem Section */}
-                <h2 className="text-2xl font-semibold mt-8 mb-4">{t.about.ecosystem}</h2>
+                <h2 className="text-2xl font-semibold mt-8 mb-4">
+                  {t.about.ecosystem}
+                </h2>
                 <p className="text-justify">{t.about.conclusion}</p>
 
                 {/* Partners Logos */}
@@ -42,49 +52,57 @@ export default function AboutPage() {
                     {/* Logo UE */}
                     <div className="flex flex-col items-center">
                       <div className="h-20 w-32 flex items-center justify-center">
-                        <img 
-                          src="/logos/eu-logo.svg" 
-                          alt="Union Européenne" 
+                        <img
+                          src="/logos/cofi-ue.png"
+                          alt="Union Européenne"
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <span className="text-sm text-gray-600 text-center mt-2">Union Européenne</span>
+                      <span className="text-sm text-gray-600 text-center mt-2">
+                        Union Européenne
+                      </span>
                     </div>
 
                     {/* Logo AFD */}
                     <div className="flex flex-col items-center">
                       <div className="h-20 w-40 flex items-center justify-center">
-                        <img 
-                          src="/logos/afd-logo.png" 
-                          alt="Agence Française de Développement" 
+                        <img
+                          src="/logos/logo-afd.png"
+                          alt="Agence Française de Développement"
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <span className="text-sm text-gray-600 text-center mt-2">Agence Française de Développement</span>
+                      <span className="text-sm text-gray-600 text-center mt-2">
+                        Agence Française de Développement
+                      </span>
                     </div>
 
                     {/* Logo APIP */}
                     <div className="flex flex-col items-center">
                       <div className="h-20 w-32 flex items-center justify-center">
-                        <img 
-                          src="/logos/apip-logo.svg" 
-                          alt="APIP Guinée" 
+                        <img
+                          src="/logos/logo-apip.png"
+                          alt="APIP Guinée"
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <span className="text-sm text-gray-600 text-center mt-2">APIP</span>
+                      <span className="text-sm text-gray-600 text-center mt-2">
+                        APIP
+                      </span>
                     </div>
 
                     {/* Logo Ministère du Commerce */}
                     <div className="flex flex-col items-center">
                       <div className="h-20 w-32 flex items-center justify-center">
-                        <img 
-                          src="/logos/commerce-guinea-logo.svg" 
-                          alt="Ministère du Commerce de Guinée" 
+                        <img
+                          src="/logos/commerce-guinea-logo.svg"
+                          alt="Ministère du Commerce de Guinée"
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <span className="text-sm text-gray-600 text-center mt-2">Ministère du Commerce</span>
+                      <span className="text-sm text-gray-600 text-center mt-2">
+                        Ministère du Commerce
+                      </span>
                     </div>
                   </div>
                 </div>

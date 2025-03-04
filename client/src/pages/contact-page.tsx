@@ -1,7 +1,7 @@
 import { RootLayout } from "@/components/layout/root-layout";
 import { useLanguage } from "@/contexts/language-context";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Building2, Wallet } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Mail, Phone, MapPin, Building2, Wallet, Globe, Clock } from "lucide-react";
 
 export default function ContactPage() {
   const { t } = useLanguage();
@@ -34,6 +34,45 @@ export default function ContactPage() {
                 <div className="flex items-center gap-4">
                   <Mail className="h-5 w-5 text-primary" />
                   <p className="text-lg">contact@apip.gov.gn</p>
+                </div>
+              </div>
+            </div>
+
+            {/* EU Delegation Contact Information */}
+            <div className="mb-8">
+              <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                <Building2 className="h-6 w-6 text-primary" />
+                {t.contact.euDelegation.title}
+              </h2>
+              <div className="space-y-4 ml-8">
+                <div className="flex items-center gap-4">
+                  <MapPin className="h-5 w-5 text-primary" />
+                  <p className="text-lg">{t.contact.euDelegation.address}</p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Phone className="h-5 w-5 text-primary" />
+                  <p className="text-lg">{t.contact.euDelegation.phone}</p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Mail className="h-5 w-5 text-primary" />
+                  <p className="text-lg">{t.contact.euDelegation.email}</p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Globe className="h-5 w-5 text-primary" />
+                  <p className="text-lg">
+                    <a 
+                      href={t.contact.euDelegation.website} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      {t.contact.euDelegation.website}
+                    </a>
+                  </p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Clock className="h-5 w-5 text-primary" />
+                  <p className="text-lg">{t.contact.euDelegation.officeHours}</p>
                 </div>
               </div>
             </div>

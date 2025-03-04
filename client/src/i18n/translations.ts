@@ -64,6 +64,14 @@ export const translations = {
         email: "Your Email",
         message: "Your Message",
         subject: "Subject"
+      },
+      euDelegation: {
+        title: "European Union Delegation in Guinea",
+        address: "Corniche Sud, Madina Dispensaire, Commune de Matam, Conakry, République de Guinée",
+        phone: "+224 624 94 94 30 / +224 624 94 94 31 / +224 624 94 94 32 / +224 624 94 94 33",
+        email: "delegation-guinee-conakry@ec.europa.eu",
+        website: "https://www.eeas.europa.eu/guinea",
+        officeHours: "Monday to Thursday: 8:00 - 17:00, Friday: 8:00 - 13:00"
       }
     },
     faq: {
@@ -260,6 +268,14 @@ export const translations = {
         email: "Votre email",
         message: "Votre message",
         subject: "Sujet"
+      },
+      euDelegation: {
+        title: "Délégation de l'Union européenne en Guinée",
+        address: "Corniche Sud, Madina Dispensaire, Commune de Matam, Conakry, République de Guinée",
+        phone: "+224 624 94 94 30 / +224 624 94 94 31 / +224 624 94 94 32 / +224 624 94 94 33",
+        email: "delegation-guinee-conakry@ec.europa.eu",
+        website: "https://www.eeas.europa.eu/guinea",
+        officeHours: "Lundi à Jeudi: 8h00 - 17h00, Vendredi: 8h00 - 13h00"
       }
     },
     faq: {

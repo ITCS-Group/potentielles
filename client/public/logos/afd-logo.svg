@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="80" viewBox="0 0 120 80">
-  <g transform="translate(10,10) scale(0.8)">
-    <!-- Cercle extérieur rouge -->
-    <path d="M60 10 A40 40 0 0 1 100 50 A40 40 0 0 1 60 90 A40 40 0 0 1 20 50 A40 40 0 0 1 60 10" fill="none" stroke="#E4002B" stroke-width="12"/>
-    <!-- Cercle intérieur bleu -->
-    <path d="M60 20 A30 30 0 0 1 90 50 A30 30 0 0 1 60 80 A30 30 0 0 1 30 50 A30 30 0 0 1 60 20" fill="#004C9B"/>
-  </g>
-</svg>
