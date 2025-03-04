@@ -6,7 +6,12 @@ export const fr = {
     heroText: "Votre plateforme d'accompagnement pour les femmes entrepreneures en Guinée",
     joinButton: "Rejoindre la plateforme",
     impact: "Notre Impact",
-    impactDesc: "Un accompagnement complet pour le développement de l'entrepreneuriat féminin"
+    impactDesc: "Un accompagnement complet pour le développement de l'entrepreneuriat féminin",
+    stats: {
+      entrepreneurs: "Femmes entrepreneures accompagnées",
+      projects: "Projets financés",
+      regions: "Régions couvertes"
+    }
   },
   faq: {
     title: "Questions Fréquentes",

@@ -6,7 +6,12 @@ export const en = {
     heroText: "Your support platform for women entrepreneurs in Guinea",
     joinButton: "Join the platform",
     impact: "Our Impact",
-    impactDesc: "Comprehensive support for women's entrepreneurship development"
+    impactDesc: "Comprehensive support for women's entrepreneurship development",
+    stats: {
+      entrepreneurs: "Women entrepreneurs supported",
+      projects: "Funded projects",
+      regions: "Regions covered"
+    }
   },
   faq: {
     title: "Frequently Asked Questions",
