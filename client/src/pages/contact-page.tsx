@@ -63,7 +63,7 @@ export default function ContactPage() {
             {/* Map will be embedded here */}
             <div className="w-full h-96 bg-gray-100 rounded-lg overflow-hidden">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.7!2d-13.7!3d9.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOsKwMzAnMDAuMCJOIDEzwrA0MicwMC4wIlc!5e0!3m2!1sfr!2sgn!4v1234567890!5m2!1sfr!2sgn"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.5076460736313!2d-13.722023485722629!3d9.514595593176071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf1cd8c25seventh%3A0x9seventh8d7seventh!2sAPIp%20Guinea!5e0!3m2!1sfr!2sgn!4v1683915436981!5m2!1sfr!2sgn"
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
