@@ -32,8 +32,8 @@ export function RootLayout({ children }: RootLayoutProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col"> {/* Added flexbox for better layout */}
+      <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50 w-full"> {/* Added w-full for full width */}
         <div className="px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
@@ -147,7 +147,7 @@ export function RootLayout({ children }: RootLayoutProps) {
                         <Menu className="h-5 w-5" />
                       </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="w-56">
+                    <DropdownMenuContent align="end">
                       <DropdownMenuItem onClick={() => setLocation("/")}>
                         <Home className="mr-2 h-4 w-4" />
                         {t.common.home}
@@ -182,13 +182,13 @@ export function RootLayout({ children }: RootLayoutProps) {
       </header>
 
       {user && (
-        <Sidebar 
-          isOpen={isSidebarOpen} 
-          onClose={() => setIsSidebarOpen(false)} 
-        />
+        <div className="flex" style={{height: 'calc(100vh - 64px)'}}> {/* Added container for sidebar and main content */}
+          <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} className="z-40" /> {/* Added z-index */}
+          <main className="flex-grow pt-16">{children}</main> {/* Added flex-grow to main */}
+        </div>
       )}
+      {!user && <main className="pt-16">{children}</main>} {/* Added to handle case where user is not logged in*/}
 
-      <main className="pt-16">{children}</main>
     </div>
   );
 }
