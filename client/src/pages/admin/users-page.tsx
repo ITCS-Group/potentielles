@@ -34,7 +34,7 @@ export default function UserManagementPage() {
                 <CardTitle>{user.name}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Role: {t.roles[user.role]}</p>
+                <p>{t.common.role}: {t.roles[user.role]}</p>
               </CardContent>
             </Card>
           ))}

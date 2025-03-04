@@ -32,7 +32,7 @@ export default function MentorDashboardPage() {
             <CardTitle>{t.mentors.mentees}</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>Nombre de mentorés: {mentees?.length || 0}</p>
+            <p>{t.mentors.totalMentees}: {mentees?.length || 0}</p>
           </CardContent>
         </Card>
       </div>

@@ -28,10 +28,10 @@ export default function DonorDashboardPage() {
         <h1 className="text-3xl font-bold mb-8">{t.dashboard.overview}</h1>
         <Card>
           <CardHeader>
-            <CardTitle>Impact Overview</CardTitle>
+            <CardTitle>{t.donors.impactOverview}</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>Total projects funded: {projects?.length || 0}</p>
+            <p>{t.donors.totalFunded}: {projects?.length || 0}</p>
           </CardContent>
         </Card>
       </div>

@@ -38,7 +38,7 @@ export default function AdminDashboardPage() {
               <CardTitle>{t.admin.users}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>Total users: {users?.length || 0}</p>
+              <p>{t.admin.userCount}: {users?.length || 0}</p>
             </CardContent>
           </Card>
           <Card>
@@ -46,7 +46,7 @@ export default function AdminDashboardPage() {
               <CardTitle>{t.admin.projects}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>Projects to review: {projects?.length || 0}</p>
+              <p>{t.admin.projectCount}: {projects?.length || 0}</p>
             </CardContent>
           </Card>
         </div>

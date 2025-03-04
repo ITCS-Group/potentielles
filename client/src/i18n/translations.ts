@@ -22,25 +22,6 @@ export const translations = {
       profile: "Profile",
       about: "About"
     },
-    auth: {
-      loginTitle: "Login to your account",
-      registerTitle: "Create your account",
-      alreadyHaveAccount: "Already have an account?",
-      dontHaveAccount: "Don't have an account?",
-      forgotPassword: "Forgot your password?",
-      joinPotentielles: "Join Potenti'Elles Guinea",
-      empoweringStatement: "Supporting female entrepreneurs in Guinea through digital innovation and community empowerment",
-      supportMentoring: "Business development support and personalized mentoring",
-      accessResources: "Access to digital training and resources in local languages",
-      connectOrganizations: "Direct connection with APIP and support organizations",
-      progressTracking: "Track your business growth and impact metrics",
-      selectRole: "Select a role",
-      demoAccounts: "Demo accounts:",
-      demoEntrepreneur: "Entrepreneur: username 'entrepreneur' / password 'demo123'",
-      demoApip: "APIP Admin: username 'apip' / password 'demo123'",
-      demoSupport: "Support Org: username 'support' / password 'demo123'",
-      demoDonor: "Donor: username 'donor' / password 'demo123'"
-    },
     roles: {
       entrepreneur: "Entrepreneur",
       apip: "APIP",
@@ -60,15 +41,24 @@ export const translations = {
       projects: "Project Review",
       surveys: "Surveys Management",
       analytics: "Analytics",
-      settings: "Settings"
+      settings: "Settings",
+      userCount: "Total users",
+      projectCount: "Projects to review"
     },
     mentors: {
       mentees: "My Mentees",
-      chat: "Chat"
+      chat: "Chat",
+      totalMentees: "Number of mentees",
+      messagePreview: "Chat feature coming soon"
     },
     donors: {
       reports: "Reports",
-      success: "Success Stories"
+      success: "Success Stories",
+      impactOverview: "Impact Overview",
+      totalFunded: "Total projects funded",
+      impactReports: "Project Impact Reports",
+      reportsDesc: "Detailed impact reports will be available here",
+      storiesDesc: "Success stories from our entrepreneurs will be shared here"
     },
     features: {
       projectManagement: "Project Management",
@@ -81,22 +71,14 @@ export const translations = {
     landing: {
       heroText: "Join our platform dedicated to supporting and empowering female entrepreneurs in Guinea. Track your progress, connect with support organizations, and grow your business.",
       joinButton: "Join Now",
-    },
-    about: {
-      title: "About Potenti'Elles",
-      description: "Potenti'Elles is a digital platform dedicated to empowering female entrepreneurs in Guinea through comprehensive digital support and resources. Our mission is to create an inclusive environment where women can thrive in business.",
-    },
-    contact: {
-      title: "Contact Us",
-      description: "Get in touch with the Potenti'Elles team. We're here to help you succeed in your entrepreneurial journey.",
-      email: "contact@potentielles.org",
-      phone: "+224 XX XX XX XX",
-      address: "Conakry, Guinea",
-    },
-    faq: {
-      title: "Frequently Asked Questions",
-      description: "Find answers to common questions about Potenti'Elles platform and services.",
-    },
+      impact: "Our Impact",
+      impactDesc: "Supporting female entrepreneurs in Guinea through digital innovation",
+      stats: {
+        entrepreneurs: "Entrepreneurs supported",
+        projects: "Projects funded",
+        regions: "Regions covered"
+      }
+    }
   },
   fr: {
     common: {
@@ -121,25 +103,6 @@ export const translations = {
       profile: "Profil",
       about: "À propos"
     },
-    auth: {
-      loginTitle: "Connectez-vous à votre compte",
-      registerTitle: "Créez votre compte",
-      alreadyHaveAccount: "Vous avez déjà un compte ?",
-      dontHaveAccount: "Vous n'avez pas de compte ?",
-      forgotPassword: "Mot de passe oublié ?",
-      joinPotentielles: "Rejoignez Potenti'Elles Guinée",
-      empoweringStatement: "Accompagnement des femmes entrepreneures en Guinée à travers l'innovation numérique et l'autonomisation communautaire",
-      supportMentoring: "Soutien au développement d'entreprise et mentorat personnalisé",
-      accessResources: "Accès à des formations et ressources numériques en langues locales",
-      connectOrganizations: "Connexion directe avec l'APIP et les organisations de soutien",
-      progressTracking: "Suivez la croissance et l'impact de votre entreprise",
-      selectRole: "Sélectionnez un rôle",
-      demoAccounts: "Comptes de démonstration :",
-      demoEntrepreneur: "Entrepreneure : nom d'utilisateur 'entrepreneur' / mot de passe 'demo123'",
-      demoApip: "Admin APIP : nom d'utilisateur 'apip' / mot de passe 'demo123'",
-      demoSupport: "Organisation de soutien : nom d'utilisateur 'support' / mot de passe 'demo123'",
-      demoDonor: "Donateur : nom d'utilisateur 'donor' / mot de passe 'demo123'"
-    },
     roles: {
       entrepreneur: "Entrepreneure",
       apip: "APIP",
@@ -159,15 +122,24 @@ export const translations = {
       projects: "Révision des projets",
       surveys: "Gestion des enquêtes",
       analytics: "Analyses",
-      settings: "Paramètres"
+      settings: "Paramètres",
+      userCount: "Total des utilisateurs",
+      projectCount: "Projets à examiner"
     },
     mentors: {
       mentees: "Mes mentorés",
-      chat: "Discussion"
+      chat: "Discussion",
+      totalMentees: "Nombre de mentorés",
+      messagePreview: "La fonctionnalité de chat sera bientôt disponible"
     },
     donors: {
       reports: "Rapports",
-      success: "Histoires de réussite"
+      success: "Histoires de réussite",
+      impactOverview: "Aperçu de l'impact",
+      totalFunded: "Total des projets financés",
+      impactReports: "Rapports d'impact des projets",
+      reportsDesc: "Les rapports d'impact détaillés seront disponibles ici",
+      storiesDesc: "Les histoires de réussite de nos entrepreneurs seront partagées ici"
     },
     features: {
       projectManagement: "Gestion de Projets",
@@ -180,23 +152,15 @@ export const translations = {
     landing: {
       heroText: "Rejoignez notre plateforme dédiée au soutien et à l'autonomisation des femmes entrepreneures en Guinée. Suivez vos progrès, connectez-vous avec des organisations de soutien et développez votre entreprise.",
       joinButton: "Rejoindre",
-    },
-    about: {
-      title: "À propos de Potenti'Elles",
-      description: "Potenti'Elles est une plateforme numérique dédiée à l'autonomisation des femmes entrepreneures en Guinée à travers un soutien numérique complet et des ressources. Notre mission est de créer un environnement inclusif où les femmes peuvent s'épanouir dans les affaires.",
-    },
-    contact: {
-      title: "Contactez-nous",
-      description: "Prenez contact avec l'équipe Potenti'Elles. Nous sommes là pour vous aider à réussir dans votre parcours entrepreneurial.",
-      email: "contact@potentielles.org",
-      phone: "+224 XX XX XX XX",
-      address: "Conakry, Guinée",
-    },
-    faq: {
-      title: "Questions Fréquentes",
-      description: "Trouvez les réponses aux questions courantes sur la plateforme et les services de Potenti'Elles.",
-    },
-  },
+      impact: "Notre Impact",
+      impactDesc: "Accompagnement des femmes entrepreneures en Guinée par l'innovation numérique",
+      stats: {
+        entrepreneurs: "Entrepreneures accompagnées",
+        projects: "Projets financés",
+        regions: "Régions couvertes"
+      }
+    }
+  }
 };
 
 export type Language = keyof typeof translations;
