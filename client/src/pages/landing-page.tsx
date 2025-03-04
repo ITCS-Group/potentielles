@@ -10,12 +10,9 @@ export default function LandingPage() {
   return (
     <RootLayout>
       <div 
-        className="w-full h-[600px] bg-cover bg-center relative"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1583407733101-dea598185a86?ixlib=rb-4.0.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80')",
-        }}
+        className="w-full h-[600px] relative bg-[#1E1E2E]"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 flex items-center">
+        <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-bold text-white mb-6">
@@ -27,7 +24,7 @@ export default function LandingPage() {
               <Button 
                 size="lg" 
                 variant="secondary"
-                className="text-lg px-8 py-6"
+                className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90"
                 onClick={() => setLocation("/auth?tab=register")}
               >
                 {t.landing.joinButton}
@@ -37,7 +34,7 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <main>
+      <main className="bg-white">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Notre Impact</h2>
