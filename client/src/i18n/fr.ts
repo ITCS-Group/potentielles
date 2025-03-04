@@ -33,6 +33,25 @@ export const fr = {
       logout: "Déconnexion"
     }
   },
+  auth: {
+    loginTitle: "Connectez-vous à votre compte",
+    registerTitle: "Créez votre compte",
+    alreadyHaveAccount: "Vous avez déjà un compte ?",
+    dontHaveAccount: "Vous n'avez pas de compte ?",
+    forgotPassword: "Mot de passe oublié ?",
+    joinPotentielles: "Rejoignez Potenti'Elles Guinée",
+    empoweringStatement: "Accompagnement des femmes entrepreneures en Guinée à travers l'innovation numérique et l'autonomisation communautaire",
+    supportMentoring: "Soutien au développement d'entreprise et mentorat personnalisé",
+    accessResources: "Accès à des formations et ressources numériques en langues locales",
+    connectOrganizations: "Connexion directe avec l'APIP et les organisations de soutien",
+    progressTracking: "Suivez la croissance et l'impact de votre entreprise",
+    selectRole: "Sélectionnez un rôle",
+    demoAccounts: "Comptes de démonstration :",
+    demoEntrepreneur: "Entrepreneure : nom d'utilisateur 'entrepreneur' / mot de passe 'demo123'",
+    demoApip: "Admin APIP : nom d'utilisateur 'apip' / mot de passe 'demo123'",
+    demoSupport: "Organisation de soutien : nom d'utilisateur 'support' / mot de passe 'demo123'",
+    demoDonor: "Donateur : nom d'utilisateur 'donor' / mot de passe 'demo123'"
+  },
   landing: {
     heroText: "Votre plateforme d'accompagnement pour les femmes entrepreneures en Guinée",
     joinButton: "Rejoindre la plateforme",
@@ -174,25 +193,6 @@ export const fr = {
       website: "https://www.afd.fr/fr/page-region-pays/guinee",
       officeHours: "Lundi à Vendredi: 8h00 - 16h30"
     }
-  },
-  auth: {
-    loginTitle: "Connectez-vous à votre compte",
-    registerTitle: "Créez votre compte",
-    alreadyHaveAccount: "Vous avez déjà un compte ?",
-    dontHaveAccount: "Vous n'avez pas de compte ?",
-    forgotPassword: "Mot de passe oublié ?",
-    joinPotentielles: "Rejoignez Potenti'Elles Guinée",
-    empoweringStatement: "Accompagnement des femmes entrepreneures en Guinée à travers l'innovation numérique et l'autonomisation communautaire",
-    supportMentoring: "Soutien au développement d'entreprise et mentorat personnalisé",
-    accessResources: "Accès à des formations et ressources numériques en langues locales",
-    connectOrganizations: "Connexion directe avec l'APIP et les organisations de soutien",
-    progressTracking: "Suivez la croissance et l'impact de votre entreprise",
-    selectRole: "Sélectionnez un rôle",
-    demoAccounts: "Comptes de démonstration :",
-    demoEntrepreneur: "Entrepreneure : nom d'utilisateur 'entrepreneur' / mot de passe 'demo123'",
-    demoApip: "Admin APIP : nom d'utilisateur 'apip' / mot de passe 'demo123'",
-    demoSupport: "Organisation de soutien : nom d'utilisateur 'support' / mot de passe 'demo123'",
-    demoDonor: "Donateur : nom d'utilisateur 'donor' / mot de passe 'demo123'"
   }
 };
 

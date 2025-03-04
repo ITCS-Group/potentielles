@@ -7,7 +7,7 @@ import {
 import { insertUserSchema, User as SelectUser, InsertUser } from "@shared/schema";
 import { getQueryFn, apiRequest, queryClient } from "../lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import { DEFAULT_LANGUAGE } from "@/i18n/translations";
+import { DEFAULT_LANGUAGE } from "@/i18n/index";
 import { useLocation } from "wouter";
 
 type AuthContextType = {
