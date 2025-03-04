@@ -8,18 +8,18 @@ export default function ResourcesPage() {
 
   const resources = [
     {
-      title: "Guide de l'entrepreneuriat",
-      description: "Un guide complet pour démarrer et développer votre entreprise",
+      title: t.resources.entrepreneurshipGuide.title,
+      description: t.resources.entrepreneurshipGuide.description,
       icon: <BookOpen className="h-6 w-6" />,
     },
     {
-      title: "Modèles de documents",
-      description: "Des modèles pour vos documents administratifs et commerciaux",
+      title: t.resources.documentTemplates.title,
+      description: t.resources.documentTemplates.description,
       icon: <FileText className="h-6 w-6" />,
     },
     {
-      title: "Formations en vidéo",
-      description: "Des formations vidéo sur divers aspects de l'entrepreneuriat",
+      title: t.resources.videoTraining.title,
+      description: t.resources.videoTraining.description,
       icon: <Video className="h-6 w-6" />,
     },
   ];
@@ -27,7 +27,7 @@ export default function ResourcesPage() {
   return (
     <RootLayout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-3xl font-bold mb-8">{t.dashboard.resources}</h1>
+        <h1 className="text-3xl font-bold mb-8">{t.resources.title}</h1>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {resources.map((resource, index) => (
             <Card key={index} className="cursor-pointer hover:shadow-lg transition-shadow">

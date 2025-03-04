@@ -99,6 +99,35 @@ export const translations = {
         projects: "Projects funded",
         regions: "Regions covered"
       }
+    },
+    about: {
+      title: "About Potenti'Elles",
+      description: "Potenti'Elles is a digital platform dedicated to empowering female entrepreneurs in Guinea through comprehensive digital support and resources. Our mission is to create an inclusive environment where women can thrive in business."
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      description: "Find answers to common questions about Potenti'Elles platform and services.",
+      questions: {
+        account: "How do I create an account?",
+        accountAnswer: "Click the 'Register' button in the top right of the homepage. Fill out the form with your information and select your role.",
+        roles: "What are the different roles on the platform?",
+        rolesAnswer: "The platform offers different roles: Entrepreneur, APIP, Support Organization, and Donor. Each role has specific features tailored to their needs."
+      }
+    },
+    resources: {
+      title: "Resources",
+      entrepreneurshipGuide: {
+        title: "Entrepreneurship Guide",
+        description: "A comprehensive guide to starting and growing your business"
+      },
+      documentTemplates: {
+        title: "Document Templates",
+        description: "Templates for your administrative and business documents"
+      },
+      videoTraining: {
+        title: "Video Training",
+        description: "Video trainings on various aspects of entrepreneurship"
+      }
     }
   },
   fr: {
@@ -200,6 +229,35 @@ export const translations = {
         entrepreneurs: "Entrepreneures accompagnées",
         projects: "Projets financés",
         regions: "Régions couvertes"
+      }
+    },
+    about: {
+      title: "À propos de Potenti'Elles",
+      description: "Potenti'Elles est une plateforme numérique dédiée à l'autonomisation des femmes entrepreneures en Guinée à travers un soutien numérique complet et des ressources. Notre mission est de créer un environnement inclusif où les femmes peuvent s'épanouir dans les affaires."
+    },
+    faq: {
+      title: "Questions Fréquentes",
+      description: "Trouvez les réponses aux questions courantes sur la plateforme et les services de Potenti'Elles.",
+      questions: {
+        account: "Comment créer un compte ?",
+        accountAnswer: "Cliquez sur le bouton 'S'inscrire' en haut à droite de la page d'accueil. Remplissez le formulaire avec vos informations et choisissez votre rôle.",
+        roles: "Quels sont les différents rôles sur la plateforme ?",
+        rolesAnswer: "La plateforme propose différents rôles : Entrepreneure, APIP, Organisation de soutien, et Donateur. Chaque rôle a des fonctionnalités spécifiques adaptées à ses besoins."
+      }
+    },
+    resources: {
+      title: "Ressources",
+      entrepreneurshipGuide: {
+        title: "Guide de l'entrepreneuriat",
+        description: "Un guide complet pour démarrer et développer votre entreprise"
+      },
+      documentTemplates: {
+        title: "Modèles de documents",
+        description: "Des modèles pour vos documents administratifs et commerciaux"
+      },
+      videoTraining: {
+        title: "Formations en vidéo",
+        description: "Des formations vidéo sur divers aspects de l'entrepreneuriat"
       }
     }
   }
