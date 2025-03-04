@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "wouter";
 import { useAuth } from "@/hooks/use-auth";
 import { UserRole } from "@shared/schema";
@@ -174,18 +174,19 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
         onClick={onClose}
+        aria-hidden="true"
       />
 
       {/* Sidebar */}
-      <div
+      <aside
         className={cn(
-          "fixed top-0 left-0 z-50 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out",
+          "fixed top-0 left-0 z-50 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out lg:translate-x-0",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
         <div className="p-4 flex justify-between items-center border-b">
           <h2 className="text-xl font-semibold">{t.common.menu}</h2>
-          <Button variant="ghost" size="icon" onClick={onClose}>
+          <Button variant="ghost" size="icon" onClick={onClose} className="lg:hidden">
             <X className="h-5 w-5" />
           </Button>
         </div>
@@ -205,7 +206,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               </Button>
             ))}
         </nav>
-      </div>
+      </aside>
     </>
   );
 }

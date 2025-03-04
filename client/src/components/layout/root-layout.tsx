@@ -1,11 +1,11 @@
+import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
-import { LogOut, Home, Menu, User, Settings, Users, Info, HelpCircle, PhoneCall } from "lucide-react";
+import { LogOut, Home, Menu, User, Settings, Info, HelpCircle, PhoneCall } from "lucide-react";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/contexts/language-context";
 import { Sidebar } from "./sidebar";
-import { useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -42,6 +42,7 @@ export function RootLayout({ children }: RootLayoutProps) {
                   variant="ghost" 
                   size="icon"
                   onClick={toggleSidebar}
+                  className="lg:hidden"
                 >
                   <Menu className="h-5 w-5" />
                 </Button>
@@ -108,31 +109,33 @@ export function RootLayout({ children }: RootLayoutProps) {
               )}
 
               {user ? (
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size="icon">
-                      <User className="h-5 w-5" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
-                    <DropdownMenuItem onClick={() => setLocation("/profile")}>
-                      <User className="mr-2 h-4 w-4" />
-                      {t.common.userMenu.profile}
-                    </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => setLocation("/settings")}>
-                      <Settings className="mr-2 h-4 w-4" />
-                      {t.common.userMenu.settings}
-                    </DropdownMenuItem>
-                    <DropdownMenuItem onClick={handleLogout}>
-                      <LogOut className="mr-2 h-4 w-4" />
-                      {t.common.userMenu.logout}
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                <>
+                  <LanguageSwitcher />
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" size="icon">
+                        <User className="h-5 w-5" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuItem onClick={() => setLocation("/profile")}>
+                        <User className="mr-2 h-4 w-4" />
+                        {t.common.userMenu.profile}
+                      </DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setLocation("/settings")}>
+                        <Settings className="mr-2 h-4 w-4" />
+                        {t.common.userMenu.settings}
+                      </DropdownMenuItem>
+                      <DropdownMenuItem onClick={handleLogout}>
+                        <LogOut className="mr-2 h-4 w-4" />
+                        {t.common.userMenu.logout}
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </>
               ) : (
                 /* Mobile menu */
                 <div className="md:hidden flex items-center gap-2">
-                  <LanguageSwitcher />
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" size="icon">
