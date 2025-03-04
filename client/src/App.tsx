@@ -31,6 +31,16 @@ import AdminSurveysPage from "@/pages/admin/surveys-page";
 import AnalyticsPage from "@/pages/admin/analytics-page";
 import SettingsPage from "@/pages/admin/settings-page";
 
+// Private Pages - Support Organization
+import MentorDashboardPage from "@/pages/mentors/dashboard-page";
+import MenteesPage from "@/pages/mentors/mentees-page";
+import ChatPage from "@/pages/mentors/chat-page";
+
+// Private Pages - Donors
+import DonorDashboardPage from "@/pages/donors/dashboard-page";
+import ReportsPage from "@/pages/donors/reports-page";
+import SuccessStoriesPage from "@/pages/donors/success-page";
+
 function Router() {
   return (
     <Switch>
@@ -57,6 +67,16 @@ function Router() {
       <ProtectedRoute path="/admin/surveys" component={AdminSurveysPage} />
       <ProtectedRoute path="/admin/reports" component={AnalyticsPage} />
       <ProtectedRoute path="/admin/settings" component={SettingsPage} />
+
+      {/* Support Organization Routes */}
+      <ProtectedRoute path="/mentors" component={MentorDashboardPage} />
+      <ProtectedRoute path="/mentors/mentees" component={MenteesPage} />
+      <ProtectedRoute path="/mentors/chat" component={ChatPage} />
+
+      {/* Donor Routes */}
+      <ProtectedRoute path="/donors" component={DonorDashboardPage} />
+      <ProtectedRoute path="/donors/reports" component={ReportsPage} />
+      <ProtectedRoute path="/donors/success" component={SuccessStoriesPage} />
 
       {/* 404 Route */}
       <Route component={NotFound} />
