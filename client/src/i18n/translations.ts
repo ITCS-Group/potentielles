@@ -22,11 +22,30 @@ export const translations = {
       profile: "Profile",
       about: "About"
     },
+    auth: {
+      loginTitle: "Login to your account",
+      registerTitle: "Create your account",
+      alreadyHaveAccount: "Already have an account?",
+      dontHaveAccount: "Don't have an account?",
+      forgotPassword: "Forgot your password?",
+      joinPotentielles: "Join Potenti'Elles Guinea",
+      empoweringStatement: "Supporting female entrepreneurs in Guinea through digital innovation and community empowerment",
+      supportMentoring: "Business development support and personalized mentoring",
+      accessResources: "Access to digital training and resources in local languages",
+      connectOrganizations: "Direct connection with APIP and support organizations",
+      progressTracking: "Track your business growth and impact metrics",
+      selectRole: "Select a role",
+      demoAccounts: "Demo accounts:",
+      demoEntrepreneur: "Entrepreneur: username 'entrepreneur' / password 'demo123'",
+      demoApip: "APIP Admin: username 'apip' / password 'demo123'",
+      demoSupport: "Support Org: username 'support' / password 'demo123'",
+      demoDonor: "Donor: username 'donor' / password 'demo123'"
+    },
     roles: {
       entrepreneur: "Entrepreneur",
       apip: "APIP",
       support_org: "Support Organization",
-      donor: "Donor",
+      donor: "Donor"
     },
     dashboard: {
       overview: "Overview",
@@ -43,7 +62,9 @@ export const translations = {
       analytics: "Analytics",
       settings: "Settings",
       userCount: "Total users",
-      projectCount: "Projects to review"
+      projectCount: "Projects to review",
+      settingsDesc: "Configure platform settings and general preferences",
+      settingsTitle: "Platform Settings"
     },
     mentors: {
       mentees: "My Mentees",
@@ -66,7 +87,7 @@ export const translations = {
       support: "Support Network",
       supportDesc: "Connect with mentors and support organizations",
       progress: "Progress Tracking",
-      progressDesc: "Monitor your business growth and achievements",
+      progressDesc: "Monitor your business growth and achievements"
     },
     landing: {
       heroText: "Join our platform dedicated to supporting and empowering female entrepreneurs in Guinea. Track your progress, connect with support organizations, and grow your business.",
@@ -103,11 +124,30 @@ export const translations = {
       profile: "Profil",
       about: "À propos"
     },
+    auth: {
+      loginTitle: "Connectez-vous à votre compte",
+      registerTitle: "Créez votre compte",
+      alreadyHaveAccount: "Vous avez déjà un compte ?",
+      dontHaveAccount: "Vous n'avez pas de compte ?",
+      forgotPassword: "Mot de passe oublié ?",
+      joinPotentielles: "Rejoignez Potenti'Elles Guinée",
+      empoweringStatement: "Accompagnement des femmes entrepreneures en Guinée à travers l'innovation numérique et l'autonomisation communautaire",
+      supportMentoring: "Soutien au développement d'entreprise et mentorat personnalisé",
+      accessResources: "Accès à des formations et ressources numériques en langues locales",
+      connectOrganizations: "Connexion directe avec l'APIP et les organisations de soutien",
+      progressTracking: "Suivez la croissance et l'impact de votre entreprise",
+      selectRole: "Sélectionnez un rôle",
+      demoAccounts: "Comptes de démonstration :",
+      demoEntrepreneur: "Entrepreneure : nom d'utilisateur 'entrepreneur' / mot de passe 'demo123'",
+      demoApip: "Admin APIP : nom d'utilisateur 'apip' / mot de passe 'demo123'",
+      demoSupport: "Organisation de soutien : nom d'utilisateur 'support' / mot de passe 'demo123'",
+      demoDonor: "Donateur : nom d'utilisateur 'donor' / mot de passe 'demo123'"
+    },
     roles: {
       entrepreneur: "Entrepreneure",
       apip: "APIP",
       support_org: "Organisation de soutien",
-      donor: "Donateur",
+      donor: "Donateur"
     },
     dashboard: {
       overview: "Vue d'ensemble",
@@ -124,7 +164,9 @@ export const translations = {
       analytics: "Analyses",
       settings: "Paramètres",
       userCount: "Total des utilisateurs",
-      projectCount: "Projets à examiner"
+      projectCount: "Projets à examiner",
+      settingsDesc: "Configuration des paramètres généraux de la plateforme",
+      settingsTitle: "Paramètres de la Plateforme"
     },
     mentors: {
       mentees: "Mes mentorés",
@@ -147,7 +189,7 @@ export const translations = {
       support: "Réseau de Soutien",
       supportDesc: "Connectez-vous avec des mentors et des organisations de soutien",
       progress: "Suivi des Progrès",
-      progressDesc: "Surveillez la croissance et les réalisations de votre entreprise",
+      progressDesc: "Surveillez la croissance et les réalisations de votre entreprise"
     },
     landing: {
       heroText: "Rejoignez notre plateforme dédiée au soutien et à l'autonomisation des femmes entrepreneures en Guinée. Suivez vos progrès, connectez-vous avec des organisations de soutien et développez votre entreprise.",

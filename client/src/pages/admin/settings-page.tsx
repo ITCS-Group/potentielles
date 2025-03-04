@@ -11,11 +11,11 @@ export default function SettingsPage() {
         <h1 className="text-3xl font-bold mb-8">{t.admin.settings}</h1>
         <Card>
           <CardHeader>
-            <CardTitle>Paramètres de la Plateforme</CardTitle>
+            <CardTitle>{t.admin.settingsTitle}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-gray-600">
-              Configuration des paramètres généraux de la plateforme.
+              {t.admin.settingsDesc}
             </p>
           </CardContent>
         </Card>
