@@ -1,0 +1,166 @@
+📌 Hierarchy of Pages for the Potenti’Elles Web App
+
+The web app should have a structured page hierarchy that ensures an intuitive user experience while maintaining role-based access. Below is the proposed sitemap, showing how different users will navigate the platform.
+
+🏠 1️⃣ Public Pages (Accessible to All Users)
+
+These pages are publicly accessible before logging in.
+
+📌 Home Page (/)
+	•	Overview of the platform
+	•	Key features & benefits
+	•	Testimonials & impact stories
+
+📌 About Us (/about)
+	•	Mission & objectives of the Potenti’Elles project
+	•	Information on APIP, AFD, and other partners
+
+📌 Contact Page (/contact)
+	•	Inquiry form
+	•	Support contact details
+
+📌 FAQ (/faq)
+	•	Common questions about registration, eligibility, and platform usage
+
+📌 Login (/login)
+	•	Email & password authentication
+	•	Mobile OTP login option
+
+📌 Sign Up (/signup)
+	•	Account creation for entrepreneurs
+	•	Role selection (Entrepreneur, Mentor, Admin)
+
+🔐 2️⃣ Private Pages (After Authentication)
+
+Once logged in, users are redirected based on their role.
+
+👩‍💼 Entrepreneur Dashboard (/dashboard)
+
+Key Features:
+✔ Overview of registered projects and their status
+✔ Button to submit new project applications
+✔ Quick links to training materials
+✔ Notifications on upcoming deadlines
+
+📌 Project Submission (/projects/new)
+	•	Form to register a new business/project
+	•	Upload documents (business registration, financials, etc.)
+
+📌 My Projects (/projects)
+	•	List of submitted projects
+	•	Status (Pending, Approved, Rejected)
+
+📌 Surveys & Forms (/surveys)
+	•	View & complete assigned surveys
+	•	Offline submission available
+
+📌 Training Resources (/resources)
+	•	Videos, PDFs, and guides
+
+📌 Profile & Settings (/profile)
+	•	Edit user information
+	•	Change password
+	•	Delete account
+
+🏢 APIP Administrator Dashboard (/admin)
+
+Key Features:
+✔ Manage user accounts (approve/reject entrepreneurs)
+✔ View all project submissions
+✔ Analyze system-wide reports & metrics
+✔ Create surveys & evaluations
+
+📌 User Management (/admin/users)
+	•	View all users
+	•	Assign/revoke roles
+
+📌 Project Review (/admin/projects)
+	•	Approve/reject new project submissions
+
+📌 Survey Builder (/admin/surveys)
+	•	Create and edit surveys (drag-and-drop form builder)
+
+📌 Analytics & Reports (/admin/reports)
+	•	Export data to CSV/JSON/PDF
+
+📌 System Settings (/admin/settings)
+	•	Manage permissions
+	•	Configure security policies
+
+📊 M&E Team Dashboard (/me)
+
+Key Features:
+✔ View impact data and project performance
+✔ Generate real-time charts & visualizations
+✔ Export aggregated reports
+
+📌 Impact Dashboard (/me/impact)
+	•	Interactive graphs and statistics
+
+📌 Export Data (/me/export)
+	•	Download data reports
+
+👨‍🏫 Mentor & Support Organizations (/mentors)
+
+Key Features:
+✔ Assign mentors to entrepreneurs
+✔ Track mentee progress
+✔ Provide guidance & recommendations
+
+📌 Mentee List (/mentors/mentees)
+	•	View assigned entrepreneurs
+
+📌 Mentor Chat (/mentors/chat)
+	•	Secure messaging system
+
+💰 Donor Dashboard (/donors)
+
+Key Features:
+✔ View impact reports
+✔ Access funding metrics
+
+📌 Funding Reports (/donors/reports)
+	•	High-level impact data
+
+📌 Success Stories (/donors/success)
+	•	Featured entrepreneur achievements
+
+📌 Page Hierarchy Summary
+
+🏠 Home (/)
+   ├── About (/about)
+   ├── Contact (/contact)
+   ├── FAQ (/faq)
+   ├── Login (/login)
+   ├── Sign Up (/signup)
+🔐 Private Pages
+   ├── Entrepreneur Dashboard (/dashboard)
+   │   ├── My Projects (/projects)
+   │   ├── Submit New Project (/projects/new)
+   │   ├── Surveys (/surveys)
+   │   ├── Resources (/resources)
+   │   ├── Profile (/profile)
+   ├── APIP Admin Dashboard (/admin)
+   │   ├── User Management (/admin/users)
+   │   ├── Project Review (/admin/projects)
+   │   ├── Surveys (/admin/surveys)
+   │   ├── Analytics (/admin/reports)
+   │   ├── Settings (/admin/settings)
+   ├── M&E Team Dashboard (/me)
+   │   ├── Impact Dashboard (/me/impact)
+   │   ├── Export Data (/me/export)
+   ├── Mentors & Support Organizations (/mentors)
+   │   ├── Mentees (/mentors/mentees)
+   │   ├── Chat (/mentors/chat)
+   ├── Donor Dashboard (/donors)
+       ├── Reports (/donors/reports)
+       ├── Success Stories (/donors/success)
+
+🚀 Conclusion: A Well-Structured & Role-Based Navigation
+
+This hierarchical structure ensures:
+✔ Clear navigation for each user type
+✔ Security & restricted access based on role permissions
+✔ Scalability for future features
+
+Would you like me to generate the folder structure and React/Express routes based on this hierarchy? 😃🚀

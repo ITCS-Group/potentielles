@@ -1,0 +1,108 @@
+📌 User Roles and Responsibilities on the Potenti’Elles Platform
+
+The Potenti’Elles platform involves different stakeholders, each with specific roles and permissions to ensure smooth monitoring, evaluation, and support for female entrepreneurs. Below is a breakdown of each user type and their responsibilities on the platform.
+
+👩‍💼 1️⃣ Entrepreneur (Beneficiary)
+
+Primary User | Role: Submit Data & Track Progress
+
+✅ Key Responsibilities:
+
+✔ Register and create a profile with business details.
+✔ Submit project applications and updates on their progress.
+✔ Access training materials and available resources.
+✔ Receive notifications about upcoming deadlines, funding opportunities, and program updates.
+✔ Complete surveys and evaluations to track business development.
+✔ Communicate with support organizations for guidance and assistance.
+
+🔒 Permissions:
+
+🔹 Can edit their profile but cannot modify evaluation criteria.
+🔹 Can see their project status but cannot access other entrepreneurs’ data.
+
+🏢 2️⃣ APIP Administrator (Platform Manager)
+
+Super Administrator | Role: Manage and Oversee the Platform
+
+✅ Key Responsibilities:
+
+✔ Manage the entire platform, including user registrations and settings.
+✔ Approve or reject entrepreneur applications based on eligibility criteria.
+✔ Monitor platform activity and ensure data integrity.
+✔ Create and customize surveys/forms for project evaluation.
+✔ Generate reports and analytics on project impact.
+✔ Manage system security and user permissions.
+
+🔒 Permissions:
+
+🔹 Full access to all platform features, including data exports and settings.
+🔹 Can assign and manage roles for other users.
+🔹 Can edit system-wide content such as eligibility criteria and project indicators.
+
+📊 3️⃣ Monitoring & Evaluation Team (M&E Officers)
+
+Data Analysts | Role: Track Impact & Performance
+
+✅ Key Responsibilities:
+
+✔ Monitor and track project progress of enrolled entrepreneurs.
+✔ Analyze collected data and measure the impact of the initiative.
+✔ Export reports in CSV, JSON, and PDF formats for decision-making.
+✔ Ensure data quality and validation before publishing reports.
+
+🔒 Permissions:
+
+🔹 Can view and analyze all entrepreneur data but cannot edit submissions.
+🔹 Can export reports but cannot modify platform settings.
+
+📌 4️⃣ Support Organization (Coaching/Mentorship Providers)
+
+Advisors | Role: Provide Support & Guidance
+
+✅ Key Responsibilities:
+
+✔ Review entrepreneur submissions and provide feedback.
+✔ Offer mentorship and training programs through the platform.
+✔ Assess the needs of entrepreneurs and recommend business support strategies.
+✔ Interact with entrepreneurs via comments or chat (if enabled).
+
+🔒 Permissions:
+
+🔹 Can access assigned entrepreneur profiles but cannot edit their information.
+🔹 Can leave feedback and recommendations for entrepreneurs.
+
+💰 5️⃣ Donors & Funding Partners (AFD, EU, Other Investors)
+
+Observers | Role: Monitor Project Impact & Outcomes
+
+✅ Key Responsibilities:
+
+✔ Track the overall impact of the project through analytics and reports.
+✔ Access aggregated performance data (without personal entrepreneur details).
+✔ Receive notifications on project milestones and key insights.
+✔ Suggest improvements or modifications based on data trends.
+
+🔒 Permissions:
+
+🔹 Can view reports and dashboards but cannot edit or modify data.
+🔹 Can access anonymized entrepreneur success stories for impact assessment.
+
+🔒 Security & Access Control Summary
+
+Role	View Data	Edit Own Data	Edit Others’ Data	Export Data	Manage Users	Manage Platform
+Entrepreneur	✅ Own	✅ Yes	❌ No	❌ No	❌ No	❌ No
+APIP Administrator	✅ All	✅ Yes	✅ Yes	✅ Yes	✅ Yes	✅ Yes
+M&E Team	✅ All	❌ No	❌ No	✅ Yes	❌ No	❌ No
+Support Organization	✅ Assigned	❌ No	❌ No	❌ No	❌ No	❌ No
+Donors/Investors	✅ Limited	❌ No	❌ No	❌ No	❌ No	❌ No
+
+🚀 Conclusion: A Secure & Role-Based Platform
+
+By defining clear roles and permissions, the Potenti’Elles platform ensures:
+✔ Entrepreneurs can submit and track their progress.
+✔ APIP has full control over data and platform operations.
+✔ M&E Officers analyze data without modifying submissions.
+✔ Support organizations provide mentorship and guidance.
+✔ Donors access key performance insights securely.
+
+This role-based structure enhances security, transparency, and efficiency for all stakeholders! 🚀
