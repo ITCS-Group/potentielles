@@ -55,7 +55,7 @@ export default function AboutPage() {
                     <div className="flex flex-col items-center">
                       <div className="h-20 w-40 flex items-center justify-center">
                         <img 
-                          src="/logos/afd-logo.svg" 
+                          src="/logos/afd-logo.png" 
                           alt="Agence Française de Développement" 
                           className="w-full h-full object-contain"
                         />
