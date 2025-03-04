@@ -116,24 +116,29 @@ export default function LoginPage() {
                 <p className="text-lg text-gray-600 mb-6">
                   {t.auth.empoweringStatement}
                 </p>
-                <ul className="space-y-4 text-gray-600">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    {t.auth.supportMentoring}
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    {t.auth.accessResources}
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    {t.auth.connectOrganizations}
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    {t.auth.progressTracking}
-                  </li>
-                </ul>
+                <div className="space-y-6">
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    {t.auth.demoAccounts}
+                  </h3>
+                  <ul className="space-y-4 text-gray-600">
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      {t.auth.demoEntrepreneur}
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      {t.auth.demoApip}
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      {t.auth.demoSupport}
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      {t.auth.demoDonor}
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

@@ -31,7 +31,12 @@ export const translations = {
       accessResources: "Access to digital training and resources in local languages",
       connectOrganizations: "Direct connection with APIP and support organizations",
       progressTracking: "Track your business growth and impact metrics",
-      selectRole: "Select a role"
+      selectRole: "Select a role",
+      demoAccounts: "Demo accounts:",
+      demoEntrepreneur: "Entrepreneur: username 'entrepreneur' / password 'demo123'",
+      demoApip: "APIP Admin: username 'apip' / password 'demo123'",
+      demoSupport: "Support Org: username 'support' / password 'demo123'",
+      demoDonor: "Donor: username 'donor' / password 'demo123'"
     },
     roles: {
       entrepreneur: "Entrepreneur",
@@ -91,7 +96,12 @@ export const translations = {
       accessResources: "Accès à des formations et ressources numériques en langues locales",
       connectOrganizations: "Connexion directe avec l'APIP et les organisations de soutien",
       progressTracking: "Suivez la croissance et l'impact de votre entreprise",
-      selectRole: "Sélectionnez un rôle"
+      selectRole: "Sélectionnez un rôle",
+      demoAccounts: "Comptes de démonstration :",
+      demoEntrepreneur: "Entrepreneure : nom d'utilisateur 'entrepreneur' / mot de passe 'demo123'",
+      demoApip: "Admin APIP : nom d'utilisateur 'apip' / mot de passe 'demo123'",
+      demoSupport: "Organisation de soutien : nom d'utilisateur 'support' / mot de passe 'demo123'",
+      demoDonor: "Donateur : nom d'utilisateur 'donor' / mot de passe 'demo123'"
     },
     roles: {
       entrepreneur: "Entrepreneure",
