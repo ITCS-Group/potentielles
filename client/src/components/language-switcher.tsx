@@ -23,7 +23,11 @@ export function LanguageSwitcher() {
           {languageFlags[currentLanguage]}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent 
+        align="end" 
+        className="overflow-hidden w-[150px]"
+        sideOffset={8}
+      >
         {Object.keys(translations).map((lang) => (
           <DropdownMenuItem
             key={lang}
