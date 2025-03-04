@@ -6,13 +6,14 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Globe } from "lucide-react";
-import { translations, Language } from "@/i18n/translations";
+import { translations, Language, DEFAULT_LANGUAGE } from "@/i18n/translations";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 
 export function LanguageSwitcher() {
   const { data: currentLanguage } = useQuery<Language>({
     queryKey: ["/api/user/language"],
+    initialData: DEFAULT_LANGUAGE,
   });
 
   const setLanguageMutation = useMutation({
