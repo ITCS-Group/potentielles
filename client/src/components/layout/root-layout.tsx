@@ -50,31 +50,59 @@ export function RootLayout({ children }: RootLayoutProps) {
           <div className="flex items-center gap-4">
             {!user && (
               <>
-                <Button 
-                  variant="ghost"
-                  onClick={() => setLocation("/about")}
-                >
-                  {t.common.about}
-                </Button>
-                <Button 
-                  variant="ghost"
-                  onClick={() => setLocation("/faq")}
-                >
-                  {t.common.faq}
-                </Button>
-                <Button 
-                  variant="ghost"
-                  onClick={() => setLocation("/contact")}
-                >
-                  {t.common.contact}
-                </Button>
-                <Button 
-                  variant="ghost" 
-                  size="icon"
-                  onClick={() => setLocation("/")}
-                >
-                  <Home className="h-5 w-5" />
-                </Button>
+                {/* Desktop menu */}
+                <div className="hidden md:flex items-center gap-4">
+                  <Button 
+                    variant="ghost"
+                    onClick={() => setLocation("/about")}
+                  >
+                    {t.common.about}
+                  </Button>
+                  <Button 
+                    variant="ghost"
+                    onClick={() => setLocation("/faq")}
+                  >
+                    {t.common.faq}
+                  </Button>
+                  <Button 
+                    variant="ghost"
+                    onClick={() => setLocation("/contact")}
+                  >
+                    {t.common.contact}
+                  </Button>
+                  <Button 
+                    variant="ghost" 
+                    size="icon"
+                    onClick={() => setLocation("/")}
+                  >
+                    <Home className="h-5 w-5" />
+                  </Button>
+                </div>
+                {/* Mobile menu */}
+                <div className="md:hidden">
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" size="icon">
+                        <Menu className="h-5 w-5" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="w-56">
+                      <DropdownMenuItem onClick={() => setLocation("/about")}>
+                        {t.common.about}
+                      </DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setLocation("/faq")}>
+                        {t.common.faq}
+                      </DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setLocation("/contact")}>
+                        {t.common.contact}
+                      </DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setLocation("/")}>
+                        <Home className="mr-2 h-4 w-4" />
+                        Accueil
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
               </>
             )}
             <LanguageSwitcher />
