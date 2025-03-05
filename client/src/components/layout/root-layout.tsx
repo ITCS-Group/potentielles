@@ -2,7 +2,7 @@ import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
-import { LogOut, Menu, User, Settings, X } from "lucide-react";
+import { LogOut, Menu, User, Settings, X, Home, Info, HelpCircle, PhoneCall } from "lucide-react";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/contexts/language-context";
 import {
@@ -53,8 +53,102 @@ export function RootLayout({ children }: RootLayoutProps) {
             </div>
 
             <div className="flex items-center gap-2">
+              {!user && (
+                <>
+                  {/* Desktop menu */}
+                  <div className="hidden md:flex items-center">
+                    <nav className="flex items-center space-x-1">
+                      <Button 
+                        variant="ghost" 
+                        onClick={() => setLocation("/")}
+                        className="px-3 transition-colors"
+                      >
+                        {t.common.home}
+                      </Button>
+                      <Button 
+                        variant="ghost"
+                        onClick={() => setLocation("/about")}
+                        className="px-3 transition-colors"
+                      >
+                        {t.common.about}
+                      </Button>
+                      <Button 
+                        variant="ghost"
+                        onClick={() => setLocation("/faq")}
+                        className="px-3 transition-colors"
+                      >
+                        {t.common.faq}
+                      </Button>
+                      <Button 
+                        variant="ghost"
+                        onClick={() => setLocation("/contact")}
+                        className="px-3 transition-colors"
+                      >
+                        {t.common.contact}
+                      </Button>
+                    </nav>
+                  </div>
+                </>
+              )}
+
               <LanguageSwitcher />
-              {user && (
+
+              {!user ? (
+                <>
+                  <div className="hidden md:flex items-center gap-2">
+                    <Button 
+                      variant="ghost"
+                      onClick={() => setLocation("/login")}
+                      className="px-3 transition-colors"
+                    >
+                      {t.common.login}
+                    </Button>
+                    <Button 
+                      variant="default"
+                      onClick={() => setLocation("/register")}
+                      className="px-3"
+                    >
+                      {t.common.register}
+                    </Button>
+                  </div>
+                  {/* Mobile menu for non-authenticated users */}
+                  <div className="md:hidden">
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button variant="ghost" size="icon">
+                          <Menu className="h-5 w-5" />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end">
+                        <DropdownMenuItem onClick={() => setLocation("/")}>
+                          <Home className="mr-2 h-4 w-4" />
+                          {t.common.home}
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setLocation("/about")}>
+                          <Info className="mr-2 h-4 w-4" />
+                          {t.common.about}
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setLocation("/faq")}>
+                          <HelpCircle className="mr-2 h-4 w-4" />
+                          {t.common.faq}
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setLocation("/contact")}>
+                          <PhoneCall className="mr-2 h-4 w-4" />
+                          {t.common.contact}
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setLocation("/login")}>
+                          <LogOut className="mr-2 h-4 w-4" rotate={180} />
+                          {t.common.login}
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setLocation("/register")}>
+                          <User className="mr-2 h-4 w-4" />
+                          {t.common.register}
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </div>
+                </>
+              ) : (
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" size="icon">
@@ -82,15 +176,16 @@ export function RootLayout({ children }: RootLayoutProps) {
         </div>
       </header>
 
-      {/* Sidebar */}
+      {/* Sidebar for authenticated users */}
       {user && (
         <>
           {/* Overlay */}
           <div
-            className={`fixed inset-0 bg-black/50 z-30 transition-opacity duration-200 ${
-              isSidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+            className={`fixed inset-0 bg-black/50 z-30 md:hidden transition-opacity duration-200 ${
+              isSidebarOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
             }`}
             onClick={() => setIsSidebarOpen(false)}
+            aria-hidden="true"
           />
 
           {/* Sidebar */}
