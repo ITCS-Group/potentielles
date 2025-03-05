@@ -2,7 +2,22 @@ import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
-import { LogOut, Menu, User, Settings, X, Home, Info, HelpCircle, PhoneCall } from "lucide-react";
+import { 
+  LogOut, 
+  Menu, 
+  User, 
+  Settings, 
+  X, 
+  Home, 
+  Info, 
+  HelpCircle, 
+  PhoneCall,
+  Layout,
+  FileText,
+  FolderPlus,
+  ClipboardList,
+  BookOpen
+} from "lucide-react";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/contexts/language-context";
 import {
@@ -203,6 +218,7 @@ export function RootLayout({ children }: RootLayoutProps) {
                   setIsSidebarOpen(false);
                 }}
               >
+                <Layout className="h-5 w-5" />
                 {t.dashboard.overview}
               </Button>
               <Button
@@ -213,6 +229,7 @@ export function RootLayout({ children }: RootLayoutProps) {
                   setIsSidebarOpen(false);
                 }}
               >
+                <FileText className="h-5 w-5" />
                 {t.dashboard.projects}
               </Button>
               <Button
@@ -223,6 +240,7 @@ export function RootLayout({ children }: RootLayoutProps) {
                   setIsSidebarOpen(false);
                 }}
               >
+                <FolderPlus className="h-5 w-5" />
                 {t.common.newProject}
               </Button>
               <Button
@@ -233,6 +251,7 @@ export function RootLayout({ children }: RootLayoutProps) {
                   setIsSidebarOpen(false);
                 }}
               >
+                <ClipboardList className="h-5 w-5" />
                 {t.dashboard.surveys}
               </Button>
               <Button
@@ -243,6 +262,7 @@ export function RootLayout({ children }: RootLayoutProps) {
                   setIsSidebarOpen(false);
                 }}
               >
+                <BookOpen className="h-5 w-5" />
                 {t.dashboard.resources}
               </Button>
             </nav>
