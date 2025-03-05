@@ -34,11 +34,11 @@ export function RootLayout({ children }: RootLayoutProps) {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
               {user && (
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   size="icon"
                   onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                  className="block"
+                  className="flex items-center justify-center w-10 h-10"
                 >
                   {isSidebarOpen ? (
                     <X className="h-5 w-5" />
@@ -58,28 +58,28 @@ export function RootLayout({ children }: RootLayoutProps) {
                   {/* Desktop menu */}
                   <div className="hidden md:flex items-center">
                     <nav className="flex items-center space-x-1">
-                      <Button 
-                        variant="ghost" 
+                      <Button
+                        variant="ghost"
                         onClick={() => setLocation("/")}
                         className="px-3 transition-colors"
                       >
                         {t.common.home}
                       </Button>
-                      <Button 
+                      <Button
                         variant="ghost"
                         onClick={() => setLocation("/about")}
                         className="px-3 transition-colors"
                       >
                         {t.common.about}
                       </Button>
-                      <Button 
+                      <Button
                         variant="ghost"
                         onClick={() => setLocation("/faq")}
                         className="px-3 transition-colors"
                       >
                         {t.common.faq}
                       </Button>
-                      <Button 
+                      <Button
                         variant="ghost"
                         onClick={() => setLocation("/contact")}
                         className="px-3 transition-colors"
@@ -96,14 +96,14 @@ export function RootLayout({ children }: RootLayoutProps) {
               {!user ? (
                 <>
                   <div className="hidden md:flex items-center gap-2">
-                    <Button 
+                    <Button
                       variant="ghost"
                       onClick={() => setLocation("/login")}
                       className="px-3 transition-colors"
                     >
                       {t.common.login}
                     </Button>
-                    <Button 
+                    <Button
                       variant="default"
                       onClick={() => setLocation("/register")}
                       className="px-3"
