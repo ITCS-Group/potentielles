@@ -2,10 +2,9 @@ import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
-import { LogOut, Home, Menu, User, Settings, Info, HelpCircle, PhoneCall, X } from "lucide-react";
+import { LogOut, Menu, User, Settings, X } from "lucide-react";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/contexts/language-context";
-import { Sidebar } from "./sidebar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,13 +26,10 @@ export function RootLayout({ children }: RootLayoutProps) {
     logoutMutation.mutate(undefined);
   };
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-30 w-full">
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-20 w-full">
         <div className="px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
@@ -41,8 +37,8 @@ export function RootLayout({ children }: RootLayoutProps) {
                 <Button 
                   variant="ghost" 
                   size="icon"
-                  onClick={toggleSidebar}
-                  className="block md:hidden"
+                  onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                  className="block"
                 >
                   {isSidebarOpen ? (
                     <X className="h-5 w-5" />
@@ -57,137 +53,112 @@ export function RootLayout({ children }: RootLayoutProps) {
             </div>
 
             <div className="flex items-center gap-2">
-              {!user && (
-                <>
-                  {/* Desktop menu */}
-                  <div className="hidden md:flex items-center">
-                    <nav className="flex items-center space-x-1">
-                      <Button 
-                        variant="ghost" 
-                        onClick={() => setLocation("/")}
-                        className="px-3 transition-colors"
-                      >
-                        {t.common.home}
-                      </Button>
-                      <Button 
-                        variant="ghost"
-                        onClick={() => setLocation("/about")}
-                        className="px-3 transition-colors"
-                      >
-                        {t.common.about}
-                      </Button>
-                      <Button 
-                        variant="ghost"
-                        onClick={() => setLocation("/faq")}
-                        className="px-3 transition-colors"
-                      >
-                        {t.common.faq}
-                      </Button>
-                      <Button 
-                        variant="ghost"
-                        onClick={() => setLocation("/contact")}
-                        className="px-3 transition-colors"
-                      >
-                        {t.common.contact}
-                      </Button>
-                      <div className="flex items-center ml-2 space-x-1">
-                        <LanguageSwitcher />
-                        <Button 
-                          variant="ghost"
-                          onClick={() => setLocation("/login")}
-                          className="px-3 transition-colors"
-                        >
-                          {t.common.login}
-                        </Button>
-                        <Button 
-                          variant="default"
-                          onClick={() => setLocation("/register")}
-                          className="px-3"
-                        >
-                          {t.common.register}
-                        </Button>
-                      </div>
-                    </nav>
-                  </div>
-                </>
-              )}
-
-              {user ? (
-                <>
-                  <LanguageSwitcher />
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="icon">
-                        <User className="h-5 w-5" />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                      <DropdownMenuItem onClick={() => setLocation("/profile")}>
-                        <User className="mr-2 h-4 w-4" />
-                        {t.common.userMenu.profile}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/settings")}>
-                        <Settings className="mr-2 h-4 w-4" />
-                        {t.common.userMenu.settings}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={handleLogout}>
-                        <LogOut className="mr-2 h-4 w-4" />
-                        {t.common.userMenu.logout}
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </>
-              ) : (
-                /* Mobile menu */
-                <div className="md:hidden flex items-center gap-2">
-                  <LanguageSwitcher />
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="icon">
-                        <Menu className="h-5 w-5" />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                      <DropdownMenuItem onClick={() => setLocation("/")}>
-                        <Home className="mr-2 h-4 w-4" />
-                        {t.common.home}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/about")}>
-                        <Info className="mr-2 h-4 w-4" />
-                        {t.common.about}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/faq")}>
-                        <HelpCircle className="mr-2 h-4 w-4" />
-                        {t.common.faq}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/contact")}>
-                        <PhoneCall className="mr-2 h-4 w-4" />
-                        {t.common.contact}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/login")}>
-                        <LogOut className="mr-2 h-4 w-4" rotate={180} />
-                        {t.common.login}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLocation("/register")}>
-                        <User className="mr-2 h-4 w-4" />
-                        {t.common.register}
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
+              <LanguageSwitcher />
+              {user && (
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="icon">
+                      <User className="h-5 w-5" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuItem onClick={() => setLocation("/profile")}>
+                      <User className="mr-2 h-4 w-4" />
+                      {t.common.profile}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setLocation("/settings")}>
+                      <Settings className="mr-2 h-4 w-4" />
+                      {t.common.userMenu.settings}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={handleLogout}>
+                      <LogOut className="mr-2 h-4 w-4" />
+                      {t.common.userMenu.logout}
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               )}
             </div>
           </div>
         </div>
       </header>
 
+      {/* Sidebar */}
       {user && (
-        <div className="flex" style={{height: 'calc(100vh - 64px)'}}>
-          <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} className="z-40" />
-          <main className="flex-grow pt-16">{children}</main>
-        </div>
+        <>
+          {/* Overlay */}
+          <div
+            className={`fixed inset-0 bg-black/50 z-30 transition-opacity duration-200 ${
+              isSidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
+            onClick={() => setIsSidebarOpen(false)}
+          />
+
+          {/* Sidebar */}
+          <aside
+            className={`fixed top-0 left-0 z-40 h-full w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out mt-14 ${
+              isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
+          >
+            <nav className="p-4 space-y-2">
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => {
+                  setLocation("/dashboard");
+                  setIsSidebarOpen(false);
+                }}
+              >
+                {t.dashboard.overview}
+              </Button>
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => {
+                  setLocation("/projects");
+                  setIsSidebarOpen(false);
+                }}
+              >
+                {t.dashboard.projects}
+              </Button>
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => {
+                  setLocation("/projects/new");
+                  setIsSidebarOpen(false);
+                }}
+              >
+                {t.common.newProject}
+              </Button>
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => {
+                  setLocation("/surveys");
+                  setIsSidebarOpen(false);
+                }}
+              >
+                {t.dashboard.surveys}
+              </Button>
+              <Button
+                variant="ghost"
+                className="w-full justify-start gap-3"
+                onClick={() => {
+                  setLocation("/resources");
+                  setIsSidebarOpen(false);
+                }}
+              >
+                {t.dashboard.resources}
+              </Button>
+            </nav>
+          </aside>
+        </>
       )}
-      {!user && <main className="pt-16">{children}</main>}
+
+      {/* Main Content */}
+      <main className="pt-16 px-4">
+        {children}
+      </main>
     </div>
   );
 }
