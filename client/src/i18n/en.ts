@@ -243,6 +243,14 @@ export const en = {
     },
     ecosystem: "An Ecosystem Serving Women Entrepreneurs",
     conclusion: "Thanks to the synergy between EU and AFD funding, and implementation by APIP, Potenti'Elles aims to sustainably transform the female entrepreneurial landscape in Guinea. This project is based on an integrated approach combining field support and digital solutions to create an inclusive and favorable environment for Guinean women entrepreneurs."
+  },
+  surveys: {
+    title: "Surveys",
+    businessTitle: "Business Development Survey",
+    businessDescription: "Answer questions about your business development and needs.",
+    newSurvey: "New Survey",
+    submit: "Submit Survey",
+    responses: "Survey Responses",
   }
 };
 
