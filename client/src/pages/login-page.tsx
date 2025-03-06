@@ -44,7 +44,7 @@ export default function LoginPage() {
   return (
     <RootLayout>
       <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 padding-8rems">
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="flex-1">
               <Card className="w-full">
@@ -78,7 +78,7 @@ export default function LoginPage() {
                   <Form {...form}>
                     <form
                       onSubmit={form.handleSubmit((data) =>
-                        loginMutation.mutate(data)
+                        loginMutation.mutate(data),
                       )}
                       className="space-y-4"
                     >
@@ -134,7 +134,9 @@ export default function LoginPage() {
 
             <div className="hidden lg:block flex-1">
               <div className="bg-white rounded-lg shadow-lg p-8 h-full">
-                <h2 className="text-3xl font-bold mb-6">{t.auth.joinPotentielles}</h2>
+                <h2 className="text-3xl font-bold mb-6">
+                  {t.auth.joinPotentielles}
+                </h2>
                 <p className="text-lg text-gray-600 mb-6">
                   {t.auth.empoweringStatement}
                 </p>

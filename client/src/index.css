@@ -23,6 +23,14 @@
     overflow-x: hidden;
     width: 100%;
     position: relative;
+
+    .padding-15rems {
+      padding-top: 18rem;
+    }
+
+    .padding-8rems {
+      padding-top: 5rem;
+    }
   }
 
   #root {

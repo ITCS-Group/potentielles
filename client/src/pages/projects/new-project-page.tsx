@@ -4,7 +4,14 @@ import { RootLayout } from "@/components/layout/root-layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useMutation } from "@tanstack/react-query";
@@ -39,14 +46,19 @@ export default function NewProjectPage() {
 
   return (
     <RootLayout>
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 padding-8rems">
         <Card>
           <CardHeader>
             <CardTitle>{t.common.newProject}</CardTitle>
           </CardHeader>
           <CardContent>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit((data) => createProject.mutate(data))} className="space-y-6">
+              <form
+                onSubmit={form.handleSubmit((data) =>
+                  createProject.mutate(data),
+                )}
+                className="space-y-6"
+              >
                 <FormField
                   control={form.control}
                   name="name"

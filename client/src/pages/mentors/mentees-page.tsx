@@ -25,7 +25,7 @@ export default function MenteesPage() {
 
   return (
     <RootLayout>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 padding-8rems">
         <h1 className="text-3xl font-bold mb-8">{t.mentors.mentees}</h1>
         <div className="grid gap-6">
           {mentees?.map((mentee) => (

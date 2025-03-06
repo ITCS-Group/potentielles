@@ -9,10 +9,10 @@ export default function LandingPage() {
 
   return (
     <RootLayout>
-      <div className="relative w-full min-h-[600px]">
+      <div className="relative w-full min-h-[845px]">
         {/* Image de fond */}
         <div className="absolute inset-0">
-          <img 
+          <img
             src="/images/entrepreneur.jpg"
             alt="Femme entrepreneure en Guinée"
             className="w-full h-full object-cover"
@@ -23,7 +23,7 @@ export default function LandingPage() {
 
         {/* Contenu */}
         <div className="relative z-10 h-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 padding-15rems">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-bold text-white mb-6">
                 {t.common.welcome}
@@ -31,8 +31,8 @@ export default function LandingPage() {
               <p className="text-xl text-white mb-8 leading-relaxed">
                 {t.landing.heroText}
               </p>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="secondary"
                 className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90"
                 onClick={() => setLocation("/register")}
@@ -55,22 +55,24 @@ export default function LandingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <h3 className="text-lg font-semibold mb-4">{t.features.projectManagement}</h3>
+              <h3 className="text-lg font-semibold mb-4">
+                {t.features.projectManagement}
+              </h3>
               <p className="text-gray-600">
                 {t.features.projectManagementDesc}
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <h3 className="text-lg font-semibold mb-4">{t.features.support}</h3>
-              <p className="text-gray-600">
-                {t.features.supportDesc}
-              </p>
+              <h3 className="text-lg font-semibold mb-4">
+                {t.features.support}
+              </h3>
+              <p className="text-gray-600">{t.features.supportDesc}</p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <h3 className="text-lg font-semibold mb-4">{t.features.progress}</h3>
-              <p className="text-gray-600">
-                {t.features.progressDesc}
-              </p>
+              <h3 className="text-lg font-semibold mb-4">
+                {t.features.progress}
+              </h3>
+              <p className="text-gray-600">{t.features.progressDesc}</p>
             </div>
           </div>
 
@@ -78,7 +80,9 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="text-4xl font-bold text-primary mb-2">500+</div>
-                <div className="text-gray-600">{t.landing.stats.entrepreneurs}</div>
+                <div className="text-gray-600">
+                  {t.landing.stats.entrepreneurs}
+                </div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-primary mb-2">50+</div>

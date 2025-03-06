@@ -16,7 +16,7 @@ export default function ContactPage() {
 
   return (
     <RootLayout>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 padding-8rems">
         <Card>
           <CardContent className="pt-6">
             <h1 className="text-4xl font-bold mb-8">{t.contact.title}</h1>

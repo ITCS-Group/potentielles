@@ -26,11 +26,14 @@ export default function ResourcesPage() {
 
   return (
     <RootLayout>
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 padding-8rems">
         <h1 className="text-3xl font-bold mb-8">{t.resources.title}</h1>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {resources.map((resource, index) => (
-            <Card key={index} className="cursor-pointer hover:shadow-lg transition-shadow">
+            <Card
+              key={index}
+              className="cursor-pointer hover:shadow-lg transition-shadow"
+            >
               <CardHeader>
                 <div className="flex items-center gap-4">
                   {resource.icon}

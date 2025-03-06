@@ -2,21 +2,21 @@ import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
-import { 
-  LogOut, 
-  Menu, 
-  User, 
-  Settings, 
-  X, 
-  Home, 
-  Info, 
-  HelpCircle, 
+import {
+  LogOut,
+  Menu,
+  User,
+  Settings,
+  X,
+  Home,
+  Info,
+  HelpCircle,
   PhoneCall,
   Layout,
   FileText,
   FolderPlus,
   ClipboardList,
-  BookOpen
+  BookOpen,
 } from "lucide-react";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/contexts/language-context";
@@ -147,7 +147,9 @@ export function RootLayout({ children }: RootLayoutProps) {
                           <HelpCircle className="mr-2 h-4 w-4" />
                           {t.common.faq}
                         </DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => setLocation("/contact")}>
+                        <DropdownMenuItem
+                          onClick={() => setLocation("/contact")}
+                        >
                           <PhoneCall className="mr-2 h-4 w-4" />
                           {t.common.contact}
                         </DropdownMenuItem>
@@ -155,7 +157,9 @@ export function RootLayout({ children }: RootLayoutProps) {
                           <LogOut className="mr-2 h-4 w-4" rotate={180} />
                           {t.common.login}
                         </DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => setLocation("/register")}>
+                        <DropdownMenuItem
+                          onClick={() => setLocation("/register")}
+                        >
                           <User className="mr-2 h-4 w-4" />
                           {t.common.register}
                         </DropdownMenuItem>
@@ -197,7 +201,9 @@ export function RootLayout({ children }: RootLayoutProps) {
           {/* Overlay */}
           <div
             className={`fixed inset-0 bg-black/50 z-30 md:hidden transition-opacity duration-200 ${
-              isSidebarOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+              isSidebarOpen
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
             }`}
             onClick={() => setIsSidebarOpen(false)}
             aria-hidden="true"
@@ -271,9 +277,7 @@ export function RootLayout({ children }: RootLayoutProps) {
       )}
 
       {/* Main Content */}
-      <main className="pt-16 px-4">
-        {children}
-      </main>
+      <main>{children}</main>
     </div>
   );
 }

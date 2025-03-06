@@ -15,7 +15,9 @@ export default function DashboardPage() {
     queryKey: ["/api/projects", user?.id],
   });
 
-  const { data: activities, isLoading: activitiesLoading } = useQuery<Activity[]>({
+  const { data: activities, isLoading: activitiesLoading } = useQuery<
+    Activity[]
+  >({
     queryKey: ["/api/activities"],
   });
 
@@ -31,7 +33,7 @@ export default function DashboardPage() {
 
   return (
     <RootLayout>
-      <div className="min-h-screen bg-gray-50 p-8">
+      <div className="min-h-screen bg-gray-50 p-8 padding-8rems">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold mb-8">{t.dashboard.overview}</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -67,28 +67,34 @@ export default function AuthPage() {
   return (
     <RootLayout>
       <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 padding-8rems">
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="flex-1">
               <Card className="w-full">
                 <CardHeader>
-                  <CardTitle>{t.auth[defaultTab === "login" ? "loginTitle" : "registerTitle"]}</CardTitle>
-                  <CardDescription>
-                    {t.common.welcome}
-                  </CardDescription>
+                  <CardTitle>
+                    {
+                      t.auth[
+                        defaultTab === "login" ? "loginTitle" : "registerTitle"
+                      ]
+                    }
+                  </CardTitle>
+                  <CardDescription>{t.common.welcome}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Tabs defaultValue={defaultTab}>
                     <TabsList className="grid w-full grid-cols-2">
                       <TabsTrigger value="login">{t.common.login}</TabsTrigger>
-                      <TabsTrigger value="register">{t.common.register}</TabsTrigger>
+                      <TabsTrigger value="register">
+                        {t.common.register}
+                      </TabsTrigger>
                     </TabsList>
 
                     <TabsContent value="login">
                       <Form {...loginForm}>
                         <form
                           onSubmit={loginForm.handleSubmit((data) =>
-                            loginMutation.mutate(data)
+                            loginMutation.mutate(data),
                           )}
                           className="space-y-4"
                         >
@@ -136,7 +142,7 @@ export default function AuthPage() {
                       <Form {...registerForm}>
                         <form
                           onSubmit={registerForm.handleSubmit((data) =>
-                            registerMutation.mutate(data)
+                            registerMutation.mutate(data),
                           )}
                           className="space-y-4"
                         >
@@ -204,7 +210,9 @@ export default function AuthPage() {
                                 >
                                   <FormControl>
                                     <SelectTrigger>
-                                      <SelectValue placeholder={t.common.selectRole} />
+                                      <SelectValue
+                                        placeholder={t.common.selectRole}
+                                      />
                                     </SelectTrigger>
                                   </FormControl>
                                   <SelectContent>
@@ -239,7 +247,9 @@ export default function AuthPage() {
 
             <div className="hidden lg:block flex-1">
               <div className="bg-white rounded-lg shadow-lg p-8 h-full">
-                <h2 className="text-3xl font-bold mb-6">{t.auth.joinPotentielles}</h2>
+                <h2 className="text-3xl font-bold mb-6">
+                  {t.auth.joinPotentielles}
+                </h2>
                 <p className="text-lg text-gray-600 mb-6">
                   {t.auth.empoweringStatement}
                 </p>

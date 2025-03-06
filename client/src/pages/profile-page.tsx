@@ -4,7 +4,14 @@ import { RootLayout } from "@/components/layout/root-layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
 export default function ProfilePage() {
@@ -20,7 +27,7 @@ export default function ProfilePage() {
 
   return (
     <RootLayout>
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 padding-8rems">
         <Card>
           <CardHeader>
             <CardTitle>{t.common.profile}</CardTitle>

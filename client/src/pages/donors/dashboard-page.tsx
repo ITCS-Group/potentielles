@@ -24,14 +24,16 @@ export default function DonorDashboardPage() {
 
   return (
     <RootLayout>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 padding-8rems">
         <h1 className="text-3xl font-bold mb-8">{t.dashboard.overview}</h1>
         <Card>
           <CardHeader>
             <CardTitle>{t.donors.impactOverview}</CardTitle>
           </CardHeader>
           <CardContent>
-            <p>{t.donors.totalFunded}: {projects?.length || 0}</p>
+            <p>
+              {t.donors.totalFunded}: {projects?.length || 0}
+            </p>
           </CardContent>
         </Card>
       </div>

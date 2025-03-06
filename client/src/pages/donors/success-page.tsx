@@ -7,7 +7,7 @@ export default function SuccessStoriesPage() {
 
   return (
     <RootLayout>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 padding-8rems">
         <h1 className="text-3xl font-bold mb-8">{t.donors.success}</h1>
         <Card>
           <CardHeader>
@@ -15,7 +15,8 @@ export default function SuccessStoriesPage() {
           </CardHeader>
           <CardContent>
             <p className="text-gray-600">
-              Les histoires de réussite de nos entrepreneurs seront partagées ici.
+              Les histoires de réussite de nos entrepreneurs seront partagées
+              ici.
             </p>
           </CardContent>
         </Card>

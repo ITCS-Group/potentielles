@@ -7,16 +7,14 @@ export default function SettingsPage() {
 
   return (
     <RootLayout>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 padding-8rems">
         <h1 className="text-3xl font-bold mb-8">{t.admin.settings}</h1>
         <Card>
           <CardHeader>
             <CardTitle>{t.admin.settingsTitle}</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-gray-600">
-              {t.admin.settingsDesc}
-            </p>
+            <p className="text-gray-600">{t.admin.settingsDesc}</p>
           </CardContent>
         </Card>
       </div>

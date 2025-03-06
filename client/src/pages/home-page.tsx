@@ -4,12 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLocation } from "wouter";
 import { useLanguage } from "@/contexts/language-context";
 import { RootLayout } from "@/components/layout/root-layout";
-import {
-  BarChart3,
-  ClipboardList,
-  FileText,
-  Users,
-} from "lucide-react";
+import { BarChart3, ClipboardList, FileText, Users } from "lucide-react";
 
 type CardInfo = {
   title: string;
@@ -93,7 +88,7 @@ export default function HomePage() {
 
   return (
     <RootLayout>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 padding-8rems">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {user &&
             roleBasedCards[user.role].map((card, idx) => (

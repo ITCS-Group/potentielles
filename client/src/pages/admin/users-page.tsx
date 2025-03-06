@@ -25,7 +25,7 @@ export default function UserManagementPage() {
 
   return (
     <RootLayout>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 padding-8rems">
         <h1 className="text-3xl font-bold mb-8">{t.admin.users}</h1>
         <div className="grid gap-6">
           {users?.map((user) => (
@@ -34,7 +34,9 @@ export default function UserManagementPage() {
                 <CardTitle>{user.name}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>{t.common.role}: {t.roles[user.role]}</p>
+                <p>
+                  {t.common.role}: {t.roles[user.role]}
+                </p>
               </CardContent>
             </Card>
           ))}

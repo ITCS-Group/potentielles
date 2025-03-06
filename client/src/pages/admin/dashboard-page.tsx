@@ -30,7 +30,7 @@ export default function AdminDashboardPage() {
 
   return (
     <RootLayout>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 padding-8rems">
         <h1 className="text-3xl font-bold mb-8">{t.dashboard.overview}</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <Card>
@@ -38,7 +38,9 @@ export default function AdminDashboardPage() {
               <CardTitle>{t.admin.users}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>{t.admin.userCount}: {users?.length || 0}</p>
+              <p>
+                {t.admin.userCount}: {users?.length || 0}
+              </p>
             </CardContent>
           </Card>
           <Card>
@@ -46,7 +48,9 @@ export default function AdminDashboardPage() {
               <CardTitle>{t.admin.projects}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>{t.admin.projectCount}: {projects?.length || 0}</p>
+              <p>
+                {t.admin.projectCount}: {projects?.length || 0}
+              </p>
             </CardContent>
           </Card>
         </div>
