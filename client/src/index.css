@@ -31,6 +31,10 @@
     .padding-8rems {
       padding-top: 5rem;
     }
+
+    .width-img {
+      width: 150px;
+    }
   }
 
   #root {

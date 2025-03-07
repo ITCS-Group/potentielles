@@ -63,7 +63,11 @@ export function RootLayout({ children }: RootLayoutProps) {
                 </Button>
               )}
               <div className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 text-transparent bg-clip-text">
-                Potenti'Elles
+                <img
+                  src="/logos/poten.png"
+                  alt="Potenti'Elles"
+                  className="w-full h-full object-contain width-img"
+                />
               </div>
             </div>
 
